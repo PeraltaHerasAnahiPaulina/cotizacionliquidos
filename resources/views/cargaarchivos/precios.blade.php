@@ -2,8 +2,6 @@
 
 
 @section('contenido')
-
-
 <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
     <div class="container-fluid">
         <div class="page-header-content">
@@ -66,7 +64,5 @@
         </script>
         
     </div>
-
-
 
     @endsection
