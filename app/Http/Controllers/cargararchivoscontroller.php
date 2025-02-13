@@ -23,4 +23,8 @@ class cargararchivoscontroller extends Controller
         return view('cotizacion.cotizacion');
     }
 
+    public function reporte(){
+        return view('catalogo.reporte');
+    }
+
 }

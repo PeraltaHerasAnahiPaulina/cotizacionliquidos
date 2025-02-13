@@ -12,3 +12,5 @@ Route::get('/precios',  [cargararchivoscontroller::class, 'precios'])->name('pre
 Route::get('/inventario',  [cargararchivoscontroller::class, 'inventario'])->name('inventario'); 
 Route::get('/cotizacion',  [cargararchivoscontroller::class, 'cotizacion'])->name('cotizacion'); 
 
+Route::get('/reporte', [cargararchivoscontroller::class, 'reporte'])->name('reporte');
+
