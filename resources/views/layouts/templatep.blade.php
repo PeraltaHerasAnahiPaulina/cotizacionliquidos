@@ -75,51 +75,52 @@
 <body class="dashboard dashboard_1">
    <div class="full_container">
       <div class="inner_container">
-         <!-- Sidebar  -->
-         <nav id="sidebar">
-            <div class="sidebar_blog_1">
-               <div class="sidebar-header">
-                  <div class="logo_section">
-                     <a href="index.html"><img class="logo_icon img-responsive" src="{{ asset('assets/img/logo.png')}}"
-                           alt="#" /></a>
-                  </div>
-               </div>
-               <div class="sidebar_user_info">
-                  <div class="icon_setting"></div>
-                  <div class="user_profle_side">
-                     <div class="user_img"><img class="img-responsive"
-                           src="{{ asset('assets/pluto/images/layout_img/user_img.jpg')}}" alt="#" />
+         <!-- Sidebar -->
+            <nav id="sidebar">
+               <div class="sidebar_blog_1">
+                  <div class="sidebar-header">
+                     <div class="logo_section">
+                        <a href="index.html"><img class="logo_icon img-responsive" src="{{ asset('assets/img/logo.png')}}" alt="#" /></a>
                      </div>
-                     <div class="user_info">
-                        <h6>Juan</h6>
+                  </div>
+                  <div class="sidebar_user_info">
+                     <div class="icon_setting"></div>
+                     <div class="user_profle_side">
+                        <div class="user_img"><img class="img-responsive" src="{{ asset('assets/pluto/images/layout_img/user_img.jpg')}}" alt="#" /></div>
+                        <div class="user_info">
+                           <h6>Juan</h6>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
-            <div class="sidebar_blog_2">
-               <h4>General</h4>
-               <ul class="list-unstyled components">
-                  <li class="active">
-                     <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i
-                           class="fa fa-briefcase blue1_color"></i> <span>Carga de archivos</span></a>
-                     <ul class="collapse list-unstyled" id="dashboard">
-                        <li>
-                           <a href="/clientes"> <span> Cliente</span></a>
-                        </li>
-                        <li>
-                           <a href="/productos"> <span> Productos</span></a>
-                        </li>
-                        <li>
-                           <a href="/precios"> <span> Precios</span></a>
-                        </li>
-                        <li>
-                           <a href="/inventario"> <span> Inventarios</span></a>
-                        </li>
-                     </ul>
-                  </li>
-               </ul>
-            </div>
-         </nav>
+
+               <div class="sidebar_blog_2">
+                  <h4>General</h4>
+                  <ul class="list-unstyled components">
+                     <li>
+                        <a href="#cargaArchivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-briefcase blue1_color"></i> <span>Carga de archivos</span></a>
+                        <ul class="collapse list-unstyled" id="cargaArchivos">
+                           <li><a href="/clientes"> <span> Cliente</span></a></li>
+                           <li><a href="/productos"> <span> Productos</span></a></li>
+                           <li><a href="/precios"> <span> Precios</span></a></li>
+                           <li><a href="/inventario"> <span> Inventarios</span></a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+
+               <div class="sidebar_blog_2">
+                  <ul class="list-unstyled components">
+                     <li>
+                        <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Cotización</span></a>
+                        <ul class="collapse list-unstyled" id="cotizacionMenu">
+                           <li><a href="/cotizacion"> <span> Crear</span></a></li>
+                           <li><a href="/reporte"> <span> Reporte</span></a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
          <!-- end sidebar -->
          <!-- right content -->
          <div id="content">
