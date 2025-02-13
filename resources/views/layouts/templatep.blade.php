@@ -119,7 +119,26 @@
                   </li>
                </ul>
             </div>
+
+            <div class="sidebar_blog_2">
+               <h4>Catalogos</h4>
+               <ul class="list-unstyled components">
+                  <li class="active">
+                     <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class='fa-solid fa-person'></i> <span>Clientes</span></a>
+                     <ul class="collapse list-unstyled" id="dashboard1">
+                        <li>
+                           <a href="/reporte"> <span> Reportes</span></a>
+                        </li>
+                        
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         
          </nav>
+
+
+         
          <!-- end sidebar -->
          <!-- right content -->
          <div id="content">
