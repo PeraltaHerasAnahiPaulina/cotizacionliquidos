@@ -130,10 +130,13 @@
                         <label for="cantidad">Cantidad:</label>
                         <input type="number" class="form-control" id="cantidad">
                     </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cantidad">Precio Total:</label>
+                        <input type="text" class="form-control" id="cantidad">
+                    </div>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <label for="precioTotal">Precio Total:</label>
-                    <input type="text" class="form-control w-25" id="precioTotal">
+                    
                     <button type="button" class="btn btn-primary">Agregar</button>
                 </div>
             </form>
