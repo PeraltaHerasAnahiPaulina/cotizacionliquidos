@@ -19,5 +19,8 @@ class cargararchivoscontroller extends Controller
     public function inventario(){
         return view('cargaarchivos.inventarios');
     }
+    public function cotizacion(){
+        return view('cotizacion.cotizacion');
+    }
 
 }
