@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión - Líquidos</title>
+    
     <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -18,7 +18,7 @@
             color: white;
         }
         header {
-            position: absolute;
+            position: fixed;
             top: 0;
             width: 100%;
             background: #00144F;
@@ -30,12 +30,13 @@
             justify-content: flex-start;
             gap: 15px;
             padding-left: 20px;
+            z-index: 1000;
         }
         header img {
             height: 50px;
         }
         footer {
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
             background: #00144F;
@@ -45,28 +46,32 @@
         }
         .container-wrapper {
             display: flex;
-            width: 80%;
+            flex-direction: column;
+            width: 90%;
             max-width: 1200px;
             background: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            margin-top: 80px;
+            margin-top: 100px;
             margin-bottom: 50px;
             color: black;
+            text-align: center;
         }
         .login-container {
-            width: 50%;
-            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
         }
         .image-container {
-            width: 50%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 20px;
         }
         .image-container img {
-            max-width: 100%;
+            max-width: 80%;
             height: auto;
             border-radius: 10px;
         }
@@ -86,6 +91,18 @@
             margin: 5px;
             color: white;
         }
+        @media (min-width: 768px) {
+            .container-wrapper {
+                flex-direction: row;
+                text-align: left;
+            }
+            .login-container {
+                width: 50%;
+            }
+            .image-container {
+                width: 50%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -98,7 +115,7 @@
             <h3 class="text-center mb-3">Inicio de Sesión</h3>
             <form>
                 <div class="mb-3">
-                    <label for="username" class="form-label"><i class="fas fa-user"></i> Usuario</label>
+                    <label for="username" class="form-label"><i class="fas fa-user"></i> Correo electronico</label>
                     <input type="text" class="form-control" id="username" required>
                 </div>
                 <div class="mb-3">
@@ -125,7 +142,7 @@
                 </svg></a>
                 <a href="#" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
                   <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
-                </svg></a>
+                </svg></i></a>
             </div>
         </div>
         <div class="image-container">
