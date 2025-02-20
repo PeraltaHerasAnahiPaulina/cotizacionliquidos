@@ -1,4 +1,4 @@
-@extends('layouts.templatep')
+@extends('gerenciaventas.layouts.templatep')
 
 
 @section('contenido')
@@ -26,24 +26,22 @@
             <button class="btn btn-success" id="uploadBtn">Carga de Archivos</button>
             
             <div class="alert alert-info mt-3" id="statusMessage" style="display: none;">
-                Se cargaron 20 registros nuevos y se actualizaron 10 registros.
+                Se cargaron 13 registros nuevos y se actualizaron 10 registros.
             </div>
         
             <table class="table table-striped mt-3" id="dataTable" style="display: none;">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Clave SAP</th>
-                        <th>Producto</th>
-                        <th>Empaque</th>
-                        <th>Capacidad</th>
-                        <th>Especificación</th>
-                        <th>Precio Público</th>
+                        <th style="background-color: #00144F; color: white;">Clave SAP</th>
+                        <th style="background-color: #00144F; color: white;">Producto</th>
+                        <th style="background-color: #00144F; color: white;">Empaque</th>
+                        <th style="background-color: #00144F; color: white;">Capacidad</th>
+                        <th style="background-color: #00144F; color: white;">Especificación</th>
+                        <th style="background-color: #00144F; color: white;">Precio Público</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td colspan="6" style="background-color: #00144F; color: white; font-weight: bold;">Lubricantes Monogrados para Motor</td>
-                    </tr>
+                   
                     <tr>
                         <td>125018</td>
                         <td>M-MONOGRADO 40</td>
@@ -93,9 +91,7 @@
                         <td>$2,262.12</td>
                     </tr>
                 
-                    <tr>
-                        <td colspan="6" style="background-color: #00144F; color: white; font-weight: bold;">Lubricantes con Tecnología Sintética para Motor</td>
-                    </tr>
+                    
                     <tr>
                         <td>125025</td>
                         <td>M-SUPER ANTI-FRICTION 5W-20</td>

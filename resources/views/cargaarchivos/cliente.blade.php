@@ -1,4 +1,4 @@
-@extends('layouts.templatep')
+@extends('gerenciaventas.layouts.templatep')
 
 
 @section('contenido')
@@ -28,14 +28,14 @@
             </div>
         
             <table class="table table-striped mt-3" id="dataTable" style="display: none; background-color: #00144F; color: white;">
-                <thead class="thead-dark">
-                        <tr>
-                            <th>Clave SAP</th>
-                            <th>Razón Social</th>
-                            <th>Nombre</th>
-                            <th>Dirección</th>
-                        </tr>
-                    </thead>
+                <thead>
+                    <tr>
+                        <th style="background-color: #00144F; color: white;">Clave SAP</th>
+                        <th style="background-color: #00144F; color: white;">Razón Social</th>
+                        <th style="background-color: #00144F; color: white;">Nombre</th>
+                        <th style="background-color: #00144F; color: white;">Dirección</th>
+                    </tr>
+                </thead>                              
                     <tbody>
                         <tr>
                             <td>02885</td>

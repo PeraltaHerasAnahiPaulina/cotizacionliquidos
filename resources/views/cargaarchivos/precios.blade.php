@@ -1,4 +1,4 @@
-@extends('layouts.templatep')
+@extends('gerenciaventas.layouts.templatep')
 
 
 @section('contenido')
@@ -31,8 +31,8 @@
                     <label class="form-check-label" for="industrias">Industrias</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="tipo" id="gracias" value="Gracias">
-                    <label class="form-check-label" for="gracias">Gracias</label>
+                    <input class="form-check-input" type="radio" name="tipo" id="gracias" value="Grasas">
+                    <label class="form-check-label" for="gracias">Grasas</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="tipo" id="alimentacion" value="Alimentación y aviación">
@@ -48,7 +48,7 @@
             <button class="btn btn-success" id="uploadBtn">Carga de Archivos</button>
             
             <div class="alert alert-info mt-3" id="statusMessage" style="display: none;">
-                Se cargaron 20 registros nuevos y se actualizaron 10 registros.
+                Se cargaron 13 registros nuevos y se actualizaron 10 registros.
             </div>
         </div>
   
@@ -57,18 +57,16 @@
             <table class="table table-striped mt-3" id="dataTable" style="display: none;">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Clave SAP</th>
-                        <th>Producto</th>
-                        <th>Presentación</th>
-                        <th>Tamaño</th>
-                        <th>Viscosidad</th>
-                        <th>Precio Público</th>
+                        <th style="background-color: #00144F; color: white;">Clave SAP</th>
+                        <th style="background-color: #00144F; color: white;">Producto</th>
+                        <th style="background-color: #00144F; color: white;">Presentación</th>
+                        <th style="background-color: #00144F; color: white;">Tamaño</th>
+                        <th style="background-color: #00144F; color: white;">Viscosidad</th>
+                        <th style="background-color: #00144F; color: white;">Precio Público</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td colspan="6" style="background-color: #00144F; color: white; font-weight: bold;">Lubricantes Hidráulicos</td>
-                    </tr>
+                    
                     <tr>
                         <td>122652</td>
                         <td>M-DTE 27 DRUM</td>
@@ -174,17 +172,7 @@
                         <td>$234.44</td>
                     </tr>
                 
-                    <tr>
-                        <td colspan="6" style="background-color: #00144F; color: white; font-weight: bold;">Lubricantes Hidráulicos Alto I.V.</td>
-                    </tr>
-                    <tr>
-                        <td>101557</td>
-                        <td>UNIVIS HV 13 DRUM</td>
-                        <td>Tambor</td>
-                        <td>55 USG</td>
-                        <td>-</td>
-                        <td>$143,439.10</td>
-                    </tr>
+                   
                 </tbody>
                 
             </table>

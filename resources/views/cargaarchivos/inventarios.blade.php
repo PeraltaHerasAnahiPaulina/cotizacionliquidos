@@ -1,4 +1,4 @@
-@extends('layouts.templatep')
+@extends('gerenciaventas.layouts.templatep')
 
 @section('contenido')
 <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
@@ -30,10 +30,10 @@
                 <thead class="thead-dark">
                     <thead>
                         <tr>
-                            <th>Clave </th>
-                            <th>Nombre</th>
-                            <th>Unidad de medida</th>
-                            <th>Existencia </th>
+                            <th style="background-color: #00144F; color: white;">Clave </th>
+                            <th style="background-color: #00144F; color: white;">Nombre</th>
+                            <th style="background-color: #00144F; color: white;">Unidad de medida</th>
+                            <th style="background-color: #00144F; color: white;">Existencia </th>
                         </tr>
                     </thead>
                     <tbody>
