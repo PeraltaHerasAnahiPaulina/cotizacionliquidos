@@ -45,7 +45,7 @@
 <body>
 
     <div class="welcome-container">
-        <h1 class="welcome-title">¡Bienvenido Vendedor!</h1>
+        <h1 class="welcome-title">¡Bienvenido Area Ventas!</h1>
         <img src="assets/img/ace.jpg" alt="Logo de Pylsa" class="welcome-image">
     </div>
 

@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Admin</title>
+   <title></title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -80,15 +80,15 @@
                <div class="sidebar_blog_1">
                   <div class="sidebar-header">
                      <div class="logo_section">
-                        <a href="index.html"><img class="logo_icon img-responsive" src="{{ asset('assets/img/logo.png')}}" alt="#" /></a>
+                        <a href="#"><img class="logo_icon img-responsive" src="{{ asset('assets/img/logoo.png')}}" alt="#" /></a>
                      </div>
                   </div>
                   <div class="sidebar_user_info">
                      <div class="icon_setting"></div>
                      <div class="user_profle_side">
-                        <div class="user_img"><img class="img-responsive" src="{{ asset('assets/pluto/images/layout_img/user_img.jpg')}}" alt="#" /></div>
+                        <div class="user_img"><img class="img-responsive" src="{{ asset('assets/pluto/images/layout_img/msg1.png')}}" alt="#" /></div>
                         <div class="user_info">
-                           <h6>Juan</h6>
+                           <h6>Ana Mendez</h6>
                         </div>
                      </div>
                   </div>
@@ -137,8 +137,8 @@
                               <li>
                                  <a class="dropdown-toggle" data-toggle="dropdown"><img
                                        class="img-responsive rounded-circle"
-                                       src="{{ asset('assets/pluto/images/layout_img/user_img.jpg')}}" alt="#" /><span
-                                       class="name_user">John David</span></a>
+                                       src="{{ asset('assets/pluto/images/layout_img/msg1.png')}}" alt="#" /><span
+                                       class="name_user">Ana Mendez</span></a>
                                  <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#"><span>Cerrar Sesion</span> <i
                                           class="fa fa-sign-out"></i></a>

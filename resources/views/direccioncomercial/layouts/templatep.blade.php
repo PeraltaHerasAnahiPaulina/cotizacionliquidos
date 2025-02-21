@@ -80,15 +80,15 @@
                <div class="sidebar_blog_1">
                   <div class="sidebar-header">
                      <div class="logo_section">
-                        <a href="index.html"><img class="logo_icon img-responsive" src="{{ asset('assets/img/logo.png')}}" alt="#" /></a>
+                        <a href="#"><img class="logo_icon img-responsive" src="{{ asset('assets/img/logoo.png')}}" alt="#" /></a>
                      </div>
                   </div>
                   <div class="sidebar_user_info">
                      <div class="icon_setting"></div>
                      <div class="user_profle_side">
-                        <div class="user_img"><img class="img-responsive" src="{{ asset('assets/pluto/images/layout_img/user_img.jpg')}}" alt="#" /></div>
+                        <div class="user_img"><img class="img-responsive" src="{{ asset('assets/pluto/images/layout_img/useralan.webp')}}" alt="#" /></div>
                         <div class="user_info">
-                           <h6>Juan</h6>
+                           <h6>Alan Peña</h6>
                         </div>
                      </div>
                   </div>
@@ -101,18 +101,15 @@
                   </ul>
                </div>
 
-               <div class="">
-               <h4></h4>
-                  <ul class="list-unstyled components">
-                     <li>
-                        <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Cotización</span></a>
-                        <ul class="collapse list-unstyled" id="cotizacionMenu">
-                           <li><a href="/cotizacion"> <span> Crear</span></a></li>
-                           <li><a href="/reporte"> <span> Reporte</span></a></li>
-                        </ul>
-                     </li>
-                  </ul>
-               </div>
+               <ul class="list-unstyled components">
+                  <li>
+                     <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Cotización</span></a>
+                     <ul class="collapse list-unstyled" id="cotizacionMenu">
+                        <li><a href="/cotizacion"> <span> Ver cotizacion</span></a></li>
+                       
+                     </ul>
+                  </li>
+               </ul>
 
                <div class="sidebar_blog_2">
                <h4>Estadisticas</h4>
@@ -121,7 +118,7 @@
                      <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class='fa-solid fa-person'></i> <span>Estadisticas</span></a>
                      <ul class="collapse list-unstyled" id="dashboard1">
                         <li>
-                           <a href="#"> <span> ...</span></a>
+                           <a href="#"> <span> Ver estadisticas </span></a>
                         </li>
                         
                      </ul>
@@ -156,8 +153,8 @@
                               <li>
                                  <a class="dropdown-toggle" data-toggle="dropdown"><img
                                        class="img-responsive rounded-circle"
-                                       src="{{ asset('assets/pluto/images/layout_img/user_img.jpg')}}" alt="#" /><span
-                                       class="name_user">John David</span></a>
+                                       src="{{ asset('assets/pluto/images/layout_img/useralan.webp')}}" alt="#" /><span
+                                       class="name_user">Alan Peña</span></a>
                                  <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#"><span>Cerrar Sesion</span> <i
                                           class="fa fa-sign-out"></i></a>

@@ -27,5 +27,3 @@ Route::get('/iniciogerencia',  [gerenciaventascontroller::class, 'iniciogerencia
 Route::get('/iniciodireccion',  [direccioncomercialcontroller::class, 'iniciodireccion'])->name('iniciodireccion');
 //Interfas Carga Sap
 Route::get('/iniciosap',  [cargasapcontroller::class, 'iniciosap'])->name('iniciosap');
-//Interfas Adiministrador de Ventas
-Route::get('/inicioventas',  [adminventascontroller::class, 'inicioventas'])->name('inicioventas');

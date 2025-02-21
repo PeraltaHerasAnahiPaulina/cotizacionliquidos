@@ -32,12 +32,12 @@
             <table class="table table-striped mt-3" id="dataTable" style="display: none;">
                 <thead class="thead-dark">
                     <tr>
-                        <th style="background-color: #00144F; color: white;">Clave SAP</th>
-                        <th style="background-color: #00144F; color: white;">Producto</th>
-                        <th style="background-color: #00144F; color: white;">Empaque</th>
-                        <th style="background-color: #00144F; color: white;">Capacidad</th>
-                        <th style="background-color: #00144F; color: white;">Especificación</th>
-                        <th style="background-color: #00144F; color: white;">Precio Público</th>
+                        <th style="background-color: #00144F; color: white; text-align: center;">Clave SAP</th>
+                        <th style="background-color: #00144F; color: white; text-align: center;">Producto</th>
+                        <th style="background-color: #00144F; color: white; text-align: center;">Empaque</th>
+                        <th style="background-color: #00144F; color: white; text-align: center;">Capacidad</th>
+                        <th style="background-color: #00144F; color: white; text-align: center;">Especificación</th>
+                        <th style="background-color: #00144F; color: white; text-align: center;">Precio Público</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,7 +48,7 @@
                         <td>Litro</td>
                         <td>12X0.946 L</td>
                         <td>Standard</td>
-                        <td>$1,410.95</td>
+                        <td style=" text-align: right;">$1,410.95</td>
                     </tr>
                     <tr>
                         <td>125027</td>
@@ -56,7 +56,7 @@
                         <td>Garrafa</td>
                         <td>4X5 L</td>
                         <td>Standard</td>
-                        <td>$2,262.12</td>
+                        <td style=" text-align: right;">$2,262.12</td>
                     </tr>
                     <tr>
                         <td>124982</td>
@@ -64,7 +64,7 @@
                         <td>Cubeta</td>
                         <td>19 L</td>
                         <td>Standard</td>
-                        <td>$2,063.05</td>
+                        <td style=" text-align: right;">$2,063.05</td>
                     </tr>
                     <tr>
                         <td>124985</td>
@@ -72,7 +72,7 @@
                         <td>Tambor</td>
                         <td>208 L</td>
                         <td>Standard</td>
-                        <td>$18,519.59</td>
+                        <td style=" text-align: right;">$18,519.59</td>
                     </tr>
                     <tr>
                         <td>125028</td>
@@ -80,7 +80,7 @@
                         <td>Litro</td>
                         <td>12X0.946 L</td>
                         <td>Standard</td>
-                        <td>$1,410.95 </td>
+                        <td style=" text-align: right;">$1,410.95 </td>
                     </tr>
                     <tr>
                         <td>125029</td>
@@ -88,7 +88,7 @@
                         <td>Garrafa</td>
                         <td>4X5 L</td>
                         <td>Standard</td>
-                        <td>$2,262.12</td>
+                        <td style=" text-align: right;">$2,262.12</td>
                     </tr>
                 
                     
@@ -98,7 +98,7 @@
                         <td>Litro</td>
                         <td>12X0.946 L</td>
                         <td>Tec. Sint.</td>
-                        <td>$2,003.96</td>
+                        <td style=" text-align: right;">$2,003.96</td>
                     </tr>
                     <tr>
                         <td>M125026</td>
@@ -106,7 +106,7 @@
                         <td>Garrafa</td>
                         <td>4X5 L</td>
                         <td>Tec. Sint.</td>
-                        <td>$3,212.82</td>
+                        <td style=" text-align: right;">$3,212.82</td>
                     </tr>
                     <tr>
                         <td>125024</td>
@@ -114,7 +114,7 @@
                         <td>Tambor</td>
                         <td>208 L</td>
                         <td>Tec. Sint.</td>
-                        <td>$30,407.46</td>
+                        <td style=" text-align: right;">$30,407.46</td>
                     </tr>
                     <tr>
                         <td>125000</td>
@@ -122,7 +122,7 @@
                         <td>Litro</td>
                         <td>12X0.946 L</td>
                         <td>Tec. Sint.</td>
-                        <td>$2,003.96</td>
+                        <td style=" text-align: right;">$2,003.96</td>
                     </tr>
                     <tr>
                         <td>125001</td>
@@ -130,7 +130,7 @@
                         <td>Garrafa</td>
                         <td>4X5 L</td>
                         <td>Tec. Sint.</td>
-                        <td>$3,212.82</td>
+                        <td style=" text-align: right;">$3,212.82</td>
                     </tr>
                     <tr>
                         <td>124989</td>
@@ -138,7 +138,7 @@
                         <td>Tambor</td>
                         <td>208 L</td>
                         <td>Tec. Sint.</td>
-                        <td>$30,407.46</td>
+                        <td style=" text-align: right;">$30,407.46</td>
                     </tr>
                     <tr>
                         <td>126972</td>
@@ -146,7 +146,7 @@
                         <td>Tote</td>
                         <td>1000 L</td>
                         <td>Tec. Sint.</td>
-                        <td>$140,794.61</td>
+                        <td style=" text-align: right;">$140,794.61</td>
                     </tr>
                 </tbody>                
             </table>
