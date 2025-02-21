@@ -107,7 +107,7 @@
 </head>
 <body>
     <header>
-        <img src="assets/img/Logo_Pylsa_Colorr.png" alt="Logo de la empresa">
+        <img src="assets/img/logos/abamex.png" alt="Logo de la empresa">
         <h2>SISTEMA DE COTIZACIONES ABAMEX</h2>
     </header>
     <div class="container-wrapper">

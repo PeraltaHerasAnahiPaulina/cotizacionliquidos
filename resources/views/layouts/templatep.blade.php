@@ -152,7 +152,7 @@
                            class="fa fa-bars"></i></button>
                      <div class="logo_section">
                         <a href="index.html"><img class="img-responsive"
-                              src="{{ asset('assets/img/Abamex_Pylsa_Ne.png')}}" alt="#" /></a>
+                              src="{{ asset('assets/img/logos/abamex.png')}}" alt="#" /></a>
                      </div>
                      <div class="right_topbar">
                         <div class="icon_info">

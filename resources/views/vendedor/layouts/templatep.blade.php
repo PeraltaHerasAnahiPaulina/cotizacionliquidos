@@ -80,7 +80,7 @@
                <div class="sidebar_blog_1">
                   <div class="sidebar-header">
                      <div class="logo_section">
-                        <a href="index.html"><img class="logo_icon img-responsive" src="{{ asset('assets/img/logo.png')}}" alt="#" /></a>
+                        <a href="index.html"><img class="logo_icon img-responsive" src="{{ asset('assets/img/logos/abamex.png')}}" alt="#" /></a>
                      </div>
                   </div>
                   <div class="sidebar_user_info">
@@ -140,7 +140,7 @@
                            class="fa fa-bars"></i></button>
                      <div class="logo_section">
                         <a href="index.html"><img class="img-responsive"
-                              src="{{ asset('assets/img/Abamex_Pylsa_Ne.png')}}" alt="#" /></a>
+                              src="{{ asset('assets/img/logos/abamex.png')}}" alt="#" /></a>
                      </div>
                      <div class="right_topbar">
                         <div class="icon_info">
