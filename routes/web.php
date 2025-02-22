@@ -21,9 +21,13 @@ Route::get('/reporte', [cargararchivoscontroller::class, 'reporte'])->name('repo
 
 //Interfas Vendedor
 Route::get('/iniciovendedor',  [vendedorcontroller::class, 'iniciovendedor'])->name('iniciovendedor'); 
+Route::get('/cotizacionreportev',  [vendedorcontroller::class, 'cotizacionreporte'])->name('cotizacionreportev'); 
 //Interfas Gerencia de ventas
 Route::get('/iniciogerencia',  [gerenciaventascontroller::class, 'iniciogerencia'])->name('iniciogerencia'); 
+Route::get('/cotizacionreporteg',  [gerenciaventascontroller::class, 'cotizacionreporte'])->name('cotizacionreporteg'); 
 //Interfas Direccion Comercial
 Route::get('/iniciodireccion',  [direccioncomercialcontroller::class, 'iniciodireccion'])->name('iniciodireccion');
+Route::get('/cotizacionreportec',  [direccioncomercialcontroller::class, 'cotizacionreporte'])->name('cotizacionreportec'); 
 //Interfas Carga Sap
 Route::get('/iniciosap',  [cargasapcontroller::class, 'iniciosap'])->name('iniciosap');
+Route::get('/cotizacionreportes',  [cargasapcontroller::class, 'cotizacionreporte'])->name('cotizacionreportes'); 

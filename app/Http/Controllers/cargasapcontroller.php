@@ -10,4 +10,7 @@ class cargasapcontroller extends Controller
     public function iniciosap(){
         return view('cargasap.inicio');
     }
+    public function cotizacionreporte(){
+        return view('cargasap.cotizacion.cotizacionreporte');
+    }
 }
