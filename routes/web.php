@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\cargararchivoscontroller;
+use App\Http\Controllers\vendedorcontroller;
+use App\Http\Controllers\gerenciaventascontroller;
+use App\Http\Controllers\direccioncomercialcontroller;
+use App\Http\Controllers\cargasapcontroller;
+use App\Http\Controllers\adminventascontroller;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,3 +24,11 @@ Route::get('/userventas', [cargararchivoscontroller::class,'userventas'])->name(
 Route::get('/consultaventa', [cargararchivoscontroller::class,'consultaventa'])->name('consultaventa');
 
 
+//Interfas Vendedor
+Route::get('/iniciovendedor',  [vendedorcontroller::class, 'iniciovendedor'])->name('iniciovendedor'); 
+//Interfas Gerencia de ventas
+Route::get('/iniciogerencia',  [gerenciaventascontroller::class, 'iniciogerencia'])->name('iniciogerencia'); 
+//Interfas Direccion Comercial
+Route::get('/iniciodireccion',  [direccioncomercialcontroller::class, 'iniciodireccion'])->name('iniciodireccion');
+//Interfas Carga Sap
+Route::get('/iniciosap',  [cargasapcontroller::class, 'iniciosap'])->name('iniciosap');

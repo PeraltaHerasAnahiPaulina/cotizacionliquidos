@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Admin</title>
+
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -80,33 +80,31 @@
                <div class="sidebar_blog_1">
                   <div class="sidebar-header">
                      <div class="logo_section">
-                        <a href="index.html"><img class="logo_icon img-responsive" src="{{ asset('assets/img/logo.png')}}" alt="#" /></a>
+                        <a href="index.html"><img class="logo_icon img-responsive" src="{{ asset('assets/img/logoo.png')}}" alt="#" /></a>
                      </div>
                   </div>
                   <div class="sidebar_user_info">
                      <div class="icon_setting"></div>
                      <div class="user_profle_side">
-                        <div class="user_img"><img class="img-responsive" src="{{ asset('assets/pluto/images/layout_img/user_img.jpg')}}" alt="#" /></div>
+                        <div class="user_img"><img class="img-responsive" src="{{ asset('assets/pluto/images/layout_img/msg2.png')}}" alt="#" /></div>
                         <div class="user_info">
-                           <h6>Juan</h6>
+                           <h6>Miguel Escutia</h6>
                         </div>
                      </div>
                   </div>
                </div>
 
-<<<<<<< HEAD
-            <div class="sidebar_blog_2">
-=======
                <div class="sidebar_blog_2">
-                  <h4>General</h4>
+                  <h4>Gerencia de Ventas</h4>
+                  <h4>Catalogos</h4>
                   <ul class="list-unstyled components">
-                     <li>
-                        <a href="#cargaArchivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-briefcase blue1_color"></i> <span>Carga de archivos</span></a>
-                        <ul class="collapse list-unstyled" id="cargaArchivos">
-                           <li><a href="/clientes"> <span> Cliente</span></a></li>
-                           <li><a href="/productos"> <span> Productos</span></a></li>
-                           <li><a href="/precios"> <span> Precios</span></a></li>
-                           <li><a href="/inventario"> <span> Inventarios</span></a></li>
+                     <li class="active">
+                        <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class='fa-solid fa-person'></i> <span>Clientes</span></a>
+                        <ul class="collapse list-unstyled" id="dashboard1">
+                           <li>
+                              <a href="#"> <span> Reportes</span></a>
+                           </li>
+                           
                         </ul>
                      </li>
                   </ul>
@@ -118,51 +116,23 @@
                      <li>
                         <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Cotización</span></a>
                         <ul class="collapse list-unstyled" id="cotizacionMenu">
-                           <li><a href="/cotizacion"> <span> Crear</span></a></li>
-                           <li><a href="/reporte"> <span> Reporte</span></a></li>
+                          
+                           <li><a href="/cotizacion"> <span> Reporte</span></a></li>
                         </ul>
                      </li>
                   </ul>
                </div>
 
                <div class="sidebar_blog_2">
-               <h4>Catalogos</h4>
->>>>>>> 3959231bc7c2176edd3883c3459217b635f0c5d0
+               <h4>Carga de archivos</h4>
                <ul class="list-unstyled components">
-                  <li class="active">
-                     <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-"><i
-                           class="fa fa-male blue1_color"></i> <span>Catalogo</span></a>
-                     <ul class="collapse list-unstyled" id="dashboard1">
-                        <li>
-                           <a href="#Clientes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                              > <span>Clientes</span>
-                           </a>
-                           <ul class="collapse list-unstyled" id="Clientes">
-                              <li>
-
-                              </li>
-                              <li>
-                                 <a href="/client"> <span>Reporte Cliente</span></a>
-                              </li>
-                              <li>
-                                 <a href="/reporte"> <span>Nuevo Cliente</span></a>
-                              </li>
-                           </ul>
-                        </li>
-                        <li>
-                           <a href="#UserGerente" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                              > <span>Usuario</span>
-                           </a>
-                           <ul class="collapse list-unstyled" id="UserGerente">
-                              <li>
-                                 <a href="/userventas"><span>Usuario Ventas</span></a>
-                              </li>
-                              <li>
-                                 <a href="/consultaventa"> <span>Consulta Usuario Ventas</span></a>
-                              </li>
-                           </ul>
-                        </li>
-                        
+                  <li>
+                     <a href="#cargaArchivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-briefcase blue1_color"></i> <span>Carga de archivos</span></a>
+                     <ul class="collapse list-unstyled" id="cargaArchivos">
+                        <li><a href="/clientes"> <span> Cliente</span></a></li>
+                        <li><a href="/productos"> <span> Productos</span></a></li>
+                        <li><a href="/precios"> <span> Precios</span></a></li>
+                        <li><a href="/inventario"> <span> Inventarios</span></a></li>
                      </ul>
                   </li>
                </ul>
@@ -195,8 +165,8 @@
                               <li>
                                  <a class="dropdown-toggle" data-toggle="dropdown"><img
                                        class="img-responsive rounded-circle"
-                                       src="{{ asset('assets/pluto/images/layout_img/user_img.jpg')}}" alt="#" /><span
-                                       class="name_user">John David</span></a>
+                                       src="{{ asset('assets/pluto/images/layout_img/msg2.png')}}" alt="#" /><span
+                                       class="name_user">Miguel Escutia</span> <h6>Automotriz</h6></a>
                                  <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#"><span>Cerrar Sesion</span> <i
                                           class="fa fa-sign-out"></i></a>
