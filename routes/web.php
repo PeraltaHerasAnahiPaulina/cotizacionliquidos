@@ -18,6 +18,11 @@ Route::get('/inventario',  [cargararchivoscontroller::class, 'inventario'])->nam
 Route::get('/cotizacion',  [cargararchivoscontroller::class, 'cotizacion'])->name('cotizacion'); 
 
 Route::get('/reporte', [cargararchivoscontroller::class, 'reporte'])->name('reporte');
+Route::get('/client',  [cargararchivoscontroller::class, 'client'])->name('client');
+Route::get('/edicion', [cargararchivoscontroller::class,'edicion'])->name('edicion');
+Route::get('/userventas', [cargararchivoscontroller::class,'userventas'])->name('userventas');
+Route::get('/consultaventa', [cargararchivoscontroller::class,'consultaventa'])->name('consultaventa');
+
 
 //Interfas Vendedor
 Route::get('/iniciovendedor',  [vendedorcontroller::class, 'iniciovendedor'])->name('iniciovendedor'); 
