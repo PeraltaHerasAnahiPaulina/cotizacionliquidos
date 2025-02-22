@@ -121,13 +121,39 @@
             </div>
 
             <div class="sidebar_blog_2">
-               <h4>Catalogos</h4>
                <ul class="list-unstyled components">
                   <li class="active">
-                     <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class='fa-solid fa-person'></i> <span>Clientes</span></a>
+                     <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-"><i
+                           class="fa fa-male blue1_color"></i> <span>Catalogo</span></a>
                      <ul class="collapse list-unstyled" id="dashboard1">
                         <li>
-                           <a href="/reporte"> <span> Reportes</span></a>
+                           <a href="#Clientes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                              > <span>Clientes</span>
+                           </a>
+                           <ul class="collapse list-unstyled" id="Clientes">
+                              <li>
+
+                              </li>
+                              <li>
+                                 <a href="/client"> <span>Reporte Cliente</span></a>
+                              </li>
+                              <li>
+                                 <a href="/reporte"> <span>Nuevo Cliente</span></a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="#UserGerente" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                              > <span>Usuario</span>
+                           </a>
+                           <ul class="collapse list-unstyled" id="UserGerente">
+                              <li>
+                                 <a href="/userventas"><span>Usuario Ventas</span></a>
+                              </li>
+                              <li>
+                                 <a href="/consultaventa"> <span>Consulta Usuario Ventas</span></a>
+                              </li>
+                           </ul>
                         </li>
                         
                      </ul>
