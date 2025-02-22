@@ -94,9 +94,8 @@
                   </div>
                </div>
 
-<<<<<<< HEAD
+
             <div class="sidebar_blog_2">
-=======
                <div class="sidebar_blog_2">
                   <h4>General</h4>
                   <ul class="list-unstyled components">
@@ -126,8 +125,7 @@
                </div>
 
                <div class="sidebar_blog_2">
-               <h4>Catalogos</h4>
->>>>>>> 3959231bc7c2176edd3883c3459217b635f0c5d0
+               
                <ul class="list-unstyled components">
                   <li class="active">
                      <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-"><i
