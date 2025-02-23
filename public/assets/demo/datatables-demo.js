@@ -302,3 +302,6 @@ var table = $('#TablaEXM').DataTable({
 document.querySelectorAll('#min, #max').forEach((el) => {
     el.addEventListener('change', () => $('#TablaEXM').DataTable().draw());
 });
+
+initializeDataTable('TablaEXL');
+initializeDataTable('TablaEXM');

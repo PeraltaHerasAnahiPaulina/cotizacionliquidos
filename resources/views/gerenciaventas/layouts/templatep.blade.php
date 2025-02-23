@@ -94,22 +94,28 @@
                   </div>
                </div>
 
-               <div class="sidebar_blog_2">
-                  <h4>Gerencia de Ventas</h4>
-                  <h4>Catalogos</h4>
+                        
+            <div class="sidebar_blog_2">
+               <h4>Catalogos</h4>
                   <ul class="list-unstyled components">
-                     <li class="active">
-                        <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class='fa-solid fa-person'></i> <span>Clientes</span></a>
-                        <ul class="collapse list-unstyled" id="dashboard1">
+                     <li>
+                        <a href="#catalogo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-male blue1_color"></i> <span>Clientes</span></a>
+                        <ul class="collapse list-unstyled" id="catalogo">
                            <li>
-                              <a href="#"> <span> Reportes</span></a>
-                           </li>
-                           
+                              <a href="/client"> <span> Clientes</span></a>
+                              <a href="/reporte"> <span> Reporte Clientes</span></a></li>
+                        </ul>
+                        <a href="#usuarios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-male blue1_color"></i> <span>Usuarios</span></a>
+                        <ul class="collapse list-unstyled" id="usuarios">
+
+                           <li>
+                              <a href="/userventas"> <span> Usuario Ventas</span></a>
+                              <a href="/consultaventa"> <span> Reporte usuario</span></a></li>
                         </ul>
                      </li>
+                     
                   </ul>
                </div>
-
                <div class="sidebar_blog_2">
                <h4>Cotización</h4>
                   <ul class="list-unstyled components">

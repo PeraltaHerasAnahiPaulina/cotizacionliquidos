@@ -1,4 +1,4 @@
-@extends('layouts.templatep')
+@extends('gerenciaventas.layouts.templatep')
 
 
 @section('contenido')
@@ -9,9 +9,9 @@
         <div class="page-header-content">
             <h1 class="page-header-title">
                 <div class="page-header-icon"><i data-feather="file"></i></div>
-                <span>CLIENTES</span>
+                <span>USUARIOS</span>
             </h1>
-            <div class="page-header-subtitle">Reporte de clientes</div>
+            <div class="page-header-subtitle">Reporte de usuarios</div>
         </div>
     </div>
 </div>
@@ -75,6 +75,7 @@
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
                                         </button>
+                                        
                                 <tr>
                                     <td>Alan</td>
                                     <td>Davila</td>

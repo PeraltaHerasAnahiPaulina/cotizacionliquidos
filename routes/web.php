@@ -17,11 +17,11 @@ Route::get('/precios',  [cargararchivoscontroller::class, 'precios'])->name('pre
 Route::get('/inventario',  [cargararchivoscontroller::class, 'inventario'])->name('inventario'); 
 Route::get('/cotizacion',  [cargararchivoscontroller::class, 'cotizacion'])->name('cotizacion'); 
 
-Route::get('/reporte', [cargararchivoscontroller::class, 'reporte'])->name('reporte');
-Route::get('/client',  [cargararchivoscontroller::class, 'client'])->name('client');
-Route::get('/edicion', [cargararchivoscontroller::class,'edicion'])->name('edicion');
-Route::get('/userventas', [cargararchivoscontroller::class,'userventas'])->name('userventas');
-Route::get('/consultaventa', [cargararchivoscontroller::class,'consultaventa'])->name('consultaventa');
+Route::get('/reporte', [gerenciaventascontroller::class, 'reporte'])->name('reporte');
+Route::get('/client',  [gerenciaventascontroller::class, 'client'])->name('client');
+Route::get('/edicion', [gerenciaventascontroller::class,'edicion'])->name('edicion');
+Route::get('/userventas', [gerenciaventascontroller::class,'userventas'])->name('userventas');
+Route::get('/consultaventa', [gerenciaventascontroller::class,'consultaventa'])->name('consultaventa');
 
 
 //Interfas Vendedor

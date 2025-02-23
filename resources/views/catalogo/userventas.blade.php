@@ -1,4 +1,4 @@
-@extends('layouts.templatep')
+@extends('gerenciaventas.layouts.templatep')
 
 @section('contenido')
 
@@ -37,14 +37,19 @@
                                 <h4 class="mb-3">Información</h4>
                                 
                                 <div class="form-row mb-3">
+                                <div class="col-md-6">
+                                        <label for="apellidoP">* Nombre:</label>
+                                        <input type="text" class="form-control" id="apellidoP" placeholder="Maria">
+                                        <div class="invalid-feedback">Por favor, ingresa el apellido.</div>
+                                    </div>
                                     <div class="col-md-6">
                                         <label for="apellidoP">* Apellido Paterno:</label>
-                                        <input type="text" class="form-control" id="apellidoP" required>
+                                        <input type="text" class="form-control" id="apellidoP" placeholder="Lopez">
                                         <div class="invalid-feedback">Por favor, ingresa el apellido.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="apellidoM">* Apellido Materno:</label>
-                                        <input type="text" class="form-control" id="apellidoM" required>
+                                        <input type="text" class="form-control" id="apellidoM" placeholder="Camacho" required>
                                         <div class="invalid-feedback">Por favor, ingresa el apellido.</div>
                                     </div>
                                 </div>
@@ -52,12 +57,12 @@
                                 <div class="form-row mb-3">
                                     <div class="col-md-6">
                                         <label for="correo">* Correo:</label>
-                                        <input type="email" class="form-control" id="correo" required>
+                                        <input type="email" class="form-control" id="correo" placeholder="maria@gmail.com" required>
                                         <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="telefono">* Teléfono:</label>
-                                        <input type="text" class="form-control" id="telefono" required>
+                                        <input type="text" class="form-control" id="telefono" placeholder="723883673" required>
                                         <div class="invalid-feedback">Por favor, ingresa un teléfono.</div>
                                     </div>
                                 </div>
@@ -65,12 +70,12 @@
                                 <div class="form-row mb-3">
                                     <div class="col-md-6">
                                         <label for="contraseña">* Contraseña:</label>
-                                        <input type="password" class="form-control" id="contraseña" required>
+                                        <input type="password" class="form-control" id="contraseña" placeholder="*****" required>
                                         <div class="invalid-feedback">Por favor, ingresa una contraseña.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="confirm">* Confirmar Contraseña:</label>
-                                        <input type="password" class="form-control" id="confirm" required>
+                                        <input type="password" class="form-control" id="confirm" placeholder="*****" required>
                                         <div class="invalid-feedback">Por favor, confirma la contraseña.</div>
                                     </div>
                                 </div>
