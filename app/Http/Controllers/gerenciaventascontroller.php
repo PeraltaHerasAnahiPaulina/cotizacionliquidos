@@ -10,8 +10,6 @@ class gerenciaventascontroller extends Controller
     public function iniciogerencia(){
         return view('gerenciaventas.inicio');
     }
-<<<<<<< HEAD
-
     public function reporte(){
         return view('catalogo.reporte');
     }
@@ -30,9 +28,9 @@ class gerenciaventascontroller extends Controller
         return view ('catalogo.userventas');
     }
 
-=======
     public function cotizacionreporte(){
         return view('gerenciaventas.cotizacion.cotizacionreporte');
     }
->>>>>>> cc76e93e2dca0d895d402c78d5cef29b3da5a297
+
+
 }

@@ -96,7 +96,7 @@
         </thead>
         <tbody>
             <tr>
-                <td>2025-02-21</td>
+                  <td>21-02-2025</td>
                 <td>AME1-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
@@ -116,7 +116,7 @@
                 </td>
             </tr>
             <tr>
-                <td>2025-02-21</td>
+                  <td>21-02-2025</td>
                 <td>AME1-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
@@ -202,41 +202,43 @@
           </div>
           <!-- Sección 3 -->
           <div class="section-container" style="flex: 1;">
-            <div class="form-group">
-              <label>Autorizo Cliente</label>
-              si<input type="radio" id="html" name="fav_language"  value="si" readonly>
-              no<input type="radio" id="html" name="fav_language"  value="no" readonly>
-            </div>
-            <div class="form-group">
-              <label>Fecha Autorizacion Cliente</label>
-              <input type="Date" class="form-control" value="2025-02-21" readonly>
-            </div>
-            <div class="form-group">
-              <label>Autorizo Gerente</label>
-              si<input type="radio" id="html" name="fav_language"  value="si" readonly>
-              no<input type="radio" id="html" name="fav_language"  value="no" readonly>
-            </div>
-            <div class="form-group">
-              <label>Fecha Autorizacion Gerente</label>
-              <input type="Date" class="form-control" value="2025-02-21" readonly>
-            </div>
-            <div class="form-group">
-            <label>Nombre </label><input type="text" class="form-control" value="2025-02-21" readonly>
-            <label> Divicion</label><input type="text" class="form-control" value="2025-02-21" readonly>
-            </div>
-            <div class="form-group">
-              <label>Observaciones</label>
-              <input type="text" class="form-control" value="" readonly>
-            </div>
-            <div class="form-group">
-              <label>Formato LSMW</label>
-              si<input type="radio" id="html" name="fav_language"  value="si" readonly>
-              no<input type="radio" id="html" name="fav_language"  value="no" readonly>
-            </div>
-            <div class="form-group">
-              <label>Fecha de gereracion de archivo</label>
-              <input type="Date" class="form-control" value="2025-02-21" readonly>
-            </div>
+          <div class="form-group">
+  <label>Autorizo Cliente</label>
+  sí<input type="radio" id="html1" name="fav_language_cliente" value="si" checked readonly >
+  no<input type="radio" id="html2" name="fav_language_cliente" value="no" readonly disabled>
+</div>
+<div class="form-group">
+  <label>Fecha Autorizacion Cliente</label>
+  <input type="Date" class="form-control" value="2025-02-21" readonly>
+</div>
+<div class="form-group">
+  <label>Autorizo Gerente</label>
+  sí<input type="radio" id="html3" name="fav_language_gerente" value="si" checked readonly >
+  no<input type="radio" id="html4" name="fav_language_gerente" value="no" readonly disabled>
+</div>
+<div class="form-group">
+  <label>Fecha Autorizacion Gerente</label>
+  <input type="Date" class="form-control" value="2025-02-21" readonly>
+</div>
+<div class="form-group">
+  <label>Nombre</label>
+  <input type="text" class="form-control" value="Jesus Peñaloza Cruz" readonly>
+  <label>División</label>
+  <input type="text" class="form-control" value="Industrial" readonly>
+</div>
+<div class="form-group">
+  <label>Observaciones</label>
+  <input type="text" class="form-control" value="Sin Observaciones" readonly>
+</div>
+<div class="form-group">
+  <label>Formato LSMW</label>
+  sí<input type="radio" id="html9" name="fav_language_lsmw" value="si" checked readonly >
+  no<input type="radio" id="html10" name="fav_language_lsmw" value="no" readonly disabled>
+</div>
+<div class="form-group">
+  <label>Fecha de generación de archivo</label>
+  <input type="Date" class="form-control" value="2025-02-21" readonly>
+</div>
           </div>
         </div>
         <hr>
