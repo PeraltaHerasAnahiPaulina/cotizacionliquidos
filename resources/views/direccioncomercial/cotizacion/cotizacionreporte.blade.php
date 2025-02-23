@@ -1,0 +1,325 @@
+@extends('direccioncomercial.layouts.templatep')
+
+
+@section('contenido')
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla con Detalles Expandidos</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .section-container {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .form-group label {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .form-group input {
+      flex: 2;
+      background-color: #e9ecef;
+      border: 1px solid #ccc;
+    }
+    .details-container {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      display: none;
+    }
+    .details-container h5 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
+    <div class="container-fluid">
+        <div class="page-header-content">
+            <h1 class="page-header-title">
+                <div class="page-header-icon"><i data-feather="file"></i></div>
+                <span>Cotizaciones</span>
+            </h1>
+            <div class="page-header-subtitle">Consulta de Cotizaciones</div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-n10">
+    <div class="card">
+        <div class="card-body">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                <div id="list" class="table-responsive">
+    <table border="0" cellspacing="5" cellpadding="5" class="date-table">
+        <tbody>
+            <tr>
+                <td class="label-cell" style="font-size: 14px; font-weight:bold; padding-right: 10px;">Fecha Inicial:</td>
+                <td><input class="date-input" type="text" id="min" name="min"></td>
+                <td class="label-cell" style="font-size: 14px; font-weight:bold; padding-left: 20px; padding-right: 10px;">Fecha Final:</td>
+                <td><input class="date-input" type="text" id="max" name="max"></td>
+                <td style="padding-left: 20px;">
+                    <!-- Botón Excel -->
+                    <button class="btn btn-success btn-sm" onclick="exportToExcel()">
+                        <i class="fa fa-file-excel"></i> Exportar Excel
+                    </button>
+                </td>
+                <td class="search-controls" style="font-size: 14px; font-weight:bold;">
+                    Buscar:
+                </td>
+                <td><div id="searchContainer"></div></td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="TablaEX" class="table table-striped table-bordered display" style="width: 100%">
+        <thead>
+            <tr style="background-color: #E0E0E0">
+                <th style="background-color: #323F52; color: #ffffff">Fecha</th>
+                <th style="background-color: #323F52; color: #ffffff">Folio</th>
+                <th style="background-color: #323F52; color: #ffffff">Cliente</th>
+                <th style="background-color: #323F52; color: #ffffff">Monto</th>
+                <th style="background-color: #323F52; color: #ffffff">Estatus Cliente</th>
+                <th style="background-color: #323F52; color: #ffffff">Estatus Gerencia</th>
+                <th style="background-color: #323F52; color: #ffffff; width:25px">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2025-02-21</td>
+                <td>AME1-IND-00001-01</td>
+                <td>NUEVA GENERACION AERONAUTICA</td>
+                <td>$28,263.52</td>
+                <td>Activo</td>
+                <td>Activo</td>
+                <td>
+
+                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
+                        <i class="fa fa-file-pdf"></i> 
+                    </button>
+                    <button class="btn btn-info btn-sm" onclick="showDetails(1)">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>2025-02-21</td>
+                <td>AME1-IND-00001-01</td>
+                <td>NUEVA GENERACION AERONAUTICA</td>
+                <td>$28,263.52</td>
+                <td>Activo</td>
+                <td>Activo</td>
+                <td>
+                    <!-- Botón PDF -->
+                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
+                        <i class="fa fa-file-pdf"></i> 
+                    </button>
+                    <!-- Botón Ver -->
+                    <button class="btn btn-info btn-sm" onclick="showDetails(1)">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                    <!-- Botón Editar (libretita) -->
+                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+                    <!-- Detalles debajo de la tabla -->
+                    <div id="details-1" class="details-container">
+                    <div class="d-flex justify-content-between align-items-center">
+          <div>
+          <div>
+            <button class="btn btn-primary"><i class="fa fa-download"></i> Descargar PDF</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <!-- Sección 1 -->
+          <div class="section-container" style="flex: 1; margin-right: 10px;">
+            <h5>Cotización</h5>
+            <div class="form-group">
+              <label>Fecha</label>
+              <input type="date" class="form-control" value="2025-02-21" readonly>
+            </div>
+            <div class="form-group">
+              <label>Folio</label>
+              <input type="text" class="form-control" value="F12345" readonly>
+            </div>
+            <div class="form-group">
+              <label>Cliente</label>
+              <input type="text" class="form-control" value="NUEVA GENERACION AERONAUTICA" readonly>
+            </div>
+            <div class="form-group">
+              <label>Atención</label>
+              <input type="text" class="form-control" value="NADIA FONSECA" readonly>
+            </div>
+            <div class="form-group">
+              <label>Correo</label>
+              <input type="text" class="form-control" value="NADIA@example.com" readonly>
+            </div>
+            <div class="form-group">
+              <label>Teléfono</label>
+              <input type="text" class="form-control" value="123-456-7890" readonly>
+            </div>
+          </div>
+          <!-- Sección 2 -->
+          <div class="section-container" style="flex: 1; margin-right: 10px;">
+            <h5>Cotización de Venta</h5>
+            <div class="form-group">
+              <label>Tiempo de entrega</label>
+              <input type="text" class="form-control" value="DE ACUERDO A DISPONIBILIDAD DE PRODUCTO" readonly>
+            </div>
+            <div class="form-group">
+              <label>Validez de oferta</label>
+              <input type="text" class="form-control" value="CAMBIO CON PREVIO AVISO" readonly>
+            </div>
+            <div class="form-group">
+              <label>Moneda</label>
+              <input type="text" class="form-control" value="MXN" readonly>
+            </div>
+            <div class="form-group">
+              <label>Forma de pago</label>
+              <input type="text" class="form-control" value="CREDITO" readonly>
+            </div>
+          </div>
+          <!-- Sección 3 -->
+          <div class="section-container" style="flex: 1;">
+            <div class="form-group">
+              <label>Autorizo Cliente</label>
+              si<input type="radio" id="html" name="fav_language"  value="si" readonly>
+              no<input type="radio" id="html" name="fav_language"  value="no" readonly>
+            </div>
+            <div class="form-group">
+              <label>Fecha Autorizacion Cliente</label>
+              <input type="Date" class="form-control" value="2025-02-21" readonly>
+            </div>
+            <div class="form-group">
+              <label>Autorizo Gerente</label>
+              si<input type="radio" id="html" name="fav_language"  value="si" readonly>
+              no<input type="radio" id="html" name="fav_language"  value="no" readonly>
+            </div>
+            <div class="form-group">
+              <label>Fecha Autorizacion Gerente</label>
+              <input type="Date" class="form-control" value="2025-02-21" readonly>
+            </div>
+            <div class="form-group">
+            <label>Nombre </label><input type="text" class="form-control" value="2025-02-21" readonly>
+            <label> Divicion</label><input type="text" class="form-control" value="2025-02-21" readonly>
+            </div>
+            <div class="form-group">
+              <label>Observaciones</label>
+              <input type="text" class="form-control" value="" readonly>
+            </div>
+            <div class="form-group">
+              <label>Formato LSMW</label>
+              si<input type="radio" id="html" name="fav_language"  value="si" readonly>
+              no<input type="radio" id="html" name="fav_language"  value="no" readonly>
+            </div>
+            <div class="form-group">
+              <label>Fecha de gereracion de archivo</label>
+              <input type="Date" class="form-control" value="2025-02-21" readonly>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <!-- Tabla de resumen -->
+        <h5>Resumen</h5>
+        <table class="table table-bordered table-summary">
+          <thead>
+            <tr>
+              <th>Cantidad</th>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Presentación</th>
+              <th>Precio unitario</th>
+              <th>Precio Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10</td>
+              <td>104765</td>
+              <td>M-JET OIL ll CAN 24X1UQL</td>
+              <td>Caja 24 pzas</td>
+              <td>$684.55</td>
+              <td>$6,845.50</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>104765</td>
+              <td>M-JET OIL ll CAN 24X1UQL</td>
+              <td>Caja 24 pzas</td>
+              <td>$527.66</td>
+              <td>$5,276.60</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>122728</td>
+              <td>M-VACUOLINE 146 DRUM 208L</td>
+              <td>Tambor</td>
+              <td>$2,448.60</td>
+              <td>$12,243.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-right">
+          <p><strong>Subtotal:</strong> $24,365.10</p>
+          <p><strong>IVA 16%:</strong> $3,898.42</p>
+          <p><strong>Total:</strong> $28,263.52</p>
+          
+        </div>
+        <button class="btn btn-danger" onclick="closeDetails(1)">Cerrar</button>
+      </div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable();
+  });
+
+  function showDetails(id) {
+    // Comprobar si el detalle ya está visible
+    var detailContainer = $("#details-" + id);
+    
+    if (detailContainer.is(":visible")) {
+      // Si está visible, lo ocultamos
+      detailContainer.hide();
+    } else {
+      // Si no está visible, ocultamos todos los demás detalles y mostramos el correspondiente
+      $(".details-container").hide(); 
+      detailContainer.show();
+    }
+  }
+
+  function closeDetails(id) {
+    // Ocultar el detalle correspondiente
+    $("#details-" + id).hide();
+  }
+</script>
+
+
+
+</body>
+</html>
+@endsection
