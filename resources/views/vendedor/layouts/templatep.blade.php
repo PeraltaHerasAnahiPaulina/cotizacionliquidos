@@ -153,7 +153,7 @@
                                  <a class="dropdown-toggle" data-toggle="dropdown"><img
                                        class="img-responsive rounded-circle"
                                        src="{{ asset('assets/pluto/images/layout_img/user_img.jpg')}}" alt="#" /><span
-                                       class="name_user">Pedro Sanabria</span></a>
+                                       class="name_user">Pedro Sanabria</span><h6>Automotriz</h6></a>
                                  <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#"><span>Cerrar Sesion</span> <i
                                           class="fa fa-sign-out"></i></a>

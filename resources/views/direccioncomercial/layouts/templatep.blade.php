@@ -154,7 +154,7 @@
                                  <a class="dropdown-toggle" data-toggle="dropdown"><img
                                        class="img-responsive rounded-circle"
                                        src="{{ asset('assets/pluto/images/layout_img/useralan.webp')}}" alt="#" /><span
-                                       class="name_user">Alan Peña</span></a>
+                                       class="name_user">Alan Peña</span><h6>Industrial</h6></a>
                                  <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#"><span>Cerrar Sesion</span> <i
                                           class="fa fa-sign-out"></i></a>

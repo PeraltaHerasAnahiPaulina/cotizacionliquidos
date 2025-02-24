@@ -96,11 +96,17 @@
         </thead>
         <tbody>
             <tr>
-                <td>21-02-2025</td>
+                  <td>21-02-2025</td>
                 <td>AME1-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
-                <td>Activo</td>
+                <td style="text-align: center;">
+                  <div style="margin-bottom: 10px;">Activo</div>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadoModal">
+                    Cambiar Estado
+                  </button>
+                </td>
+                </td>
                 <td>Activo</td>
                 <td>
 
@@ -120,7 +126,12 @@
                 <td>AME1-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
-                <td>Activo</td>
+                <td style="text-align: center;">
+                  <div style="margin-bottom: 10px;">Activo</div>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadoModal">
+                    Cambiar Estado
+                  </button>
+                </td>
                 <td>Activo</td>
                 <td>
                     <!-- Botón PDF -->
@@ -239,7 +250,6 @@
   <label>Fecha de generación de archivo</label>
   <input type="Date" class="form-control" value="2025-02-21" readonly>
 </div>
-
           </div>
         </div>
         <hr>
@@ -293,6 +303,79 @@
       </div>
 </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <!-- Select de estado -->
+          <div class="form-group">
+            <label for="estadoSelect">Estado</label>
+            <select class="form-control" id="estadoSelect">
+              <option value="">Seleccione un estado</option>
+              <option value="entregado">Entregado</option>
+              <option value="pendiente">Pendiente</option>
+              <option value="cancelado">Cancelado</option>
+              <option value="recibido">Recibido</option>
+            </select>
+          </div>
+          
+          <!-- Fecha de modificación -->
+          <div class="form-group" id="fechaGroup" style="display: none;">
+            <label for="fechaModificacion">Fecha de Modificación</label>
+            <input type="date" class="form-control" id="fechaModificacion">
+          </div>
+          
+          <!-- Observaciones -->
+          <div class="form-group" id="observacionesGroup" style="display: none;">
+            <label for="observaciones">Observaciones</label>
+            <textarea class="form-control" id="observaciones" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script para mostrar/ocultar elementos según selección -->
+<script>
+  document.getElementById('estadoSelect').addEventListener('change', function() {
+    let fechaGroup = document.getElementById('fechaGroup');
+    let observacionesGroup = document.getElementById('observacionesGroup');
+    
+    if (this.value) {
+      fechaGroup.style.display = 'block';
+    } else {
+      fechaGroup.style.display = 'none';
+      observacionesGroup.style.display = 'none';
+    }
+  });
+  
+  document.getElementById('fechaModificacion').addEventListener('change', function() {
+    let observacionesGroup = document.getElementById('observacionesGroup');
+    
+    if (this.value) {
+      observacionesGroup.style.display = 'block';
+    } else {
+      observacionesGroup.style.display = 'none';
+    }
+  });
+</script>
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

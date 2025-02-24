@@ -1,4 +1,4 @@
-@extends('layouts.templatep')
+@extends('cargasap.layouts.templatep')
 
 @section('contenido')
 <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
