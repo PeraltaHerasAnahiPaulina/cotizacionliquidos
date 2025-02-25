@@ -118,7 +118,7 @@
                         <li>
                            <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Cotización</span></a>
                            <ul class="collapse list-unstyled" id="cotizacionMenu">
-                              <li><a href="/cotizacion"> <span> Crear</span></a></li>
+                              <li><a href="/coti"> <span> Crear</span></a></li>
                               <li><a href="/cotizacionreportev"> <span> Reporte de cotizacion</span></a></li>
                            </ul>
                         </li>

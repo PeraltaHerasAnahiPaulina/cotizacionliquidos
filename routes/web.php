@@ -27,12 +27,16 @@ Route::get('/consultaventa', [gerenciaventascontroller::class,'consultaventa'])-
 //Interfas Vendedor
 Route::get('/iniciovendedor',  [vendedorcontroller::class, 'iniciovendedor'])->name('iniciovendedor'); 
 Route::get('/cotizacionreportev',  [vendedorcontroller::class, 'cotizacionreporte'])->name('cotizacionreportev'); 
+Route::get('/coti',  [vendedorcontroller::class, 'coti'])->name('coti'); 
 //Interfas Gerencia de ventas
 Route::get('/iniciogerencia',  [gerenciaventascontroller::class, 'iniciogerencia'])->name('iniciogerencia'); 
-Route::get('/cotizacionreporteg',  [gerenciaventascontroller::class, 'cotizacionreporte'])->name('cotizacionreporteg'); 
+Route::get('/cotizacionreporteg',  [gerenciaventascontroller::class, 'cotizacionreporte'])->name('cotizacionreporteg');
+Route::get('/coti2',  [gerenciaventascontroller::class, 'coti2'])->name('coti2');  
 //Interfas Direccion Comercial
 Route::get('/iniciodireccion',  [direccioncomercialcontroller::class, 'iniciodireccion'])->name('iniciodireccion');
-Route::get('/cotizacionreportec',  [direccioncomercialcontroller::class, 'cotizacionreporte'])->name('cotizacionreportec'); 
+Route::get('/cotizacionreportec',  [direccioncomercialcontroller::class, 'cotizacionreporte'])->name('cotizacionreportec');
+Route::get('/coti3',  [direccioncomercialcontroller::class, 'coti3'])->name('coti3');  
 //Interfas Carga Sap
 Route::get('/iniciosap',  [cargasapcontroller::class, 'iniciosap'])->name('iniciosap');
 Route::get('/cotizacionreportes',  [cargasapcontroller::class, 'cotizacionreporte'])->name('cotizacionreportes'); 
+Route::get('/coti4',  [cargasapcontroller::class, 'coti4'])->name('coti4'); 

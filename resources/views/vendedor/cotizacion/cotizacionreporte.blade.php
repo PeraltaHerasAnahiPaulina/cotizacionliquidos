@@ -318,7 +318,7 @@
         <form>
           <!-- Select de estado -->
           <div class="form-group">
-            <label for="estadoSelect">Estado</label>
+            <label for="estadoSelect" class="d-block">Estado</label>
             <select class="form-control" id="estadoSelect">
               <option value="">Seleccione un estado</option>
               <option value="entregado">Entregado</option>
@@ -329,14 +329,14 @@
           </div>
           
           <!-- Fecha de modificación -->
-          <div class="form-group" id="fechaGroup" style="display: none;">
-            <label for="fechaModificacion">Fecha de Modificación</label>
+          <div class="form-group" id="fechaGroup">
+            <label for="fechaModificacion" class="d-block">Fecha de Cambio de Estado</label>
             <input type="date" class="form-control" id="fechaModificacion">
           </div>
           
           <!-- Observaciones -->
-          <div class="form-group" id="observacionesGroup" style="display: none;">
-            <label for="observaciones">Observaciones</label>
+          <div class="form-group" id="observacionesGroup">
+            <label for="observaciones" class="d-block">Observaciones</label>
             <textarea class="form-control" id="observaciones" rows="3"></textarea>
           </div>
         </form>
@@ -349,30 +349,6 @@
   </div>
 </div>
 
-<!-- Script para mostrar/ocultar elementos según selección -->
-<script>
-  document.getElementById('estadoSelect').addEventListener('change', function() {
-    let fechaGroup = document.getElementById('fechaGroup');
-    let observacionesGroup = document.getElementById('observacionesGroup');
-    
-    if (this.value) {
-      fechaGroup.style.display = 'block';
-    } else {
-      fechaGroup.style.display = 'none';
-      observacionesGroup.style.display = 'none';
-    }
-  });
-  
-  document.getElementById('fechaModificacion').addEventListener('change', function() {
-    let observacionesGroup = document.getElementById('observacionesGroup');
-    
-    if (this.value) {
-      observacionesGroup.style.display = 'block';
-    } else {
-      observacionesGroup.style.display = 'none';
-    }
-  });
-</script>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

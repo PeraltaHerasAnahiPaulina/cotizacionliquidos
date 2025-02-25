@@ -21,8 +21,8 @@
     <div class="row">
         <!-- Primera fila: 3 columnas -->
         <div class="col-md-4 mb-3">
-            <label for="status">Estatus:</label>
-            <input type="text" class="form-control" id="status" value="Comercial" readonly>
+            <label for="status">Tipo de Cotización:</label>
+            <input type="text" class="form-control" id="status" value="Automotriz" readonly>
         </div>
         <div class="col-md-4 mb-3">
             <label for="fecha">Seleccionar Fecha:</label>
@@ -30,7 +30,7 @@
         </div>
         <div class="col-md-4 mb-3">
             <label for="folio">Folio:</label>
-            <input type="text" class="form-control" id="folio" value="093KS2L4">
+            <input type="text" class="form-control" id="folio" value="AME1-IND-000001-01">
         </div>
     </div>
 
@@ -267,7 +267,7 @@
                             </tr>
                             <tr>
                                 <th style="color: #00144F ;" colspan="5" class="text-end fw-bold">TOTAL:</th>
-                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29.851</td>
+                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29.851,67</td>
                             </tr>
                         </tfoot>
                     </table>
@@ -279,7 +279,6 @@
         </div>
     </div>
 </div>
-
 
 
     @endsection

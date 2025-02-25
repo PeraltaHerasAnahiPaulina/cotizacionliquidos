@@ -15,4 +15,7 @@ class vendedorcontroller extends Controller
     public function cotizacionreporte(){
         return view('vendedor.cotizacion.cotizacionreporte');
     }
+    public function coti(){
+        return view('vendedor.cotizacion.coti');
+    }
 }

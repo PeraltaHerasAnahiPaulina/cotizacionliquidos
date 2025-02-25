@@ -13,4 +13,8 @@ class direccioncomercialcontroller extends Controller
     public function cotizacionreporte(){
         return view('direccioncomercial.cotizacion.cotizacionreporte');
     }
+
+    public function coti3(){
+        return view('direccioncomercial.cotizacion.coti3');
+    }
 }

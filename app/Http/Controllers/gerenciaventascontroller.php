@@ -33,5 +33,9 @@ class gerenciaventascontroller extends Controller
         return view('gerenciaventas.cotizacion.cotizacionreporte');
     }
 
+    public function coti2(){
+        return view('gerenciaventas.cotizacion.coti2');
+    }
+
 }
 

@@ -13,4 +13,8 @@ class cargasapcontroller extends Controller
     public function cotizacionreporte(){
         return view('cargasap.cotizacion.cotizacionreporte');
     }
+
+    public function coti4(){
+        return view('cargasap.cotizacion.coti4');
+    }
 }
