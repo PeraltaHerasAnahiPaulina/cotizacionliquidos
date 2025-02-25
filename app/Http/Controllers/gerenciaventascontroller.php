@@ -10,6 +10,7 @@ class gerenciaventascontroller extends Controller
     public function iniciogerencia(){
         return view('gerenciaventas.inicio');
     }
+
     public function reporte(){
         return view('catalogo.reporte');
     }
@@ -32,5 +33,5 @@ class gerenciaventascontroller extends Controller
         return view('gerenciaventas.cotizacion.cotizacionreporte');
     }
 
-
 }
+
