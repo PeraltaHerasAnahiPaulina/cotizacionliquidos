@@ -101,8 +101,8 @@
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px;">Activo</div>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadoModal">
-                    Cambiar Estado
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadoModal">
+                     <i class="fa fa-refresh"></i>
                   </button>
                 </td>
                 </td>
@@ -127,8 +127,8 @@
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px;">Activo</div>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadoModal">
-                    Cambiar Estado
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadoModal">
+                     <i class="fa fa-refresh"></i>
                   </button>
                 </td>
                 <td>Activo</td>
@@ -214,8 +214,8 @@
           <div class="section-container" style="flex: 1;">
           <div class="form-group">
   <label>Autorizo Cliente</label>
-  sí<input type="radio" id="html1" name="fav_language_cliente" value="si" checked readonly >
-  no<input type="radio" id="html2" name="fav_language_cliente" value="no" readonly disabled>
+  Sí<input type="radio" id="html1" name="fav_language_cliente" value="si" checked readonly >
+  No<input type="radio" id="html2" name="fav_language_cliente" value="no" readonly disabled>
 </div>
 <div class="form-group">
   <label>Fecha Autorizacion Cliente</label>
@@ -223,8 +223,8 @@
 </div>
 <div class="form-group">
   <label>Autorizo Gerente</label>
-  sí<input type="radio" id="html3" name="fav_language_gerente" value="si" checked readonly >
-  no<input type="radio" id="html4" name="fav_language_gerente" value="no" readonly disabled>
+  Sí<input type="radio" id="html3" name="fav_language_gerente" value="si" checked readonly >
+  No<input type="radio" id="html4" name="fav_language_gerente" value="no" readonly disabled>
 </div>
 <div class="form-group">
   <label>Fecha Autorizacion Gerente</label>
@@ -242,8 +242,8 @@
 </div>
 <div class="form-group">
   <label>Formato LSMW</label>
-  sí<input type="radio" id="html9" name="fav_language_lsmw" value="si" checked readonly >
-  no<input type="radio" id="html10" name="fav_language_lsmw" value="no" readonly disabled>
+  Sí<input type="radio" id="html9" name="fav_language_lsmw" value="si" checked readonly >
+  No<input type="radio" id="html10" name="fav_language_lsmw" value="no" readonly disabled>
 </div>
 <div class="form-group">
   <label>Fecha de generación de archivo</label>
@@ -253,51 +253,70 @@
         </div>
         <hr>
         <!-- Tabla de resumen -->
-        <h5>Resumen</h5>
-        <table class="table table-bordered table-summary">
-          <thead>
-            <tr>
-              <th>Cantidad</th>
-              <th>Código</th>
-              <th>Nombre</th>
-              <th>Presentación</th>
-              <th>Precio unitario</th>
-              <th>Precio Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>10</td>
-              <td>104765</td>
-              <td>M-JET OIL ll CAN 24X1UQL</td>
-              <td>Caja 24 pzas</td>
-              <td>$684.55</td>
-              <td>$6,845.50</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>104765</td>
-              <td>M-JET OIL ll CAN 24X1UQL</td>
-              <td>Caja 24 pzas</td>
-              <td>$527.66</td>
-              <td>$5,276.60</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>122728</td>
-              <td>M-VACUOLINE 146 DRUM 208L</td>
-              <td>Tambor</td>
-              <td>$2,448.60</td>
-              <td>$12,243.00</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="text-right">
-          <p><strong>Subtotal:</strong> $24,365.10</p>
-          <p><strong>IVA 16%:</strong> $3,898.42</p>
-          <p><strong>Total:</strong> $28,263.52</p>
-          
-        </div>
+       <h5 class=" text-center mt-4" style="background-color: #00144F; color: #FFFFFF ;">Productos Agregados</h5>
+        <!-- Tabla: Artículos Solicitados -->
+        <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead style="background-color: #f5333f; color: white;">
+                        <tr>
+                            <th colspan="8" class="text-center">Artículos Solicitados</th>
+                        </tr>
+                    </thead>
+                    <thead class="table text-center">
+                        <tr>
+                            <th style="background-color: #0d6efd; color: #ffffff ;">Cantidad</th>
+                            <th style="background-color: #0d6efd; color: #ffffff ;">Código</th>
+                            <th style="background-color: #0d6efd; color: #ffffff ;">Nombre</th>
+                            <th style="background-color: #0d6efd; color: #ffffff ;">Presentación</th>
+                            <th style="background-color: #0d6efd; color: #ffffff ;">Precio Unitario</th>
+                            <th style="background-color: #0d6efd; color: #ffffff ;">Precio Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     
+                        <tr>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-JET OIL II CAN 24X1UQL</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$821,60</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$8.214,60</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">104765</td>
+                            <td style="text-align: center;">M-JET OIL II CAN 24X1UQL</td>
+                            <td style="text-align: center;">Caja 24 pzas</td>
+                            <td style="text-align: right;">$527,66</td>
+                            <td style="text-align: right;">$5.276,60</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$527,66</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$5.276,60</td>
+                        </tr>
+                       
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th style="color: #00144F ;" colspan="5" class="text-end">SUBTOTAL:</th>
+                            <td class="text-end">$25.734,20</td>
+                        </tr>
+                        <tr>
+                            <th style="color: #00144F ;" colspan="5" class="text-end">IVA 26% :</th>
+                            <td class="text-end">$4.117,47</td>
+                        </tr>
+                        <tr>
+                            <th style="color: #00144F ;" colspan="5" class="text-end fw-bold">TOTAL:</th>
+                            <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29.851,67</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
         <button class="btn btn-danger" onclick="closeDetails(1)">Cerrar</button>
       </div>
 </div>

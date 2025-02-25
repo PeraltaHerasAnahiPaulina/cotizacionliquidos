@@ -117,6 +117,20 @@
                   </ul>
                </div>
                <div class="sidebar_blog_2">
+                  <h4>Carga de archivos</h4>
+                  <ul class="list-unstyled components">
+                     <li>
+                        <a href="#cargaArchivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-briefcase blue1_color"></i> <span>Carga de archivos</span></a>
+                        <ul class="collapse list-unstyled" id="cargaArchivos">
+                           <li><a href="/clientes"> <span> Cliente</span></a></li>
+                           <li><a href="/productos"> <span> Productos</span></a></li>
+                           <li><a href="/precios"> <span> Precios</span></a></li>
+                           <li><a href="/inventario"> <span> Inventarios</span></a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar_blog_2">
                <h4>Cotización</h4>
                   <ul class="list-unstyled components">
                      <li>
@@ -129,20 +143,7 @@
                   </ul>
                </div>
 
-               <div class="sidebar_blog_2">
-               <h4>Carga de archivos</h4>
-               <ul class="list-unstyled components">
-                  <li>
-                     <a href="#cargaArchivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-briefcase blue1_color"></i> <span>Carga de archivos</span></a>
-                     <ul class="collapse list-unstyled" id="cargaArchivos">
-                        <li><a href="/clientes"> <span> Cliente</span></a></li>
-                        <li><a href="/productos"> <span> Productos</span></a></li>
-                        <li><a href="/precios"> <span> Precios</span></a></li>
-                        <li><a href="/inventario"> <span> Inventarios</span></a></li>
-                     </ul>
-                  </li>
-               </ul>
-            </div>
+             
 
             </nav>
 

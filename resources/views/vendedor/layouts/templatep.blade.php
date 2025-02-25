@@ -104,7 +104,13 @@
                      <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class='fa-solid fa-person'></i> <span>Clientes</span></a>
                      <ul class="collapse list-unstyled" id="dashboard1">
                         <li>
-                           <a href="#"> <span> Reportes</span></a>
+                           <a href="#"> <span> Alta</span></a>
+                        </li>
+                        
+                     </ul>
+                     <ul class="collapse list-unstyled" id="dashboard1">
+                        <li>
+                           <a href="/client"> <span> Reporte Clientes</span></a>
                         </li>
                         
                      </ul>
