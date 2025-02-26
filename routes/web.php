@@ -25,6 +25,7 @@ Route::get('/consultaventa', [gerenciaventascontroller::class,'consultaventa'])-
 Route::get('/edituser',[gerenciaventascontroller::class, 'edituser'])->name('edituser');
 Route::get('/cliente', [vendedorcontroller::class,'cliente'])->name('cliente');
 Route::get('/altaclient',[vendedorcontroller::class, 'altaclient'])->name('altaclient');
+Route::get('/editarv',[vendedorcontroller::class,'editarv'])->name('editarv');
 
 
 

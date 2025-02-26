@@ -25,4 +25,7 @@ class vendedorcontroller extends Controller
     public function cliente(){
         return view('vendedor.catalogo.cliente');
     }
+    public function editarv(){
+        return view('vendedor.catalogo.editarv');
+    }
 }
