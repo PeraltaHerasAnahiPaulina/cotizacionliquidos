@@ -95,13 +95,13 @@
                </div>
 
                <div class="sidebar_blog_2">
-                  <h4>Carga SAP</h4>
+                  <h4>Cotización</h4>
                   <ul class="list-unstyled components">
                      <li>
-                        <a href="#cargaArchivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-briefcase blue1_color"></i> <span>Reporte</span></a>
+                        <a href="#cargaArchivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-briefcase blue1_color"></i> <span>Cotización</span></a>
                         <ul class="collapse list-unstyled" id="cargaArchivos">
                         <li><a href="/cotizacionreportes"> <span> Reporte de cotizacion</span></a></li>
-                        <li><a href="/coti4"> <span> Crear</span></a></li>
+
                         </ul>
                      </li>
                   </ul>
@@ -138,7 +138,7 @@
                                  <a class="dropdown-toggle" data-toggle="dropdown"><img
                                        class="img-responsive rounded-circle"
                                        src="{{ asset('assets/pluto/images/layout_img/msg1.png')}}" alt="#" /><span
-                                       class="name_user">Ana Mendez</span><h6>Industrial</h6></a>
+                                       class="name_user">Ana Mendez</span><h6>Carga SAP</h6><h6>Industrial</h6></a>
                                  <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#"><span>Cerrar Sesion</span> <i
                                           class="fa fa-sign-out"></i></a>

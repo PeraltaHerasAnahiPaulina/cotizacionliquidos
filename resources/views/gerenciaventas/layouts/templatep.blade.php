@@ -102,14 +102,14 @@
                         <a href="#catalogo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-male blue1_color"></i> <span>Clientes</span></a>
                         <ul class="collapse list-unstyled" id="catalogo">
                            <li>
-                              <a href="/client"> <span> Clientes</span></a>
+                              
                               <a href="/reporte"> <span> Reporte Clientes</span></a></li>
                         </ul>
                         <a href="#usuarios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-male blue1_color"></i> <span>Usuarios</span></a>
                         <ul class="collapse list-unstyled" id="usuarios">
 
                            <li>
-                              <a href="/userventas"> <span> Usuario Ventas</span></a>
+                              <a href="/userventas"> <span> Alta</span></a>
                               <a href="/consultaventa"> <span> Reporte usuario</span></a></li>
                         </ul>
                      </li>
@@ -136,12 +136,23 @@
                      <li>
                         <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Cotización</span></a>
                         <ul class="collapse list-unstyled" id="cotizacionMenu">
-                        <li><a href="/coti2"> <span> Crear</span></a></li>
+                      
                         <li><a href="/cotizacionreporteg"> <span> Reporte de cotizacion</span></a></li>
                         </ul>
                      </li>
                   </ul>
-               </div>
+               </div>  <div class="sidebar_blog_2">
+                  <h4>Estadisticas</h4>
+                     <ul class="list-unstyled components">
+                        <li>
+                           <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Estadisticas</span></a>
+                           <ul class="collapse list-unstyled" id="cotizacionMenu">
+                         
+                           <li><a href="#"> <span> Ver estadisticas</span></a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
 
              
 
@@ -173,7 +184,7 @@
                                  <a class="dropdown-toggle" data-toggle="dropdown"><img
                                        class="img-responsive rounded-circle"
                                        src="{{ asset('assets/pluto/images/layout_img/msg2.png')}}" alt="#" /><span
-                                       class="name_user">Miguel Escutia</span> <h6>Automotriz</h6></a>
+                                       class="name_user">Miguel Escutia</span><h6>Gerente de Ventas</h6> <h6>Automotriz</h6></a>
                                  <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#"><span>Cerrar Sesion</span> <i
                                           class="fa fa-sign-out"></i></a>

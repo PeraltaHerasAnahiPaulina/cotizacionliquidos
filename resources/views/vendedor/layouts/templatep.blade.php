@@ -97,7 +97,7 @@
              
 
                <div class="sidebar_blog_2">
-               <h4>Vendedor</h4>
+              
                <h4>Catalogos</h4>
                <ul class="list-unstyled components">
                   <li class="active">
@@ -159,7 +159,7 @@
                                  <a class="dropdown-toggle" data-toggle="dropdown"><img
                                        class="img-responsive rounded-circle"
                                        src="{{ asset('assets/pluto/images/layout_img/user_img.jpg')}}" alt="#" /><span
-                                       class="name_user">Pedro Sanabria</span><h6>Automotriz</h6></a>
+                                       class="name_user">Pedro Sanabria</span><h6>Vendedor</h6><h6>Automotriz</h6></a>
                                  <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#"><span>Cerrar Sesion</span> <i
                                           class="fa fa-sign-out"></i></a>

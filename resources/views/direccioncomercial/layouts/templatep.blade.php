@@ -95,21 +95,19 @@
                </div>
 
                <div class="sidebar_blog_2">
-                  <h4>Direccion Comercial</h4>
+                  <h4>Cotizacion</h4>
                   <ul class="list-unstyled components">
-                    
+                     <li>
+                        <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Cotización</span></a>
+                        <ul class="collapse list-unstyled" id="cotizacionMenu">
+                        <li><a href="/cotizacionreportec"> <span> Reporte de cotizacion</span></a></li>
+                       
+                        </ul>
+                     </li>
                   </ul>
                </div>
 
-               <ul class="list-unstyled components">
-                  <li>
-                     <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Cotización</span></a>
-                     <ul class="collapse list-unstyled" id="cotizacionMenu">
-                     <li><a href="/cotizacionreportec"> <span> Reporte de cotizacion</span></a></li>
-                     <li><a href="/coti3"> <span> Crear</span></a></li>
-                     </ul>
-                  </li>
-               </ul>
+             
 
                <div class="sidebar_blog_2">
                <h4>Estadisticas</h4>
@@ -154,7 +152,7 @@
                                  <a class="dropdown-toggle" data-toggle="dropdown"><img
                                        class="img-responsive rounded-circle"
                                        src="{{ asset('assets/pluto/images/layout_img/useralan.webp')}}" alt="#" /><span
-                                       class="name_user">Alan Peña</span><h6>Industrial</h6></a>
+                                       class="name_user">Alan Peña</span><h6>Direccion Comercial</h6><h6>Industrial</h6></a>
                                  <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#"><span>Cerrar Sesion</span> <i
                                           class="fa fa-sign-out"></i></a>
