@@ -32,6 +32,9 @@ class gerenciaventascontroller extends Controller
     public function cotizacionreporte(){
         return view('gerenciaventas.cotizacion.cotizacionreporte');
     }
+    public function edituser(){
+        return view('catalogo.edituser');
+    }
 
     public function coti2(){
         return view('gerenciaventas.cotizacion.coti2');

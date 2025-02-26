@@ -1,5 +1,4 @@
-@extends('gerenciaventas.layouts.templatep')
-
+@extends('vendedor.layouts.templatep')
 
 @section('contenido')
 
@@ -9,9 +8,9 @@
             <div class="page-header-content">
                 <h1 class="page-header-title">
                     <div class="page-header-icon"><i data-feather="file"></i></div>
-                    <span>EDITAR </span>
+                    <span>Alta </span>
                 </h1>
-                <div class="page-header-subtitle">Informacion Cliente</div>
+                <div class="page-header-subtitle">Alta Clientes</div>
             </div>
         </div>
     </div>
@@ -38,7 +37,7 @@
                                     <div class="form-row mb-3">
                                         <div class="col-md-6">
                                             <label for="clave" class="form-label">* Clave:</label>
-                                            <input type="text" class="form-control" id="clave" placeholder="861111" required>
+                                            <input type="text" class="form-control" id="clave" placeholder="7545688" required>
                                             <div class="invalid-feedback">Por favor, ingresa la clave.</div>
                                         </div>
                                         <div class="col-md-6">
@@ -48,7 +47,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="no-producto" class="form-label">*Contacto:</label>
-                                            <input type="text" class="form-control" id="razon-social" placeholder="78979846" required>
+                                            <input type="text" class="form-control" id="contacto" placeholder="45681566"required>
                                             <div class="invalid-feedback">Por favor, ingresa Contacto.</div>
                                         </div>
                                     </div>
@@ -61,8 +60,8 @@
                                         
                                     </div>
                                     <div class="form-row justify-content-center mt-4">
-                                        <button type="submit" class="btn btn-primary mx-2" onclick="window.location='{{ route('client') }}'">Guardar</button>
-                                        <button type="reset" class="btn btn-secondary mx-2" onclick="window.location='{{ route('client') }}'">Cancelar</button>
+                                        <button type="submit" class="btn btn-primary mx-2">Guardar</button>
+                                        <button type="reset" class="btn btn-secondary mx-2">Cancelar</button>
                                      </div>
                                 </div>
                             </form>
@@ -85,7 +84,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="telefono" class="form-label">*Telefono:</label>
-                                            <input type="text" class="form-control" id="telefono" placeholder="75648413654" required>
+                                            <input type="text" class="form-control" id="telefono"  placeholder="7894561558" required>
                                             <div class="invalid-feedback">Por favor, ingresa un telefono.</div>
                                         </div>
                                     </div>
@@ -94,25 +93,25 @@
                                             <div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="moneda"
-                                                        id="activo-moneda" value="moneda" checked id="activo-moneda" required>
-                                                    <label class="form-check-label" for="activo-moneda" >MXN </label>
+                                                        id="activo-mxn" value="mxn" checked id="activo-mxn" required>
+                                                    <label class="form-check-label" for="activo-si">MXN </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="moneda"
-                                                        id="activo-moneda" value="moneda" required>
-                                                    <label class="form-check-label" for="activo-moneda">USD</label>
+                                                        id="activo-usd" value="usd" required>
+                                                    <label class="form-check-label" for="activo-no">USD</label>
                                                 </div>
                                                 <div class="col-md-6">
                                             <label class="form-label">* Forma de Pago:</label>
                                             <div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="pago"
-                                                        id="activo-pago" value="pago" required>
+                                                        id="activo-credito" value="credito" checked id="activo-creditp" required >
                                                     <label class="form-check-label" for="activo-credito">Credito </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="pago"
-                                                        id="activo-pago" value="pago" checked id="activo-pago" required>
+                                                        id="activo-contado" value="contado" required>
                                                     <label class="form-check-label" for="activo-contado">Contado</label>
                                                 </div>
                                 </div>
@@ -121,8 +120,8 @@
                         </div>
                         
                     <div class="form-row justify-content-center mt-4">
-                        <button type="submit" class="btn btn-primary mx-2" onclick="window.location='{{ route('client') }}'">Guardar</button>
-                        <button type="reset" class="btn btn-secondary mx-2" onclick="window.location='{{ route('client') }}'">Cancelar</button>
+                        <button type="submit" class="btn btn-primary mx-2" >Guardar</button>
+                        <button type="reset" class="btn btn-secondary mx-2">Cancelar</button>
                     </div>
                 </div>
 

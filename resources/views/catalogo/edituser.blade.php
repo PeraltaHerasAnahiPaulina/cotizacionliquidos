@@ -7,7 +7,7 @@
         <div class="page-header-content">
             <h1 class="page-header-title">
                 <div class="page-header-icon"><i data-feather="file"></i></div>
-                <span>REPORTE</span>
+                <span>EDITAR</span>
             </h1>
             <div class="page-header-subtitle">Información Usuario</div>
         </div>
@@ -81,7 +81,7 @@
                                 </div>
 
                                 <div class="border p-4 rounded mt-4">
-                            <h4 class="mb-3">Sucursal y Tipo de vendedor</h4>
+                            <h4 class="mb-3">Sucursal y Tipo de Empleado</h4>
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="sucursal" class="form-label">* Sucursal:</label>
@@ -98,7 +98,7 @@
                                 <div class="col-md-6">
                                     <label for="tipo" class="form-label">* Tipo:</label>
                                     <select class="form-select" id="tipo" required>
-                                        <option value="">Selecciona el tipo de vendedor</option>
+                                        <option value="">Selecciona el tipo de empleado</option>
                                         <option value="vendedor">Vendedor</option>
                                         <option value="gerente_ventas">Gerente de Ventas</option>
                                         <option value="administrador">Administrador</option>
@@ -106,19 +106,7 @@
                                     <div class="invalid-feedback">Por favor, selecciona un tipo de empleado.</div>
                                 </div>
                             </div>
-                            <div class="form-check form-check-inline">
-                            <h4 class="mb-3">Tipo vendedor</h4>
-                                                    <input class="form-check-input" type="radio" name="tipovendedor"
-                                                        id="activo-industrial" value="industrial" checked id="activo-industrial" required >
-                                                    <label class="form-check-label" for="activo-industrial">Industrial</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="tipovendedor"
-                                                        id="activo-automotriz" value="automotriz" required>
-                                                    <label class="form-check-label" for="activo-automotriz">Automotriz</label>
-                                                </div>
                         </div>
-                        
                                 
 
                                 <div class="form-row justify-content-center mt-4">

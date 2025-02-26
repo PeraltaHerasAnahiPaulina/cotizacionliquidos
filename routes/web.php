@@ -22,6 +22,11 @@ Route::get('/client',  [gerenciaventascontroller::class, 'client'])->name('clien
 Route::get('/edicion', [gerenciaventascontroller::class,'edicion'])->name('edicion');
 Route::get('/userventas', [gerenciaventascontroller::class,'userventas'])->name('userventas');
 Route::get('/consultaventa', [gerenciaventascontroller::class,'consultaventa'])->name('consultaventa');
+Route::get('/edituser',[gerenciaventascontroller::class, 'edituser'])->name('edituser');
+Route::get('/cliente', [vendedorcontroller::class,'cliente'])->name('cliente');
+Route::get('/altaclient',[vendedorcontroller::class, 'altaclient'])->name('altaclient');
+
+
 
 
 //Interfas Vendedor
@@ -40,3 +45,4 @@ Route::get('/coti3',  [direccioncomercialcontroller::class, 'coti3'])->name('cot
 Route::get('/iniciosap',  [cargasapcontroller::class, 'iniciosap'])->name('iniciosap');
 Route::get('/cotizacionreportes',  [cargasapcontroller::class, 'cotizacionreporte'])->name('cotizacionreportes'); 
 Route::get('/coti4',  [cargasapcontroller::class, 'coti4'])->name('coti4'); 
+

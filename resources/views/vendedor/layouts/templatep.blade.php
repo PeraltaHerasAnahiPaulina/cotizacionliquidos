@@ -96,26 +96,22 @@
 
              
 
-               <div class="sidebar_blog_2">
-              
+            
+                <div class="sidebar_blog_2">
+                  <h4>Vendedor</h4>
                <h4>Catalogos</h4>
-               <ul class="list-unstyled components">
-                  <li class="active">
-                     <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class='fa-solid fa-person'></i> <span>Clientes</span></a>
-                     <ul class="collapse list-unstyled" id="dashboard1">
-                        <li>
-                           <a href="#"> <span> Alta</span></a>
-                        </li>
-                        
-                     </ul>
-                     <ul class="collapse list-unstyled" id="dashboard1">
-                        <li>
-                           <a href="/client"> <span> Reporte Clientes</span></a>
-                        </li>
-                        
-                     </ul>
-                  </li>
-               </ul>
+                  <ul class="list-unstyled components">
+                     <li>
+                        <a href="#catalogo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-male blue1_color"></i> <span>Clientes</span></a>
+                        <ul class="collapse list-unstyled" id="catalogo">
+                           <li>
+                              <a href="/altaclient"><span>Alta </span></a>
+                              <a href="/cliente"> <span> Reporte Clientes</span></a>
+                              </li>
+                        </ul>
+                     
+                  </ul>
+
                </div>
 
                <div class="sidebar_blog_2">

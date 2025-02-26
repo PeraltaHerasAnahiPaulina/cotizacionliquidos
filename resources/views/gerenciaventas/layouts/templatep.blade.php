@@ -102,8 +102,13 @@
                         <a href="#catalogo" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-male blue1_color"></i> <span>Clientes</span></a>
                         <ul class="collapse list-unstyled" id="catalogo">
                            <li>
+<<<<<<< HEAD
                               
                               <a href="/reporte"> <span> Reporte Clientes</span></a></li>
+=======
+                              <a href="/client"> <span> Reporte Clientes</span></a>
+                              </li>
+>>>>>>> 176c963 (cambios vendedor)
                         </ul>
                         <a href="#usuarios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-male blue1_color"></i> <span>Usuarios</span></a>
                         <ul class="collapse list-unstyled" id="usuarios">
