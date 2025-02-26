@@ -101,8 +101,8 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px;">Activo</div>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadoModal">
+                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
@@ -127,8 +127,8 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px;">Activo</div>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#estadoModal">
+                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
@@ -234,8 +234,10 @@
 <div class="form-group">
   <label>Nombre</label>
   <input type="text" class="form-control" value="Jesus Peñaloza Cruz" readonly>
-  <label>División</label>
-  <input type="text" class="form-control" value="Industrial" readonly>
+</div>
+<div class="form-group">
+<label>División</label>
+<input type="text" class="form-control" value="Industrial" readonly>
 </div>
 <div class="form-group">
   <label>Observaciones</label>
@@ -292,12 +294,12 @@
                             <td style="text-align: right;">$5.276,60</td>
                         </tr>
                         <tr>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
+                        <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">5</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">122728</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$527,66</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$5.276,60</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Tambor</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$2,448.80</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$12,243.00</td>
                         </tr>
                        
                     </tbody>
