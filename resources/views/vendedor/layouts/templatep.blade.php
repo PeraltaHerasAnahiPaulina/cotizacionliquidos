@@ -98,7 +98,7 @@
 
             
                 <div class="sidebar_blog_2">
-                  <h4>Vendedor</h4>
+                  
                <h4>Catalogos</h4>
                   <ul class="list-unstyled components">
                      <li>

@@ -140,7 +140,7 @@
                         <ul class="collapse list-unstyled" id="cotizacionMenu">
                       
                         <li><a href="/cotizacionreporteg"> <span> Reporte de cotizacion</span></a></li>
-                        <li><a href="/coti2"> <span> crear</span></a></li>
+                        
                         </ul>
                      </li>
                   </ul>

@@ -101,7 +101,7 @@
                         <a href="#cargaArchivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-briefcase blue1_color"></i> <span>Cotización</span></a>
                         <ul class="collapse list-unstyled" id="cargaArchivos">
                         <li><a href="/cotizacionreportes"> <span> Reporte de cotizacion</span></a></li>
-                        <li><a href="/coti4"> <span> Crear</span></a></li>
+                       
 
                         </ul>
                      </li>
