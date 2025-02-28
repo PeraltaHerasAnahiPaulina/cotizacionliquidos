@@ -84,12 +84,12 @@
     <table id="TablaEX" class="table table-striped table-bordered display" style="width: 100%">
         <thead>
             <tr style="background-color: #E0E0E0">
-                <th style="background-color: #323F52; color: #ffffff">Fecha</th>
-                <th style="background-color: #323F52; color: #ffffff">Folio</th>
-                <th style="background-color: #323F52; color: #ffffff">Cliente</th>
+                <th style="background-color: #323F52; color: #ffffff; width: 180px">Fecha</th>
+                <th style="background-color: #323F52; color: #ffffff; width: 180px; ">Folio</th>
+                <th style="background-color: #323F52; color: #ffffff; width: 320px;">Cliente</th>
                 <th style="background-color: #323F52; color: #ffffff">Monto</th>
-                <th style="background-color: #323F52; color: #ffffff">Estatus Cliente</th>
-                <th style="background-color: #323F52; color: #ffffff">Estatus Gerencia</th>
+                <th style="background-color: #323F52; color: #ffffff;  width:250px;" >Estatus Cliente</th>
+                <th style="background-color: #323F52; color: #ffffff;  width:250px;" >Estatus Gerencia</th>
                 <th style="background-color: #323F52; color: #ffffff; width:25px">Acciones</th>
             </tr>
         </thead>
@@ -106,11 +106,11 @@
                   </button>
                 </td>
                 </td>
-                <td>Activo</td>
+                <td style="text-align: center">Activo</td>
                 <td>
 
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
-                        <i class="fa fa-file-pdf"></i> 
+                    <i class="fa-solid fa-gear"></i>
                     </button>
                     <button class="btn btn-info btn-sm" onclick="showDetails(1)">
                         <i class="fa fa-eye"></i>
@@ -127,15 +127,69 @@
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Activo</div>
-                  <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
-                    <i class="fa fa-refresh"></i>
+                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
+                     <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td>Activo</td>
+                <td style="text-align: center">Activo</td>
+                <td>
+                 
+                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
+                    <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <!-- Botón Ver -->
+                    <button class="btn btn-info btn-sm" onclick="showDetails(1)">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                    <!-- Botón Editar (libretita) -->
+                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                  <td>21-02-2025</td>
+                <td>AME1-IND-00001-01</td>
+                <td>NUEVA GENERACION AERONAUTICA</td>
+                <td>$28,263.52</td>
+                <td style="text-align: center;">
+                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
+                     <i class="fa fa-refresh"></i>
+                  </button>
+                </td>
+                <td style="text-align: center">Activo</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
-                        <i class="fa fa-file-pdf"></i> 
+                    <i class="fa-solid fa-gear"></i>
+                    </button>
+                    <!-- Botón Ver -->
+                    <button class="btn btn-info btn-sm" onclick="showDetails(1)">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                    <!-- Botón Editar (libretita) -->
+                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                  <td>21-02-2025</td>
+                <td>AME1-IND-00001-01</td>
+                <td>NUEVA GENERACION AERONAUTICA</td>
+                <td>$28,263.52</td>
+                <td style="text-align: center;">
+                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
+                     <i class="fa fa-refresh"></i>
+                  </button>
+                </td>
+                <td style="text-align: center">Activo</td>
+                <td>
+                    <!-- Botón PDF -->
+                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
+                    <i class="fa-solid fa-gear"></i>
                     </button>
                     <!-- Botón Ver -->
                     <button class="btn btn-info btn-sm" onclick="showDetails(1)">
@@ -154,8 +208,13 @@
                     <!-- Detalles debajo de la tabla -->
                     <div id="details-1" class="details-container">
                     <div class="d-flex justify-content-between align-items-center">
-          <div>
-          <div>
+                  <div class="form-group">
+  <label>Firmas</label>
+  Sí<input type="radio" id="html1" name="fav_language_cliente" value="si" checked readonly >
+  No<input type="radio" id="html2" name="fav_language_cliente" value="no" readonly disabled>
+</div>
+                    <div>
+          <div style="float: right;">
             <button class="btn btn-primary"><i class="fa fa-download"></i> Descargar PDF</button>
           </div>
         </div>
@@ -254,7 +313,8 @@
           </div>
         </div>
         <hr>
-        <h5 class=" text-center mt-4" style="background-color: #00144F; color: #FFFFFF ;">Productos Agregados</h5>
+        <!-- Tabla de resumen -->
+       <h5 class=" text-center mt-4" style="background-color: #00144F; color: #FFFFFF ;">Productos Agregados</h5>
         <!-- Tabla: Artículos Solicitados -->
         <div class="table-responsive">
                 <table class="table table-bordered">
@@ -319,9 +379,11 @@
             </div>
 
         <button class="btn btn-danger" onclick="closeDetails(1)">Cerrar</button>
+        <button class="btn btn-success" >Nueva Version</button>
       </div>
 </div>
 </div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel" aria-hidden="true">
@@ -362,6 +424,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        
         <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
@@ -369,10 +432,14 @@
 </div>
 
 
+<!-- Script para mostrar/ocultar elementos según selección -->
+
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <script>
   $(document).ready(function() {
     $('#example').DataTable();
