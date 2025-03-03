@@ -40,6 +40,7 @@ Route::post('/descargar-pdf', [gerenciaventascontroller::class, 'descargar'])->n
 Route::get('/iniciovendedor',  [vendedorcontroller::class, 'iniciovendedor'])->name('iniciovendedor'); 
 Route::get('/cotizacionreportev',  [vendedorcontroller::class, 'cotizacionreporte'])->name('cotizacionreportev'); 
 Route::get('/coti',  [vendedorcontroller::class, 'coti'])->name('coti'); 
+Route::get('/cotiv2',  [vendedorcontroller::class, 'cotiv2'])->name('cotiv2'); 
 //Interfas Gerencia de ventas
 Route::get('/iniciogerencia',  [gerenciaventascontroller::class, 'iniciogerencia'])->name('iniciogerencia'); 
 Route::get('/cotizacionreporteg',  [gerenciaventascontroller::class, 'cotizacionreporte'])->name('cotizacionreporteg');

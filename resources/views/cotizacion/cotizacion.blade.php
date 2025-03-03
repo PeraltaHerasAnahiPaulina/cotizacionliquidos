@@ -86,7 +86,7 @@
         <div class="col-md-3 mb-3">
             <label>Forma de Pago:</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="formaPago" id="credito" value="credito">
+                <input class="form-check-input" type="radio" name="formaPago" id="credito" value="credito" checked>
                 <label class="form-check-label" for="credito">Crédito</label>
             </div>
             <div class="form-check">

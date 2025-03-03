@@ -30,7 +30,7 @@
         </div>
         <div class="col-md-4 mb-3">
             <label for="folio">Folio:</label>
-            <input type="text" class="form-control" id="folio" value="AME1-IND-000001-01">
+            <input type="text" class="form-control" id="folio" value="AME1-IND-000001-02">
         </div>
     </div>
 
@@ -91,6 +91,7 @@
                 <label class="form-check-label" for="contado">Contado</label>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -337,12 +338,12 @@
                                         </button></td>
                             </tr>
                             <tr>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">5</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$527.66</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$5,276.60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$263.83</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$2,638.30</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
                                  <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                 </button>

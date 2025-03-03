@@ -100,7 +100,7 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Entregado por el cliente</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
@@ -126,7 +126,7 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Pendiente de aceptación por cliente</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
@@ -153,7 +153,7 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Cancelado por el cliente</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
@@ -180,7 +180,7 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Recibido por el cliente</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
@@ -390,7 +390,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
+        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado Del Cliente</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -401,11 +401,11 @@
           <div class="form-group">
             <label for="estadoSelect" class="d-block">Estado</label>
             <select class="form-control" id="estadoSelect">
-              <option value="">Seleccione un estado</option>
-              <option value="entregado">Entregado</option>
-              <option value="pendiente">Pendiente</option>
-              <option value="cancelado">Cancelado</option>
-              <option value="recibido">Recibido</option>
+            <option value="">Seleccione un estado</option>
+              <option value="entregado">Entregado por el cliente</option>
+              <option value="pendiente" selected>Pendiente de aceptación por cliente</option>
+              <option value="cancelado">Cancelado por el cliente</option>
+              <option value="recibido">Recibido por el cliente</option>
             </select>
           </div>
           
@@ -418,18 +418,27 @@
           <!-- Observaciones -->
           <div class="form-group" id="observacionesGroup">
             <label for="observaciones" class="d-block">Observaciones</label>
-            <textarea class="form-control" id="observaciones" rows="3"></textarea>
+            <textarea class="form-control" id="observaciones" rows="3">Cambio de estado automático</textarea>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        
         <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  // Función para establecer la fecha de hoy automáticamente
+  document.addEventListener("DOMContentLoaded", function () {
+      let today = new Date();
+      let formattedDate = today.toISOString().split("T")[0]; // Formato YYYY-MM-DD
+      document.getElementById("fechaModificacion").value = formattedDate;
+  });
+</script>
+
 
 
 <!-- Script para mostrar/ocultar elementos según selección -->
