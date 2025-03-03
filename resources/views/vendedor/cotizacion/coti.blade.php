@@ -493,7 +493,7 @@
             text: '¿Estas seguro de eliminar los productos agregados?',
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonText: 'Eliminarr',
+            confirmButtonText: 'Eliminar',
             cancelButtonText: 'Cancelar',
             reverseButtons: true
         }).then((result) => {
