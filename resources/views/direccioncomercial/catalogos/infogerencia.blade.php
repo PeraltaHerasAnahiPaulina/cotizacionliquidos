@@ -1,19 +1,16 @@
-@extends('gerenciaventas.layouts.templatep')
-
+@extends('direccioncomercial.layouts.templatep')
 
 @section('contenido')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 
 <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
     <div class="container-fluid">
         <div class="page-header-content">
             <h1 class="page-header-title">
                 <div class="page-header-icon"><i data-feather="file"></i></div>
-                <span>USUARIOS</span>
+                <span>GERENTES</span>
             </h1>
-            <div class="page-header-subtitle">Reporte de usuarios</div>
+            <div class="page-header-subtitle">Reporte de Gerentes</div>
         </div>
     </div>
 </div>
@@ -26,7 +23,7 @@
                            
                         <!-- ↓Id de la tabla (Es importante colocar un id) ↓ -->
                         <!--↓Quitar cuando se acomode dentro de un div bueno↓-->
-                        <table id="mytable1" class="table table-striped table-bordered display" style="width: 100%">
+                        <table id="TablaEXM" class="table table-striped table-bordered display" style="width: 100%">
                             <thead>
                                 <tr style="background-color: #E0E0E0">
                                     
@@ -43,16 +40,16 @@
                             </thead>
                             <tbody>
                                 <tr><!--↓ Es recomendado usar campos de tipo Text para las fechas en ese caso colocar este codigo!! ↓-->
-                                    <td>Angel</td>
+                                    <td>Luis</td>
                                     <td>Acosta</td>
                                     <td>Camacho</td>
-                                    <td>angelcamacho@gmail.com</td>
+                                    <td>luiscamacho@gmail.com</td>
                                     <td>7245845465</td>
                                     <td>AME 1</td>
                                     <td>Industrial</td>
-                                    <td>Vendedores</td>
+                                    <td>Gerente de ventas </td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
+                                        onclick="window.location='{{ route('editgerencia',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button>
                                         <button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
@@ -63,38 +60,20 @@
 
                                 </tr>
                                 <tr>
-                                    <td>Luis</td>
+                                    <td>Samuel</td>
                                     <td>Aguirre</td>
                                     <td>Bautista</td>
-                                    <td>luis@gmail.com</td>
+                                    <td>sam@gmail.com</td>
                                     <td>7245845461</td>
                                     <td>AME 5</td>
                                     <td>Industrial</td>
-                                    <td>Vendedores</td>
+                                    <td>Gerente de ventas</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
+                                        onclick="window.location='{{ route('editgerencia',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
                                         </button>
-                                        
-                                <tr>
-                                    <td>Alan</td>
-                                    <td>Davila</td>
-                                    <td>Cabrera</td>
-                                    <td>alan2@gmail.com</td>
-                                    <td>7245845467</td>
-                                    <td>AME 4</td>
-                                    <td>Automotriz</td>
-                                    <td>Vendedores</td>
-                                    <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
-                                        <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
-                                    </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
-                                            <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
-                                        </button>
-                                        
-                                </tr>
                                 <tr>
                                     <td>Maria</td>
                                     <td>Camilo</td>
@@ -103,9 +82,9 @@
                                     <td>7245845468</td>
                                     <td>AME 3</td>
                                     <td>Automotriz</td>
-                                    <td>Vendedores</td>
+                                    <td>Gerente de ventas</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
+                                        onclick="window.location='{{ route('editgerencia',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -117,11 +96,11 @@
                                     <td>Fernandez</td>
                                     <td>karla@gmail.com</td>
                                     <td>789654185</td>
-                                    <td>AME 1</td>
+                                    <td>AME 2</td>
                                     <td>Industrial</td>
-                                    <td>Vendedores</td>
+                                    <td>Gerente de ventas </td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
+                                        onclick="window.location='{{ route('editgerencia',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -133,27 +112,11 @@
                                     <td>Lara</td>
                                     <td>larafernando@gmail.com</td>
                                     <td>71414157</td>
-                                    <td>AME 1</td>
+                                    <td>AME 4</td>
                                     <td>Industriales</td>
-                                    <td>Vendedores</td>
+                                    <td>Gerente de ventas</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
-                                        <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
-                                    </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
-                                            <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
-                                        </button>
-                                </tr>
-                                <tr>
-                                    <td>Diana</td>
-                                    <td>Ibarra</td>
-                                    <td>Juarez</td>
-                                    <td>diana@gmail.com</td>
-                                    <td>789456131</td>
-                                    <td>AME 1</td>
-                                    <td>Automotriz</td>
-                                    <td>Vendedores</td>
-                                    <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
+                                        onclick="window.location='{{ route('editgerencia',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -167,63 +130,30 @@
                                     <td>7156846954</td>
                                     <td>AME 5</td>
                                     <td>Automotriz</td>
-                                    <td>Vendedores</td>
+                                    <td>Gerente de ventas</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
+                                        onclick="window.location='{{ route('editgerencia',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
                                         </button>
                                 </tr>
                                 <tr>
-                                    <td>Daniel </td>
-                                    <td>Guzman </td>
-                                    <td>Huerta</td>
-                                    <td>daniel@gmail.com</td>
-                                    <td>7221331846</td>
-                                    <td>AME 5</td>
-                                    <td>Automotriz</td>
-                                    <td>Vendedores</td>
-                                    <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
-                                        <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
-                                    </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
-                                            <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
-                                        </button>
-                                </tr>
-                                <tr>
-                                    <td>Araceli</td>
+                                    <td>Azucena</td>
                                     <td>Gomez</td>
                                     <td>Garcia</td>
-                                    <td>araceli@gmail.com</td>
+                                    <td>azucena@gmail.com</td>
                                     <td>795556311</td>
                                     <td>AME 4</td>
                                     <td>Automotriz</td>
-                                    <td>Vendedores</td>
+                                    <td>Gerente de ventas</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
+                                        onclick="window.location='{{ route('editgerencia',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
                                         </button>
                                 </tr>
-                                <tr>
-                                    <td>Pedro</td>
-                                    <td>Estrada </td>
-                                    <td>Garcia</td>
-                                    <td>pedro@gmail.com</td>
-                                    <td>791485555</td>
-                                    <td>AME 2</td>
-                                    <td>Industrial</td>
-                                    <td>Vendedores</td>
-                                    <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('edicion',11) }}'">
-                                        <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
-                                    </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
-                                            <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
-                                        </button>
-                                </tr>
-
                             </tbody>
                         </table>
                     </div>
@@ -232,15 +162,6 @@
 
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#mytable1').DataTable();
-    });
-</script>
-
 <script>
     function confirmDesactivation() {
         Swal.fire({

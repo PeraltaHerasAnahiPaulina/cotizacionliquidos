@@ -199,6 +199,83 @@
 
 
 <br>
+
+<!-- Modal de Edición -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Editar Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <!-- Primera fila con 5 elementos -->
+                        <div class="col-md-6 mb-3">
+                            <label for="tipo">Tipo:</label>
+                            <select class="form-select" id="tipo">
+                                <option>Tipo 1</option>
+                                <option>Tipo 2</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="producto">Producto:</label>
+                            <select class="form-select" id="producto">
+                                <option>M-JET OIL II CAN 24X1UQL</option>
+                                <option>M-VACUOLINE 146 DRUM 208L</option>
+                                <option>M-JET OIL II CAN 24X1UQL</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="presentacion">Presentación:</label>
+                            <input type="text" class="form-control" id="presentacion" value="Caja 24 pzas" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="existencia">Existencia:</label>
+                            <input type="text" class="form-control" id="existencia" value="46" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Segunda fila con 4 elementos -->
+                        <div class="col-md-6 mb-3">
+                            <label for="costoUnitario">Costo Unitario:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="costoUnitario" step="0.01" value="821.60">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="descuento">Descuento:</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="descuento" value="40">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" class="form-control" id="cantidad" value="10">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="precioTotal">Precio Total:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="precioTotal" step="0.01" readonly value="8.21460">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
             <h5 class=" text-center mt-4" style="background-color: #00144F; color: #FFFFFF ;">Productos Agregados</h5>
             <!-- Tabla: Artículos Solicitados -->
             <div class="table-responsive">
@@ -216,6 +293,7 @@
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Presentación</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Precio Unitario</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Precio Total</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -227,6 +305,15 @@
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$821,60</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$8.214,60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align:center">
+                                <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
+    <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
+</button>
+                                <button class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" onclick="confirmDesactivation()">
+                                            <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
+                                        </button>
+
+                                   
                             </tr>
                             <tr>
                                 <td style="text-align: center;">10</td>
@@ -235,6 +322,12 @@
                                 <td style="text-align: center;">Caja 24 pzas</td>
                                 <td style="text-align: center;">$527,66</td>
                                 <td style="text-align: center;">$5.276,60</td>
+                                <td style="text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
+    <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
+</button>
+                                <button class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#desactivarModal" onclick="confirmDesactivation()">
+                                            <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
+                                        </button></td>
                             </tr>
                             <tr>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
@@ -243,6 +336,13 @@
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$527,66</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$5.276,60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
+                                 <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
+                                </button>
+                                <button class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#desactivarModal" onclick="confirmDesactivation()">
+                                            <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
+                                        </button></td>
+
                             </tr>
                            
                         </tbody>
@@ -384,6 +484,32 @@
 
    <!-- Date Range Picker (opcional) -->
    <script src="{{ asset('assets/demo/datatables-demo.js')}}"></script>
+   
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function confirmDesactivation() {
+        Swal.fire({
+            title: 'Eliminar Productos agregados',
+            text: '¿Estas seguro de eliminar los productos agregados?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Eliminarr',
+            cancelButtonText: 'Cancelar',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Aquí puedes agregar la lógica para desactivar al cliente.
+                Swal.fire(
+                    'Eliminado!',
+                    'Los productos han sido eliminados',
+                    'success'
+                );
+            }
+        });
+    }
+</script>
+
+   
 
 </body>
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\gerenciaventascontroller;
 use App\Http\Controllers\direccioncomercialcontroller;
 use App\Http\Controllers\cargasapcontroller;
 use App\Http\Controllers\adminventascontroller;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,6 +27,11 @@ Route::get('/edituser',[gerenciaventascontroller::class, 'edituser'])->name('edi
 Route::get('/cliente', [vendedorcontroller::class,'cliente'])->name('cliente');
 Route::get('/altaclient',[vendedorcontroller::class, 'altaclient'])->name('altaclient');
 Route::get('/editarv',[vendedorcontroller::class,'editarv'])->name('editarv');
+Route::get('/usuario',[direccioncomercialcontroller::class, 'usuario'])->name('usuario');
+Route::get('/infogerencia',[direccioncomercialcontroller::class, 'infogerencia'])->name('infogerencia');
+Route::get('/editgerencia',[direccioncomercialcontroller::class, 'editgerencia'])->name('editgerencia');
+
+Route::post('/descargar-pdf', [gerenciaventascontroller::class, 'descargar'])->name('descargar.pdf');
 
 
 

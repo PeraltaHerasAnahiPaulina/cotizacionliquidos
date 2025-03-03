@@ -95,6 +95,22 @@
                </div>
 
                <div class="sidebar_blog_2">
+               <h4>Catalogos</h4>
+                  <ul class="list-unstyled components">
+                     <li>
+                        <a href="#usuarios" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-male blue1_color"></i> <span>Usuarios</span></a>
+                        <ul class="collapse list-unstyled" id="usuarios">
+
+                           <li>
+                              <a href="/usuario"> <span> Alta Gerente Ventas</span></a>
+                              <a href="/infogerencia"> <span> Reporte gerente de ventas </span></a></li>
+                        </ul>
+                     </li>
+                     
+                  </ul>
+               </div>
+
+               <div class="sidebar_blog_2">
                   <h4>Cotizacion</h4>
                   <ul class="list-unstyled components">
                      <li>

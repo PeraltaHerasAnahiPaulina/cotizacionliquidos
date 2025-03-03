@@ -156,7 +156,21 @@
                     <div class="d-flex justify-content-between align-items-center">
           <div>
           <div>
-            <button class="btn btn-primary"><i class="fa fa-download"></i> Descargar PDF</button>
+          <form id="downloadForm" method="POST" action="{{ route('descargar.pdf') }}" class="d-flex justify-content-between align-items-center">
+          <button type="button" id="descargarBtn" class="btn btn-primary" ><i class="fa fa-download"></i> Descargar PDF</button>
+    @csrf
+    <div>
+    <input type="radio" name="firma" id="con_firma" value="con_firma">
+        <label  class="ms-2" for="con_firma">Con firma</label>
+        
+    </div>
+    <div>
+    <input type="radio" name="firma" id="sin_firma" value="sin_firma">
+        <label  class="ms-2" for="sin_firma">Sin firma</label>
+       
+    </div>
+    
+</form>
           </div>
         </div>
       </div>
@@ -398,7 +412,21 @@
   }
 </script>
 
+<script>
+    document.getElementById('descargarBtn').addEventListener('click', function() {
+        // Obtener la opción seleccionada
+        const seleccion = document.querySelector('input[name="firma"]:checked');
 
+        if (!seleccion) {
+            alert('Por favor, selecciona si deseas descargar con o sin firma.');
+            return;
+        }
+
+        // Enviar el formulario con la selección
+        const form = document.getElementById('downloadForm');
+        form.submit();
+    });
+</script>
 
 </body>
 </html>

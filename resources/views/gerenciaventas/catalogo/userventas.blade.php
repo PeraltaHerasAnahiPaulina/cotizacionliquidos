@@ -84,31 +84,26 @@
                             <h4 class="mb-3">Sucursal y Tipo de Empleado</h4>
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="sucursal" class="form-label">* Sucursal:</label>
+                                    <label for="sucursal" class="form-label">* Sucursal :</label>
                                     <select class="form-select" id="sucursal" required>
-                                        <option value="">Selecciona una sucursal</option>
-                                        <option value="AME1">Ame1</option>
-                                        <option value="AME2">Ame2</option>
-                                        <option value="AME3">Ame3</option>
-                                        <option value="AME4">Ame4</option>
-                                        <option value="AME5">Ame5</option>
+                                        <option value="">AME1</option>
+                                        <option value="AME1">AME2</option>
+                                        <option value="AME2">AME3</option>
+                                        <option value="AME3">AME4</option>
+                                        <option value="AME4">AME5</option>
                                     </select>
                                     <div class="invalid-feedback">Por favor, selecciona una sucursal.</div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="tipo" class="form-label">* Tipo:</label>
                                     <select class="form-select" id="tipo" required>
-                                        <option value="">Selecciona el tipo de empleado</option>
+                                        <option value="">VENDEDOR</option>
                                         <option value="vendedor">Vendedor</option>
-                                        <option value="gerente_ventas">Gerente de Ventas</option>
-                                        <option value="administrador">Administrador</option>
                                     </select>
                                     <div class="invalid-feedback">Por favor, selecciona un tipo de empleado.</div>
                                 </div>
                             </div>
                         </div>
-                                
-
                                 <div class="form-row justify-content-center mt-4">
                                     <button type="submit" class="btn btn-primary mx-2">Guardar</button>
                                     <button type="reset" class="btn btn-secondary mx-2">Cancelar</button>
