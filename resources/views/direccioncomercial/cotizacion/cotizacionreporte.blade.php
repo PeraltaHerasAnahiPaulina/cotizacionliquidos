@@ -69,18 +69,18 @@
                 <td><input class="date-input" type="text" id="max" name="max"></td>
                 <td style="padding-left: 20px;">
                     <!-- Botón Excel -->
-                    <button class="btn btn-success btn-sm" onclick="exportToExcel()">
-                        <i class="fa fa-file-excel"></i> Exportar Excel
-                    </button>
+                    <button class="btn btn-success btn-sm" id="exportButton" onclick="exportToExcel()">
+                    <i class="fa fa-file-excel"></i> Exportar Excel
+                </button>
                 </td>
                 <td class="search-controls" style="font-size: 14px; font-weight:bold;">
-                    Buscar:
+                Buscar: <input type="text" id="searchInput" placeholder="Buscar...">
                 </td>
-                <td><div id="searchContainer"></div></td>
+            
             </tr>
         </tbody>
     </table>
-    <table id="TablaEX" class="table table-striped table-bordered display" style="width: 100%">
+    <table id="documentTable" class="table table-striped table-bordered display" style="width: 100%">
         <thead>
             <tr style="background-color: #E0E0E0">
                 <th style="background-color: #323F52; color: #ffffff; width: 180px">Fecha</th>
@@ -99,13 +99,13 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Entregado por el cliente</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
                 </td>
-                <td style="text-align: center">Activo</td>
+                <td style="text-align: center">Entregado por el cliente</td>
                 <td>
 
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -125,12 +125,12 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Pendiente de aceptación por cliente</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">Activo</td>
+                <td style="text-align: center">Pendiente de aceptación por cliente</td>
                 <td>
                  
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -152,12 +152,12 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Cancelado por el cliente</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">Activo</td>
+                <td style="text-align: center">Cancelado por el cliente</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -179,12 +179,12 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Recibido por el cliente</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">Activo</td>
+                <td style="text-align: center">Recibido por el cliente</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -438,13 +438,64 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
-  $(document).ready(function() {
-    $('#example').DataTable();
-  });
+$(document).ready(function() {
+    var table = $('#documentTable').DataTable();
 
-  function showDetails(id) {
+    // Cuando el usuario escribe en el campo de búsqueda
+    $('#searchInput').on('keyup', function() {
+        table.search(this.value).draw();
+    });
+
+    // Función para exportar solo las filas visibles (filtradas)
+    function exportToExcel() {
+        var data = [];
+        data.push(["Reporte de Cotizaciones"]); // Título de la hoja
+
+        // Obtener los encabezados de la tabla
+        var headers = [];
+        $('#documentTable thead th').each(function(index) {
+            if (index < 6) { // Limitar a las primeras 6 columnas
+                headers.push($(this).text().trim());
+            }
+        });
+        data.push(headers);
+
+        // Obtener solo las filas visibles después de aplicar el filtro
+        table.rows({ search: 'applied' }).every(function() {
+            var rowData = this.node();
+            var rowDataArray = [];
+
+            // Recoger los datos de cada celda (hasta la columna 6)
+            $(rowData).find('td').each(function(index) {
+                if (index < 6) { // Limitar a las primeras 6 columnas
+                    rowDataArray.push($(this).text().trim());
+                }
+            });
+
+            // Agregar los datos de la fila al array
+            data.push(rowDataArray);
+        });
+
+        // Crear la hoja de cálculo Excel
+        var worksheet = XLSX.utils.aoa_to_sheet(data);
+        var workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, 'Documentos');
+
+        // Descargar el archivo Excel
+        XLSX.writeFile(workbook, 'Reporte_Cotizaciones.xlsx');
+    }
+
+    // Asignar evento al botón de exportación
+    $('#exportButton').on('click', function() {
+        exportToExcel();
+    });
+    
+});
+
+function showDetails(id) {
     // Comprobar si el detalle ya está visible
     var detailContainer = $("#details-" + id);
     
@@ -463,8 +514,6 @@
     $("#details-" + id).hide();
   }
 </script>
-
-
 
 </body>
 </html>
