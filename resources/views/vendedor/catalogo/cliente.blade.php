@@ -45,7 +45,7 @@
                                     <td>722254522</td>
                                     <td>Calle Aventura #10</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button>
                                         <button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
@@ -61,7 +61,7 @@
                                     <td>722222454</td>
                                     <td>Calle Hidalgo #702</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -72,7 +72,7 @@
                                     <td>556475211</td>
                                     <td>Calle libre #099</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -85,7 +85,7 @@
                                     <td>7894523451</td>
                                     <td>Calle Soledad #304</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -97,7 +97,7 @@
                                     <td>775566999</td>
                                     <td>Calle San Lorenzo #123</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -109,7 +109,7 @@
                                     <td>758468255</td>
                                     <td>Calle La Esperanza #108</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -121,7 +121,7 @@
                                     <td>7894663112</td>
                                     <td>Calle Potrero #200</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -133,7 +133,7 @@
                                     <td>722236914</td>
                                     <td>Calle Altamirano #504</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -145,7 +145,7 @@
                                     <td>775828512</td>
                                     <td>Calle del Carmen</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -157,7 +157,7 @@
                                     <td>729645882</td>
                                     <td>Calle Madero #222</td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
@@ -169,7 +169,7 @@
                                     <td>7285645681</td>
                                     <td>Calle 16 de Septiembre </td>
                                     <td><button class="btn btn-datatable btn-icon btn-transparent-dark mr-2" 
-                                        onclick="window.location='{{ route('editarv',11) }}'">
+                                        onclick="window.location='{{ route('coti',11) }}'">
                                         <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                     </button><button class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#desactivarModal" onclick="confirmDesactivation()">
                                             <i class="fa-solid fa-ban" style="color: #ff0000;"></i>

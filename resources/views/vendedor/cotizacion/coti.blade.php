@@ -1,7 +1,17 @@
 @extends('vendedor.layouts.templatep')
 
 @section('contenido')
-
+<div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
+    <div class="container-fluid">
+        <div class="page-header-content">
+            <h1 class="page-header-title">
+                <div class="page-header-icon"><i data-feather="file"></i></div>
+                <span>Cotizaciones</span>
+            </h1>
+            <div class="page-header-subtitle">Crear Cotizaciones</div>
+        </div>
+    </div>
+</div>
 <div class="container-fluid mt-n10">
     <div class="card">
         <div class="card-body">
@@ -29,21 +39,18 @@
         <div class="col-md-3 mb-3">
             <label for="cliente">Seleccione Cliente:</label>
             <select class="form-select" id="cliente">
-                <option>Cliente 1</option>
-                <option>Cliente 2</option>
-                <option>Cliente 3</option>
+                <option>Carlos Ortega Mendez</option>
             </select>
         </div>
         <div class="col-md-3 mb-3">
             <label for="atencion">Atención:</label>
             <select class="form-select" id="atencion">
-                <option>Atención 1</option>
-                <option>Atención 2</option>
+                <option>Nadia Fonseca</option>
             </select>
         </div>
         <div class="col-md-3 mb-3">
             <label for="correo">Correo:</label>
-            <input type="email" class="form-control" id="correo" value="JohnDavid@gmail.com">
+            <input type="email" class="form-control" id="correo" value="CarlosOrtega@gmail.com">
         </div>
         <div class="col-md-3 mb-3">
             <label for="telefono">Teléfono:</label>
@@ -64,7 +71,7 @@
         </div>
         <div class="col-md-3 mb-3">
             <label for="validezOferta">Validez de Oferta:</label>
-            <input type="text" class="form-control" id="validezOferta" value="Terminado">
+            <input type="text" class="form-control" id="validezOferta" value="CAMBIOS CON PREVIO AVISO">
         </div>
         <div class="col-md-3 mb-3">
             <label for="moneda">Moneda:</label>
@@ -76,7 +83,7 @@
         <div class="col-md-3 mb-3">
             <label>Forma de Pago:</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="formaPago" id="credito" value="credito">
+                <input class="form-check-input" type="radio" name="formaPago" id="credito" value="credito" checked>
                 <label class="form-check-label" for="credito">Crédito</label>
             </div>
             <div class="form-check">
@@ -261,7 +268,7 @@
                             <label for="precioTotal">Precio Total:</label>
                             <div class="input-group">
                                 <span class="input-group-text">$</span>
-                                <input type="number" class="form-control" id="precioTotal" step="0.01" readonly value="8.21460">
+                                <input type="number" class="form-control" id="precioTotal" step="0.01" readonly value="8,214.60">
                             </div>
                         </div>
                     </div>
@@ -303,8 +310,8 @@
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-JET OIL II CAN 24X1UQL</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$821,60</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$8.214,60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$821.60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$8,214.60</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align:center">
                                 <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
     <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
@@ -320,8 +327,8 @@
                                 <td style="text-align: center;">104765</td>
                                 <td style="text-align: center;">M-JET OIL II CAN 24X1UQL</td>
                                 <td style="text-align: center;">Caja 24 pzas</td>
-                                <td style="text-align: center;">$527,66</td>
-                                <td style="text-align: center;">$5.276,60</td>
+                                <td style="text-align: center;">$527.66</td>
+                                <td style="text-align: center;">$5,276.60</td>
                                 <td style="text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
     <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
 </button>
@@ -334,8 +341,8 @@
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$527,66</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$5.276,60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$527.66</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$5,276.60</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
                                  <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                 </button>
@@ -349,22 +356,22 @@
                         <tfoot>
                             <tr>
                                 <th style="color: #00144F ;" colspan="5" class="text-end">SUBTOTAL:</th>
-                                <td class="text-end">$25.734,20</td>
+                                <td class="text-end">$25,734.20</td>
                             </tr>
                             <tr>
                                 <th style="color: #00144F ;" colspan="5" class="text-end">IVA 26% :</th>
-                                <td class="text-end">$4.117,47</td>
+                                <td class="text-end">$4,117.47</td>
                             </tr>
                             <tr>
                                 <th style="color: #00144F ;" colspan="5" class="text-end fw-bold">TOTAL:</th>
-                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29.851,67</td>
+                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29,851.67</td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
 
-            <div class="text-center mt-4">
-                <button class="btn btn-success" id="createCotizacionBtn">Crear Cotización</button>
+            <div class="text-center mt-4"><a href="/cotiv2">
+                <button class="btn btn-success" id="createCotizacionBtn">Crear Cotización</button></a>
             </div>
         </div>
     </div>

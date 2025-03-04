@@ -1,4 +1,4 @@
-@extends('cargasap.layouts.templatep')
+@extends('vendedor.layouts.templatep')
 
 @section('contenido')
 <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
@@ -6,12 +6,12 @@
         <div class="page-header-content">
             <h1 class="page-header-title">
                 <div class="page-header-icon"><i data-feather="file"></i></div>
-                <span>COTIZACIÓN</span>
+                <span>Cotizaciones</span>
             </h1>
+            <div class="page-header-subtitle">Crear Cotizaciones</div>
         </div>
     </div>
 </div>
-
 <div class="container-fluid mt-n10">
     <div class="card">
         <div class="card-body">
@@ -30,7 +30,7 @@
         </div>
         <div class="col-md-4 mb-3">
             <label for="folio">Folio:</label>
-            <input type="text" class="form-control" id="folio" value="AME1-IND-000001-01">
+            <input type="text" class="form-control" id="folio" value="AME1-IND-000001-02">
         </div>
     </div>
 
@@ -39,21 +39,18 @@
         <div class="col-md-3 mb-3">
             <label for="cliente">Seleccione Cliente:</label>
             <select class="form-select" id="cliente">
-                <option>Cliente 1</option>
-                <option>Cliente 2</option>
-                <option>Cliente 3</option>
+                <option>Carlos Ortega Mendez</option>
             </select>
         </div>
         <div class="col-md-3 mb-3">
             <label for="atencion">Atención:</label>
             <select class="form-select" id="atencion">
-                <option>Atención 1</option>
-                <option>Atención 2</option>
+                <option>Nadia Fonseca</option>
             </select>
         </div>
         <div class="col-md-3 mb-3">
             <label for="correo">Correo:</label>
-            <input type="email" class="form-control" id="correo" value="JohnDavid@gmail.com">
+            <input type="email" class="form-control" id="correo" value="CarlosOrtega@gmail.com">
         </div>
         <div class="col-md-3 mb-3">
             <label for="telefono">Teléfono:</label>
@@ -74,7 +71,7 @@
         </div>
         <div class="col-md-3 mb-3">
             <label for="validezOferta">Validez de Oferta:</label>
-            <input type="text" class="form-control" id="validezOferta" value="Terminado">
+            <input type="text" class="form-control" id="validezOferta" value="CAMBIOS CON PREVIO AVISO">
         </div>
         <div class="col-md-3 mb-3">
             <label for="moneda">Moneda:</label>
@@ -94,6 +91,7 @@
                 <label class="form-check-label" for="contado">Contado</label>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -209,6 +207,83 @@
 
 
 <br>
+
+<!-- Modal de Edición -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Editar Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <!-- Primera fila con 5 elementos -->
+                        <div class="col-md-6 mb-3">
+                            <label for="tipo">Tipo:</label>
+                            <select class="form-select" id="tipo">
+                                <option>Tipo 1</option>
+                                <option>Tipo 2</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="producto">Producto:</label>
+                            <select class="form-select" id="producto">
+                                <option>M-JET OIL II CAN 24X1UQL</option>
+                                <option>M-VACUOLINE 146 DRUM 208L</option>
+                                <option>M-JET OIL II CAN 24X1UQL</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="presentacion">Presentación:</label>
+                            <input type="text" class="form-control" id="presentacion" value="Caja 24 pzas" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="existencia">Existencia:</label>
+                            <input type="text" class="form-control" id="existencia" value="46" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Segunda fila con 4 elementos -->
+                        <div class="col-md-6 mb-3">
+                            <label for="costoUnitario">Costo Unitario:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="costoUnitario" step="0.01" value="821.60">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="descuento">Descuento:</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="descuento" value="40">
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" class="form-control" id="cantidad" value="10">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="precioTotal">Precio Total:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="precioTotal" step="0.01" readonly value="8,214.60">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
             <h5 class=" text-center mt-4" style="background-color: #00144F; color: #FFFFFF ;">Productos Agregados</h5>
             <!-- Tabla: Artículos Solicitados -->
             <div class="table-responsive">
@@ -220,67 +295,88 @@
                         </thead>
                         <thead class="table text-center">
                             <tr>
-                                <th style="background-color: #0d6efd; color: #000000 ;">Cantidad</th>
-                                <th style="background-color: #0d6efd; color: #000000 ;">Código</th>
-                                <th style="background-color: #0d6efd; color: #000000 ;">Nombre</th>
-                                <th style="background-color: #0d6efd; color: #000000 ;">Presentación</th>
-                                <th style="background-color: #0d6efd; color: #000000 ;">Precio Unitario</th>
-                                <th style="background-color: #0d6efd; color: #000000 ;">Precio Total</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Cantidad</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Código</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Nombre</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Presentación</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Precio Unitario</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Precio Total</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
                          
                             <tr>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">10</td>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">104765</td>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">M-JET OIL II CAN 24X1UQL</td>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">Caja 24 pzas</td>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">$821,60</td>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">$8.214,60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-JET OIL II CAN 24X1UQL</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$821.60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$8,214.60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align:center">
+                                <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
+    <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
+</button>
+                                <button class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" onclick="confirmDesactivation()">
+                                            <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
+                                        </button>
+
+                                   
                             </tr>
                             <tr>
                                 <td style="text-align: center;">10</td>
                                 <td style="text-align: center;">104765</td>
                                 <td style="text-align: center;">M-JET OIL II CAN 24X1UQL</td>
                                 <td style="text-align: center;">Caja 24 pzas</td>
-                                <td style="text-align: center;">$527,66</td>
-                                <td style="text-align: center;">$5.276,60</td>
+                                <td style="text-align: center;">$527.66</td>
+                                <td style="text-align: center;">$5,276.60</td>
+                                <td style="text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
+    <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
+</button>
+                                <button class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#desactivarModal" onclick="confirmDesactivation()">
+                                            <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
+                                        </button></td>
                             </tr>
                             <tr>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">10</td>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">104765</td>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">Caja 24 pzas</td>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">$527,66</td>
-                                <td style="background-color: #8c8c8c8c; text-align: center;">$5.276,60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">5</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$263.83</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$2,638.30</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
+                                 <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
+                                </button>
+                                <button class="btn btn-datatable btn-icon btn-transparent-dark" data-bs-toggle="modal" data-bs-target="#desactivarModal" onclick="confirmDesactivation()">
+                                            <i class="fa-solid fa-ban" style="color: #ff0000;"></i>
+                                        </button></td>
+
                             </tr>
                            
                         </tbody>
                         <tfoot>
                             <tr>
                                 <th style="color: #00144F ;" colspan="5" class="text-end">SUBTOTAL:</th>
-                                <td class="text-end">$25.734,20</td>
+                                <td class="text-end">$25,734.20</td>
                             </tr>
                             <tr>
                                 <th style="color: #00144F ;" colspan="5" class="text-end">IVA 26% :</th>
-                                <td class="text-end">$4.117,47</td>
+                                <td class="text-end">$4,117.47</td>
                             </tr>
                             <tr>
                                 <th style="color: #00144F ;" colspan="5" class="text-end fw-bold">TOTAL:</th>
-                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29.851,67</td>
+                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29,851.67</td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
 
-            <div class="text-center mt-4">
-                <button class="btn btn-success" id="createCotizacionBtn">Crear Cotización</button>
+            <div class="text-center mt-4"><a href="/cotiv2">
+                <button class="btn btn-success" id="createCotizacionBtn">Crear Cotización</button></a>
             </div>
         </div>
     </div>
 </div>
 
-
-
-    @endsection
             
+@endsection

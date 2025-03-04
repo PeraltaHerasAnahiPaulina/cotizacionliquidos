@@ -70,18 +70,18 @@
                 <td><input class="date-input" type="text" id="max" name="max"></td>
                 <td style="padding-left: 20px;">
                     <!-- Botón Excel -->
-                    <button class="btn btn-success btn-sm" onclick="exportToExcel()">
-                        <i class="fa fa-file-excel"></i> Exportar Excel
-                    </button>
+                    <button class="btn btn-success btn-sm" id="exportButton" onclick="exportToExcel()">
+                    <i class="fa fa-file-excel"></i> Exportar Excel
+                </button>
                 </td>
                 <td class="search-controls" style="font-size: 14px; font-weight:bold;">
-                    Buscar:
+                Buscar: <input type="text" id="searchInput" placeholder="Buscar...">
                 </td>
-                <td><div id="searchContainer"></div></td>
+            
             </tr>
         </tbody>
     </table>
-    <table id="TablaEX" class="table table-striped table-bordered display" style="width: 100%">
+    <table id="documentTable" class="table table-striped table-bordered display" style="width: 100%">
         <thead>
             <tr style="background-color: #E0E0E0">
                 <th style="background-color: #323F52; color: #ffffff; width: 180px">Fecha</th>
@@ -99,14 +99,15 @@
                 <td>AME1-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
+                <td style="text-align: center">Entregado por el cliente</td>
+                </td>
+                
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Entregado por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                </td>
-                <td style="text-align: center">Activo</td>
                 <td>
 
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -125,13 +126,15 @@
                 <td>AME1-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
+                <td style="text-align: center">Pendiente de aceptación por cliente</td>
+                </td>
+                
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Pendiente de aceptación por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">Activo</td>
                 <td>
                  
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -152,13 +155,15 @@
                 <td>AME1-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
+                <td style="text-align: center">Cancelado por el cliente</td>
+                </td>
+                
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Cancelado por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">Activo</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -179,13 +184,15 @@
                 <td>AME1-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
+                <td style="text-align: center">Recibido por el cliente</td>
+                </td>
+                
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Activo</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Recibido por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">Activo</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -208,26 +215,17 @@
                     <!-- Detalles debajo de la tabla -->
                     <div id="details-1" class="details-container">
                     <div class="d-flex justify-content-between align-items-center">
-
-          <div>
-          <div>
-          <form id="downloadForm" method="POST" action="{{ route('descargar.pdf') }}" class="d-flex align-items-center">
-    @csrf
-    <button type="button" id="descargarBtn" class="btn btn-primary me-3">
-        <i class="fa fa-download"></i> Descargar PDF
-    </button>
-
-    <div class="d-flex align-items-center">
-        <div class="me-3">
-            <input type="radio" name="firma" id="con_firma" value="con_firma" class="me-1">
-            <label for="con_firma">Con firma</label>
+                  <div class="form-group">
+  <label>Firmas</label>
+  Sí<input type="radio" id="html1" name="fav_language_cliente" value="si" checked readonly >
+  No<input type="radio" id="html2" name="fav_language_cliente" value="no" readonly disabled>
+</div>
+                    <div>
+          <div style="float: right;">
+            <button class="btn btn-primary"><i class="fa fa-download"></i> Descargar PDF</button>
+          </div>
         </div>
-        <div>
-            <input type="radio" name="firma" id="sin_firma" value="sin_firma" class="me-1">
-            <label for="sin_firma">Sin firma</label>
-        </div>
-    </div>
-</form>
+      </div>
       <div class="modal-body">
         <div class="d-flex justify-content-between">
           <!-- Sección 1 -->
@@ -399,7 +397,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
+        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado De Gerencia</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -411,10 +409,10 @@
             <label for="estadoSelect" class="d-block">Estado</label>
             <select class="form-control" id="estadoSelect">
               <option value="">Seleccione un estado</option>
-              <option value="entregado">Entregado</option>
-              <option value="pendiente">Pendiente</option>
-              <option value="cancelado">Cancelado</option>
-              <option value="recibido">Recibido</option>
+              <option value="entregado">Entregado por la gerencia</option>
+              <option value="pendiente" selected>Pendiente de aceptación por gerencia</option>
+              <option value="cancelado">Cancelado por la gerencia</option>
+              <option value="recibido">Recibido por la gerencia</option>
             </select>
           </div>
           
@@ -427,18 +425,27 @@
           <!-- Observaciones -->
           <div class="form-group" id="observacionesGroup">
             <label for="observaciones" class="d-block">Observaciones</label>
-            <textarea class="form-control" id="observaciones" rows="3"></textarea>
+            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        
         <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  // Función para establecer la fecha de hoy automáticamente
+  document.addEventListener("DOMContentLoaded", function () {
+      let today = new Date();
+      let formattedDate = today.toISOString().split("T")[0]; // Formato YYYY-MM-DD
+      document.getElementById("fechaModificacion").value = formattedDate;
+  });
+</script>
+
 
 
 <!-- Script para mostrar/ocultar elementos según selección -->
@@ -448,13 +455,64 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
-  $(document).ready(function() {
-    $('#example').DataTable();
-  });
+$(document).ready(function() {
+    var table = $('#documentTable').DataTable();
 
-  function showDetails(id) {
+    // Cuando el usuario escribe en el campo de búsqueda
+    $('#searchInput').on('keyup', function() {
+        table.search(this.value).draw();
+    });
+
+    // Función para exportar solo las filas visibles (filtradas)
+    function exportToExcel() {
+        var data = [];
+        data.push(["Reporte de Cotizaciones"]); // Título de la hoja
+
+        // Obtener los encabezados de la tabla
+        var headers = [];
+        $('#documentTable thead th').each(function(index) {
+            if (index < 6) { // Limitar a las primeras 6 columnas
+                headers.push($(this).text().trim());
+            }
+        });
+        data.push(headers);
+
+        // Obtener solo las filas visibles después de aplicar el filtro
+        table.rows({ search: 'applied' }).every(function() {
+            var rowData = this.node();
+            var rowDataArray = [];
+
+            // Recoger los datos de cada celda (hasta la columna 6)
+            $(rowData).find('td').each(function(index) {
+                if (index < 6) { // Limitar a las primeras 6 columnas
+                    rowDataArray.push($(this).text().trim());
+                }
+            });
+
+            // Agregar los datos de la fila al array
+            data.push(rowDataArray);
+        });
+
+        // Crear la hoja de cálculo Excel
+        var worksheet = XLSX.utils.aoa_to_sheet(data);
+        var workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, 'Documentos');
+
+        // Descargar el archivo Excel
+        XLSX.writeFile(workbook, 'Reporte_Cotizaciones.xlsx');
+    }
+
+    // Asignar evento al botón de exportación
+    $('#exportButton').on('click', function() {
+        exportToExcel();
+    });
+    
+});
+
+function showDetails(id) {
     // Comprobar si el detalle ya está visible
     var detailContainer = $("#details-" + id);
     
@@ -474,21 +532,7 @@
   }
 </script>
 
-<script>
-    document.getElementById('descargarBtn').addEventListener('click', function() {
-        // Obtener la opción seleccionada
-        const seleccion = document.querySelector('input[name="firma"]:checked');
 
-        if (!seleccion) {
-            alert('Por favor, selecciona si deseas descargar con o sin firma.');
-            return;
-        }
-
-        // Enviar el formulario con la selección
-        const form = document.getElementById('downloadForm');
-        form.submit();
-    });
-</script>
 
 </body>
 </html>
