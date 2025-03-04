@@ -103,7 +103,7 @@
                 </td>
                 
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Entregado por el cliente</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Entregado por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
@@ -130,7 +130,7 @@
                 </td>
                 
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Pendiente de aceptación por cliente</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Pendiente de aceptación por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
@@ -159,7 +159,7 @@
                 </td>
                 
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Cancelado por el cliente</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Cancelado por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
@@ -188,7 +188,7 @@
                 </td>
                 
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Recibido por el cliente</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Recibido por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
@@ -409,10 +409,10 @@
             <label for="estadoSelect" class="d-block">Estado</label>
             <select class="form-control" id="estadoSelect">
               <option value="">Seleccione un estado</option>
-              <option value="entregado">Entregado por el cliente</option>
-              <option value="pendiente" selected>Pendiente de aceptación por cliente</option>
-              <option value="cancelado">Cancelado por el cliente</option>
-              <option value="recibido">Recibido por el cliente</option>
+              <option value="entregado">Entregado por la gerencia</option>
+              <option value="pendiente" selected>Pendiente de aceptación por gerencia</option>
+              <option value="cancelado">Cancelado por la gerencia</option>
+              <option value="recibido">Recibido por la gerencia</option>
             </select>
           </div>
           
