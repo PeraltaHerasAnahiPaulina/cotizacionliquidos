@@ -115,7 +115,7 @@
                     <button class="btn btn-info btn-sm" onclick="showDetails(1)">
                         <i class="fa fa-eye"></i>
                     </button>
-                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                    <button class="btn btn-warning btn-sm" onclick="window.location.href='/coti'">
                         <i class="fa fa-pencil"></i>
                     </button>
                 </td>
@@ -142,7 +142,7 @@
                         <i class="fa fa-eye"></i>
                     </button>
                     <!-- Botón Editar (libretita) -->
-                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                    <button class="btn btn-warning btn-sm" onclick="window.location.href='/coti'">
                         <i class="fa fa-pencil"></i>
                     </button>
                 </td>
@@ -169,7 +169,7 @@
                         <i class="fa fa-eye"></i>
                     </button>
                     <!-- Botón Editar (libretita) -->
-                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                    <button class="btn btn-warning btn-sm" onclick="window.location.href='/coti'">
                         <i class="fa fa-pencil"></i>
                     </button>
                 </td>
@@ -196,7 +196,7 @@
                         <i class="fa fa-eye"></i>
                     </button>
                     <!-- Botón Editar (libretita) -->
-                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                    <button class="btn btn-warning btn-sm" onclick="window.location.href='/coti'">
                         <i class="fa fa-pencil"></i>
                     </button>
                 </td>
