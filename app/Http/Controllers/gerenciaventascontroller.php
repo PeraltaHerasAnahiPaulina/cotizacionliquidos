@@ -15,28 +15,28 @@ class gerenciaventascontroller extends Controller
     }
 
     public function reporte(){
-        return view('catalogo.reporte');
+        return view('gerenciaventas.catalogo.reporte');
     }
 
     public function client(){
-        return view('catalogo.client');
+        return view('gerenciaventas.catalogo.client');
     }
     public function edicion(){
-        return view ('catalogo.edicion');
+        return view ('gerenciaventas.catalogo.edicion');
     }
 
     public function consultaventa(){
-        return view ('catalogo.consultaventa');
+        return view ('gerenciaventas.catalogo.consultaventa');
     }
     public function userventas(){
-        return view ('catalogo.userventas');
+        return view ('gerenciaventas.catalogo.userventas');
     }
 
     public function cotizacionreporte(){
         return view('gerenciaventas.cotizacion.cotizacionreporte');
     }
     public function edituser(){
-        return view('catalogo.edituser');
+        return view('gerenciaventas.catalogo.edituser');
     }
 
     public function coti2(){

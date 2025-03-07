@@ -215,17 +215,26 @@
                     <!-- Detalles debajo de la tabla -->
                     <div id="details-1" class="details-container">
                     <div class="d-flex justify-content-between align-items-center">
-                  <div class="form-group">
-  <label>Firmas</label>
-  Sí<input type="radio" id="html1" name="fav_language_cliente" value="si" checked readonly >
-  No<input type="radio" id="html2" name="fav_language_cliente" value="no" readonly disabled>
-</div>
                     <div>
-          <div style="float: right;">
-            <button class="btn btn-primary"><i class="fa fa-download"></i> Descargar PDF</button>
-          </div>
+          <div>
+          <form id="downloadForm" method="POST" action="{{ route('descargar.pdf') }}" class="d-flex align-items-center">
+    @csrf
+    <button type="button" id="descargarBtn" class="btn btn-primary me-3">
+        <i class="fa fa-download"></i> Descargar PDF
+    </button>
+
+    <div class="d-flex align-items-center">
+        <div class="me-3">
+            <input type="radio" name="firma" id="con_firma" value="con_firma" class="me-1">
+            <label for="con_firma">Con firma</label>
         </div>
-      </div>
+        <div>
+            <input type="radio" name="firma" id="sin_firma" value="sin_firma" class="me-1">
+            <label for="sin_firma">Sin firma</label>
+        </div>
+    </div>
+</form>
+  
       <div class="modal-body">
         <div class="d-flex justify-content-between">
           <!-- Sección 1 -->
@@ -530,6 +539,21 @@ function showDetails(id) {
     // Ocultar el detalle correspondiente
     $("#details-" + id).hide();
   }
+</script>
+<script>
+    document.getElementById('descargarBtn').addEventListener('click', function() {
+        // Obtener la opción seleccionada
+        const seleccion = document.querySelector('input[name="firma"]:checked');
+
+        if (!seleccion) {
+            alert('Por favor, selecciona si deseas descargar con o sin firma.');
+            return;
+        }
+
+        // Enviar el formulario con la selección
+        const form = document.getElementById('downloadForm');
+        form.submit();
+    });
 </script>
 
 

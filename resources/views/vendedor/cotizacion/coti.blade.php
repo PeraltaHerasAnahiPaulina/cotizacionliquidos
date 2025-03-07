@@ -173,13 +173,9 @@
             <label for="cantidad">Cantidad:</label>
             <input type="number" class="form-control" id="cantidad" value="10">
         </div>
-        <div class="col-md-2 mb-3">
-    <label for="precioTotal">Precio Total:</label>
-        <div class="input-group">
-            <span class="input-group-text">$</span>
-            <input type="number" class="form-control" id="precioTotal" step="0.01">
-        </div>
-    </div>
+        
+
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -198,6 +194,7 @@
             });
         });
     </script>
+   
         <div class="col-md-2 mb-3 d-flex align-items-end">
             <button type="button" class="btn btn-primary w-100">Agregar</button>
         </div>

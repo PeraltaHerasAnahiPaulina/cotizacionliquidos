@@ -532,7 +532,21 @@ function showDetails(id) {
   }
 </script>
 
+<script>
+    document.getElementById('descargarBtn').addEventListener('click', function() {
+        // Obtener la opción seleccionada
+        const seleccion = document.querySelector('input[name="firma"]:checked');
 
+        if (!seleccion) {
+            alert('Por favor, selecciona si deseas descargar con o sin firma.');
+            return;
+        }
+
+        // Enviar el formulario con la selección
+        const form = document.getElementById('downloadForm');
+        form.submit();
+    });
+</script>
 </body>
 </html>
 @endsection

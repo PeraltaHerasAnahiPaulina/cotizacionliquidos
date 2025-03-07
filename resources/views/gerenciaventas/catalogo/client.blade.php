@@ -2,9 +2,7 @@
 
 
 @section('contenido')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 
 <div class="page-header pb-10 page-header-dark bg-gradient-primary-to-secondary">
     <div class="container-fluid">
@@ -30,7 +28,7 @@
                            
                         <!-- ↓Id de la tabla (Es importante colocar un id) ↓ -->
                         <!--↓Quitar cuando se acomode dentro de un div bueno↓-->
-                        <table id="mytable" class="table table-striped table-bordered display" style="width: 100%">
+                        <table id="TablaEXL" class="table table-striped table-bordered display" style="width: 100%">
                             <thead>
                                 <tr style="background-color: #E0E0E0">
                                     <th style="background-color: #323F52; color: #ffffff">Clave Sap</th>
@@ -186,15 +184,6 @@
 
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#mytable').DataTable();
-    });
-</script>
-
 <script>
     function confirmDesactivation() {
         Swal.fire({
