@@ -89,7 +89,7 @@
                 <th style="background-color: #323F52; color: #ffffff; width: 320px;">Cliente</th>
                 <th style="background-color: #323F52; color: #ffffff">Monto</th>
                 <th style="background-color: #323F52; color: #ffffff;  width:250px;" >Estatus Cliente</th>
-                <th style="background-color: #323F52; color: #ffffff;  width:250px;" >Estatus Gerencia</th>
+                <th style="background-color: #323F52; color: #ffffff;  width:250px;" >Estatus cliente</th>
                 <th style="background-color: #323F52; color: #ffffff; width:25px">Acciones</th>
             </tr>
         </thead>
@@ -115,7 +115,7 @@
                     <button class="btn btn-info btn-sm" onclick="showDetails(1)">
                         <i class="fa fa-eye"></i>
                     </button>
-                    <button class="btn btn-warning btn-sm" onclick="window.location.href='/coti'">
+                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
                         <i class="fa fa-pencil"></i>
                     </button>
                 </td>
@@ -142,7 +142,7 @@
                         <i class="fa fa-eye"></i>
                     </button>
                     <!-- Botón Editar (libretita) -->
-                    <button class="btn btn-warning btn-sm" onclick="window.location.href='/coti'">
+                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
                         <i class="fa fa-pencil"></i>
                     </button>
                 </td>
@@ -169,14 +169,14 @@
                         <i class="fa fa-eye"></i>
                     </button>
                     <!-- Botón Editar (libretita) -->
-                    <button class="btn btn-warning btn-sm" onclick="window.location.href='/coti'">
+                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
                         <i class="fa fa-pencil"></i>
                     </button>
                 </td>
             </tr>
             <tr>
                   <td>21-02-2025</td>
-                <td>AME1-IND-00001-01</td>
+                <td>xd-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
@@ -196,7 +196,7 @@
                         <i class="fa fa-eye"></i>
                     </button>
                     <!-- Botón Editar (libretita) -->
-                    <button class="btn btn-warning btn-sm" onclick="window.location.href='/coti'">
+                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
                         <i class="fa fa-pencil"></i>
                     </button>
                 </td>
@@ -398,7 +398,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado Del Cliente</h5>
+        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -408,12 +408,12 @@
           <!-- Select de estado -->
           <div class="form-group">
             <label for="estadoSelect" class="d-block">Estado</label>
-            <select class="form-control" id="estadoSelect">
-            <option value="">Seleccione un estado</option>
-              <option value="entregado">Entregado por el cliente</option>
+            <select class="form-control custom-select" id="estadoSelect">
+              <option value="">Seleccione un estado</option>
+              <option value="entregado">Entregado por la cliente</option>
               <option value="pendiente" selected>Pendiente de aceptación por cliente</option>
-              <option value="cancelado">Cancelado por el cliente</option>
-              <option value="recibido">Recibido por el cliente</option>
+              <option value="cancelado">Cancelado por la cliente</option>
+              <option value="recibido">Recibido por la cliente</option>
             </select>
           </div>
           
@@ -426,18 +426,20 @@
           <!-- Observaciones -->
           <div class="form-group" id="observacionesGroup">
             <label for="observaciones" class="d-block">Observaciones</label>
-            <textarea class="form-control" id="observaciones" rows="3">Cambio de estado automático</textarea>
+            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        
         <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
   </div>
 </div>
 
+</div>
 <script>
   // Función para establecer la fecha de hoy automáticamente
   document.addEventListener("DOMContentLoaded", function () {
@@ -446,10 +448,8 @@
       document.getElementById("fechaModificacion").value = formattedDate;
   });
 </script>
-
-
-
 <!-- Script para mostrar/ocultar elementos según selección -->
+
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -531,7 +531,6 @@ function showDetails(id) {
     $("#details-" + id).hide();
   }
 </script>
-
 <script>
     document.getElementById('descargarBtn').addEventListener('click', function() {
         // Obtener la opción seleccionada
@@ -547,6 +546,8 @@ function showDetails(id) {
         form.submit();
     });
 </script>
+
+
 </body>
 </html>
 @endsection

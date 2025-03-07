@@ -100,14 +100,14 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center">Entregado por el cliente</td>
-                </td>
-                
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Entregado por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
+                </td>
+                
                 <td>
 
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -127,14 +127,13 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center">Pendiente de aceptación por cliente</td>
-                </td>
-                
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Pendiente de aceptación por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
+                
                 <td>
                  
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -156,14 +155,13 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center">Cancelado por el cliente</td>
-                </td>
-                
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Cancelado por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
+                
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -181,18 +179,17 @@
             </tr>
             <tr>
                   <td>21-02-2025</td>
-                <td>AME1-IND-00001-01</td>
+                <td>xd-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center">Recibido por el cliente</td>
-                </td>
-                
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Recibido por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
+                
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -234,7 +231,9 @@
         </div>
     </div>
 </form>
-  
+
+
+      
       <div class="modal-body">
         <div class="d-flex justify-content-between">
           <!-- Sección 1 -->
@@ -406,7 +405,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado De Gerencia</h5>
+        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -415,15 +414,16 @@
         <form>
           <!-- Select de estado -->
           <div class="form-group">
-            <label for="estadoSelect" class="d-block">Estado</label>
-            <select class="form-control" id="estadoSelect">
-              <option value="">Seleccione un estado</option>
-              <option value="entregado">Entregado por la gerencia</option>
-              <option value="pendiente" selected>Pendiente de aceptación por gerencia</option>
-              <option value="cancelado">Cancelado por la gerencia</option>
-              <option value="recibido">Recibido por la gerencia</option>
-            </select>
-          </div>
+    <label for="estadoSelect" class="d-block">Estado</label>
+    <select class="form-control custom-select" id="estadoSelect">
+        <option value="">Seleccione un estado</option>
+        <option value="entregado">Entregado por la gerencia</option>
+        <option value="pendiente" selected>Pendiente de aceptación por gerencia</option>
+        <option value="cancelado">Cancelado por la gerencia</option>
+        <option value="recibido">Recibido por la gerencia</option>
+    </select>
+</div>
+
           
           <!-- Fecha de modificación -->
           <div class="form-group" id="fechaGroup">
@@ -440,12 +440,14 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        
         <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
   </div>
 </div>
 
+</div>
 <script>
   // Función para establecer la fecha de hoy automáticamente
   document.addEventListener("DOMContentLoaded", function () {
@@ -454,9 +456,6 @@
       document.getElementById("fechaModificacion").value = formattedDate;
   });
 </script>
-
-
-
 <!-- Script para mostrar/ocultar elementos según selección -->
 
 
@@ -540,6 +539,7 @@ function showDetails(id) {
     $("#details-" + id).hide();
   }
 </script>
+
 <script>
     document.getElementById('descargarBtn').addEventListener('click', function() {
         // Obtener la opción seleccionada
@@ -555,8 +555,6 @@ function showDetails(id) {
         form.submit();
     });
 </script>
-
-
 
 </body>
 </html>

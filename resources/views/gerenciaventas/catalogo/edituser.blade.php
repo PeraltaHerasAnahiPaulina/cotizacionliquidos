@@ -86,7 +86,6 @@
                                 <div class="col-md-6">
                                     <label for="sucursal" class="form-label">* Sucursal:</label>
                                     <select class="form-select" id="sucursal" required>
-                                        <option value="">Selecciona una sucursal</option>
                                         <option value="AME1">Ame1</option>
                                         <option value="AME2">Ame2</option>
                                         <option value="AME3">Ame3</option>
@@ -98,10 +97,7 @@
                                 <div class="col-md-6">
                                     <label for="tipo" class="form-label">* Tipo:</label>
                                     <select class="form-select" id="tipo" required>
-                                        <option value="">Selecciona el tipo de empleado</option>
-                                        <option value="vendedor">Vendedor</option>
-                                        <option value="gerente_ventas">Gerente de Ventas</option>
-                                        <option value="administrador">Administrador</option>
+                                        <option value="vendedor">VENDEDOR</option>
                                     </select>
                                     <div class="invalid-feedback">Por favor, selecciona un tipo de empleado.</div>
                                 </div>
