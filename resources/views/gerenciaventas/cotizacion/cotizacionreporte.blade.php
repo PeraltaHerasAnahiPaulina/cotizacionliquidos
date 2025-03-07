@@ -100,14 +100,14 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center">Entregado por el cliente</td>
-                </td>
-                
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Entregado por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
+                </td>
+                
                 <td>
 
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -127,14 +127,13 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center">Pendiente de aceptación por cliente</td>
-                </td>
-                
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Pendiente de aceptación por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
+                
                 <td>
                  
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -156,14 +155,13 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center">Cancelado por el cliente</td>
-                </td>
-                
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Cancelado por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
+                
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -181,18 +179,17 @@
             </tr>
             <tr>
                   <td>21-02-2025</td>
-                <td>AME1-IND-00001-01</td>
+                <td>xd-IND-00001-01</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center">Recibido por el cliente</td>
-                </td>
-                
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Recibido por la gerencia</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
+                
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -215,26 +212,17 @@
                     <!-- Detalles debajo de la tabla -->
                     <div id="details-1" class="details-container">
                     <div class="d-flex justify-content-between align-items-center">
+                  <div class="form-group">
+  <label>Firmas</label>
+  Sí<input type="radio" id="html1" name="fav_language_cliente" value="si" checked readonly >
+  No<input type="radio" id="html2" name="fav_language_cliente" value="no" readonly disabled>
+</div>
                     <div>
-          <div>
-          <form id="downloadForm" method="POST" action="{{ route('descargar.pdf') }}" class="d-flex align-items-center">
-    @csrf
-    <button type="button" id="descargarBtn" class="btn btn-primary me-3">
-        <i class="fa fa-download"></i> Descargar PDF
-    </button>
-
-    <div class="d-flex align-items-center">
-        <div class="me-3">
-            <input type="radio" name="firma" id="con_firma" value="con_firma" class="me-1">
-            <label for="con_firma">Con firma</label>
+          <div style="float: right;">
+            <button class="btn btn-primary"><i class="fa fa-download"></i> Descargar PDF</button>
+          </div>
         </div>
-        <div>
-            <input type="radio" name="firma" id="sin_firma" value="sin_firma" class="me-1">
-            <label for="sin_firma">Sin firma</label>
-        </div>
-    </div>
-</form>
-  
+      </div>
       <div class="modal-body">
         <div class="d-flex justify-content-between">
           <!-- Sección 1 -->
@@ -406,7 +394,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado De Gerencia</h5>
+        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -415,15 +403,16 @@
         <form>
           <!-- Select de estado -->
           <div class="form-group">
-            <label for="estadoSelect" class="d-block">Estado</label>
-            <select class="form-control" id="estadoSelect">
-              <option value="">Seleccione un estado</option>
-              <option value="entregado">Entregado por la gerencia</option>
-              <option value="pendiente" selected>Pendiente de aceptación por gerencia</option>
-              <option value="cancelado">Cancelado por la gerencia</option>
-              <option value="recibido">Recibido por la gerencia</option>
-            </select>
-          </div>
+    <label for="estadoSelect" class="d-block">Estado</label>
+    <select class="form-control custom-select" id="estadoSelect">
+        <option value="">Seleccione un estado</option>
+        <option value="entregado">Entregado por la gerencia</option>
+        <option value="pendiente" selected>Pendiente de aceptación por gerencia</option>
+        <option value="cancelado">Cancelado por la gerencia</option>
+        <option value="recibido">Recibido por la gerencia</option>
+    </select>
+</div>
+
           
           <!-- Fecha de modificación -->
           <div class="form-group" id="fechaGroup">
@@ -440,12 +429,14 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        
         <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
   </div>
 </div>
 
+</div>
 <script>
   // Función para establecer la fecha de hoy automáticamente
   document.addEventListener("DOMContentLoaded", function () {
@@ -454,9 +445,6 @@
       document.getElementById("fechaModificacion").value = formattedDate;
   });
 </script>
-
-
-
 <!-- Script para mostrar/ocultar elementos según selección -->
 
 
@@ -539,21 +527,6 @@ function showDetails(id) {
     // Ocultar el detalle correspondiente
     $("#details-" + id).hide();
   }
-</script>
-<script>
-    document.getElementById('descargarBtn').addEventListener('click', function() {
-        // Obtener la opción seleccionada
-        const seleccion = document.querySelector('input[name="firma"]:checked');
-
-        if (!seleccion) {
-            alert('Por favor, selecciona si deseas descargar con o sin firma.');
-            return;
-        }
-
-        // Enviar el formulario con la selección
-        const form = document.getElementById('downloadForm');
-        form.submit();
-    });
 </script>
 
 
