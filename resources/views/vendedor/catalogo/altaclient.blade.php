@@ -37,7 +37,7 @@
                                     
                                     <div class="container">
                                     <div class="row mb-3">
-                                        <!-- Columna izquierda: Calle, Número, Colonia y Código Postal -->
+                                        <!-- Columna izquierda-->
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label for="clave" class="form-label">* Clave:</label>
@@ -73,7 +73,7 @@
                                             </div>
                                         </div>
 
-                                        <!-- Columna derecha: Municipio, Estado, País y Referencias -->
+                                        <!-- Columna derecha -->
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label for="razon" class="form-label">* Razón Social</label>
@@ -103,13 +103,20 @@
                                                 <div class="invalid-feedback">Por favor, ingresa el codigo postal.</div>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="estado" class="form-label">* Estado:</label>
-                                                <input type="text" class="form-control" id="estado" placeholder="Mexico" required>
-                                                <div class="invalid-feedback">Por favor, ingresa el estado.</div>
-                                            </div>
+                           <label for="estado" class="form-label">* Estado:</label>
+                             <select class="form-control" id="estado" name="estado" required>
+                             <option value="Estado de México">Estado de México</option>
+                                <option value="Ciudad de México">Ciudad de México</option>
+                                <option value="San Luis Potosí">San Luis Potosí</option>
+                                <option value="Querétaro">Querétaro</option>
+                                <option value="Puebla">Puebla</option>
+                                                </select>
+                            <div class="invalid-feedback">Por favor, selecciona un estado.</div>
+                                      </div>
+
                                         </div>
                                     </div>
-</div>
+                            </div>
 
                                     <div class="form-row justify-content-center mt-4">
                                         <button type="submit" class="btn btn-primary mx-2">Guardar</button>
