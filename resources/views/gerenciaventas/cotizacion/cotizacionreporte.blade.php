@@ -92,6 +92,15 @@
                 <th style="background-color: #323F52; color: #ffffff;  width:250px;" >Estatus Gerencia</th>
                 <th style="background-color: #323F52; color: #ffffff; width:25px">Acciones</th>
             </tr>
+            <tr>
+      <th><input type="text" placeholder="Buscar Fecha"></th>
+      <th><input type="text" placeholder="Buscar Folio"></th>
+      <th><input type="text" placeholder="Buscar Cliente"></th>
+      <th><input type="text" placeholder="Buscar Monto"></th>
+      <th><input type="text" placeholder="Buscar Estatus Cliente"></th>
+      <th><input type="text" placeholder="Buscar Estatu Gerencia"></th>
+      <th></th>
+    </tr>
         </thead>
         <tbody>
             <tr>
@@ -461,6 +470,9 @@
 
 
 
+
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -468,53 +480,66 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
 $(document).ready(function() {
-    var table = $('#documentTable').DataTable();
+  var table = $('#documentTable').DataTable();
 
-    // Cuando el usuario escribe en el campo de búsqueda
+// Búsqueda global
+$('#searchInput').on('keyup', function() {
+    table.search(this.value).draw();
+});
+
+// Búsqueda por columnas
+$('#documentTable thead tr:eq(1) th').each(function(index) {
+    $(this).html('<input type="text" placeholder="Buscar" />');
+    $('input', this).on('keyup change', function() {
+        if (table.column(index).search() !== this.value) {
+            table.column(index).search(this.value).draw();
+        }
+    });
+});
+
+    
+    
     $('#searchInput').on('keyup', function() {
         table.search(this.value).draw();
     });
 
-    // Función para exportar solo las filas visibles (filtradas)
     function exportToExcel() {
         var data = [];
-        data.push(["Reporte de Cotizaciones"]); // Título de la hoja
+        data.push(["Reporte de Cotizaciones"]); 
 
-        // Obtener los encabezados de la tabla
         var headers = [];
         $('#documentTable thead th').each(function(index) {
-            if (index < 6) { // Limitar a las primeras 6 columnas
+            if (index < 6) { 
                 headers.push($(this).text().trim());
             }
         });
         data.push(headers);
 
-        // Obtener solo las filas visibles después de aplicar el filtro
+   
         table.rows({ search: 'applied' }).every(function() {
             var rowData = this.node();
             var rowDataArray = [];
 
-            // Recoger los datos de cada celda (hasta la columna 6)
             $(rowData).find('td').each(function(index) {
-                if (index < 6) { // Limitar a las primeras 6 columnas
+                if (index < 6) {
                     rowDataArray.push($(this).text().trim());
                 }
             });
 
-            // Agregar los datos de la fila al array
+       
             data.push(rowDataArray);
         });
 
-        // Crear la hoja de cálculo Excel
+   
         var worksheet = XLSX.utils.aoa_to_sheet(data);
         var workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, 'Documentos');
 
-        // Descargar el archivo Excel
+ 
         XLSX.writeFile(workbook, 'Reporte_Cotizaciones.xlsx');
     }
 
-    // Asignar evento al botón de exportación
+
     $('#exportButton').on('click', function() {
         exportToExcel();
     });
