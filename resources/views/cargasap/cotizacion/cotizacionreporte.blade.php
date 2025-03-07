@@ -412,10 +412,10 @@
             <label for="estadoSelect" class="d-block">Estado</label>
             <select class="form-control" id="estadoSelect">
               <option value="">Seleccione un estado</option>
-              <option value="entregado">Entregado</option>
-              <option value="pendiente">Pendiente</option>
-              <option value="cancelado">Cancelado</option>
-              <option value="recibido">Recibido</option>
+              <option value="entregado">Entregado por la gerencia</option>
+              <option value="pendiente" selected>Pendiente de aceptación por gerencia</option>
+              <option value="cancelado">Cancelado por la gerencia</option>
+              <option value="recibido">Recibido por la gerencia</option>
             </select>
           </div>
           
@@ -428,7 +428,7 @@
           <!-- Observaciones -->
           <div class="form-group" id="observacionesGroup">
             <label for="observaciones" class="d-block">Observaciones</label>
-            <textarea class="form-control" id="observaciones" rows="3"></textarea>
+            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
           </div>
         </form>
       </div>
@@ -442,7 +442,14 @@
 </div>
 
 </div>
-
+<script>
+  // Función para establecer la fecha de hoy automáticamente
+  document.addEventListener("DOMContentLoaded", function () {
+      let today = new Date();
+      let formattedDate = today.toISOString().split("T")[0]; // Formato YYYY-MM-DD
+      document.getElementById("fechaModificacion").value = formattedDate;
+  });
+</script>
 <!-- Script para mostrar/ocultar elementos según selección -->
 
 

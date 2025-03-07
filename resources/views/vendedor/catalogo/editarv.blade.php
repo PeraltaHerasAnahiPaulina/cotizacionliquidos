@@ -103,10 +103,17 @@
                                                 <div class="invalid-feedback">Por favor, ingresa el codigo postal.</div>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="estado" class="form-label">* Estado:</label>
-                                                <input type="text" class="form-control" id="estado" placeholder="Mexico" required>
-                                                <div class="invalid-feedback">Por favor, ingresa el estado.</div>
-                                            </div>
+                           <label for="estado" class="form-label">* Estado:</label>
+                             <select class="form-control" id="estado" name="estado" required>
+                             <option value="Estado de México">Estado de México</option>
+                                <option value="Ciudad de México">Ciudad de México</option>
+                                <option value="San Luis Potosí">San Luis Potosí</option>
+                                <option value="Querétaro">Querétaro</option>
+                                <option value="Puebla">Puebla</option>
+                                                </select>
+                            <div class="invalid-feedback">Por favor, selecciona un estado.</div>
+                                      </div>
+
                                         </div>
                                     </div>
 </div>
