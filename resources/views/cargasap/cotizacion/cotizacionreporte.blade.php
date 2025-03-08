@@ -116,7 +116,7 @@
                   </button>
                 </td>
                 </td>
-                <td style="text-align: center">Entregado por el cliente</td>
+                <td style="text-align: center">Entregado por el gerencia</td>
                 <td>
 
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -141,7 +141,7 @@
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">Pendiente de aceptación por cliente</td>
+                <td style="text-align: center">Pendiente de aceptación por gerencia</td>
                 <td>
                  
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -168,7 +168,7 @@
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">Cancelado por el cliente</td>
+                <td style="text-align: center">Cancelado por el gerencia</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -195,7 +195,7 @@
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">Recibido por el cliente</td>
+                <td style="text-align: center">Recibido por el gerencia</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">

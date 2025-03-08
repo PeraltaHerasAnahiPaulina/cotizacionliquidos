@@ -112,7 +112,7 @@
                   
                 </td>
                 </td>
-                <td style="text-align: center">Entregado por el cliente</td>
+                <td style="text-align: center">Entregado por el gerencia</td>
                 <td>
 
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -132,7 +132,7 @@
                   <div style="margin-bottom: 10px; text-align: center;">Pendiente de aceptación por cliente</div>
               
                 </td>
-                <td style="text-align: center">Pendiente de aceptación por cliente</td>
+                <td style="text-align: center">Pendiente de aceptación por gerencia</td>
                 <td>
                  
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -154,7 +154,7 @@
                   <div style="margin-bottom: 10px; text-align: center;">Cancelado por el cliente</div>
          
                 </td>
-                <td style="text-align: center">Cancelado por el cliente</td>
+                <td style="text-align: center">Cancelado por el gerencia</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
@@ -174,7 +174,7 @@
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Recibido por el cliente</div>
                 </td>
-                <td style="text-align: center">Recibido por el cliente</td>
+                <td style="text-align: center">Recibido por el gerencia</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
