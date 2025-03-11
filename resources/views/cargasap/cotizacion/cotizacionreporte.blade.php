@@ -85,13 +85,14 @@
     <table id="documentTable" class="table table-striped table-bordered display" style="width: 100%">
         <thead>
             <tr style="background-color: #E0E0E0">
-                <th style="background-color: #323F52; color: #ffffff; width: 180px">Fecha</th>
+                <th style="background-color: #323F52; color: #ffffff; width: 80px">Fecha</th>
                 <th style="background-color: #323F52; color: #ffffff; width: 180px; ">Folio</th>
                 <th style="background-color: #323F52; color: #ffffff; width: 320px;">Cliente</th>
                 <th style="background-color: #323F52; color: #ffffff">Monto</th>
                 <th style="background-color: #323F52; color: #ffffff;  width:250px;" >Estatus Cliente</th>
                 <th style="background-color: #323F52; color: #ffffff;  width:250px;" >Estatus Gerencia</th>
-                <th style="background-color: #323F52; color: #ffffff; width:25px">Acciones</th>
+                <th style="background-color: #323F52; color: #ffffff;  width:250px;" >Estatus Carga Sap</th>
+                <th style="background-color: #323F52; color: #ffffff; width:120px">Acciones</th>
             </tr>
             <tr>
       <th><input type="text" placeholder="Buscar Fecha"></th>
@@ -99,116 +100,33 @@
       <th><input type="text" placeholder="Buscar Cliente"></th>
       <th><input type="text" placeholder="Buscar Monto"></th>
       <th><input type="text" placeholder="Buscar Estatus Cliente"></th>
-      <th><input type="text" placeholder="Buscar Estatu Gerencia"></th>
+      <th><input type="text" placeholder="Buscar Estatus Gerencia"></th>
+      <th><input type="text" placeholder="Buscar Estatus Carga Sap "></th>
       <th></th>
     </tr>
         </thead>
         <tbody>
             <tr>
                   <td>21-02-2025</td>
-                <td>AME1-IND-00001-01</td>
+                <td>AME1-IND-00001</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$28,263.52</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Entregado por el cliente</div>
-                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
-                     <i class="fa fa-refresh"></i>
-                  </button>
+                  <div style="margin-bottom: 10px; text-align: center;">Aceptada por el Cliente</div>
                 </td>
                 </td>
-                <td style="text-align: center">Entregado por el gerencia</td>
+                <td style="text-align: center">Aprobada por Gerente</td>
+                <td style="text-align: center"> Archivo LSWP cargado</td>
                 <td>
 
-                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
-                    <i class="fa-solid fa-gear"></i>
-                    </button>
                     <button class="btn btn-info btn-sm" onclick="showDetails(1)">
                         <i class="fa fa-eye"></i>
                     </button>
-                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
-                        <i class="fa fa-pencil"></i>
+               
+                    <button class="btn btn-primary btn-sm" id="exportTxt">
+                    <i class="fa fa-download" aria-hidden="true"></i>
                     </button>
-                </td>
-            </tr>
-            <tr>
-                  <td>21-02-2025</td>
-                <td>AME1-IND-00001-01</td>
-                <td>NUEVA GENERACION AERONAUTICA</td>
-                <td>$28,263.52</td>
-                <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Pendiente de aceptación por cliente</div>
-                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
-                     <i class="fa fa-refresh"></i>
-                  </button>
-                </td>
-                <td style="text-align: center">Pendiente de aceptación por gerencia</td>
-                <td>
-                 
-                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
-                    <i class="fa-solid fa-gear"></i>
-                    </button>
-                    <!-- Botón Ver -->
-                    <button class="btn btn-info btn-sm" onclick="showDetails(1)">
-                        <i class="fa fa-eye"></i>
-                    </button>
-                    <!-- Botón Editar (libretita) -->
-                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
-                        <i class="fa fa-pencil"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                  <td>21-02-2025</td>
-                <td>AME1-IND-00001-01</td>
-                <td>NUEVA GENERACION AERONAUTICA</td>
-                <td>$28,263.52</td>
-                <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Cancelado por el cliente</div>
-                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
-                     <i class="fa fa-refresh"></i>
-                  </button>
-                </td>
-                <td style="text-align: center">Cancelado por el gerencia</td>
-                <td>
-                    <!-- Botón PDF -->
-                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
-                    <i class="fa-solid fa-gear"></i>
-                    </button>
-                    <!-- Botón Ver -->
-                    <button class="btn btn-info btn-sm" onclick="showDetails(1)">
-                        <i class="fa fa-eye"></i>
-                    </button>
-                    <!-- Botón Editar (libretita) -->
-                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
-                        <i class="fa fa-pencil"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                  <td>21-02-2025</td>
-                <td>xd-IND-00001-01</td>
-                <td>NUEVA GENERACION AERONAUTICA</td>
-                <td>$28,263.52</td>
-                <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Recibido por el cliente</div>
-                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
-                     <i class="fa fa-refresh"></i>
-                  </button>
-                </td>
-                <td style="text-align: center">Recibido por el gerencia</td>
-                <td>
-                    <!-- Botón PDF -->
-                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
-                    <i class="fa-solid fa-gear"></i>
-                    </button>
-                    <!-- Botón Ver -->
-                    <button class="btn btn-info btn-sm" onclick="showDetails(1)">
-                        <i class="fa fa-eye"></i>
-                    </button>
-                    <!-- Botón Editar (libretita) -->
-                    <button class="btn btn-warning btn-sm" onclick="editItem(1)">
-                        <i class="fa fa-pencil"></i>
-                    </button>
+
                 </td>
             </tr>
         </tbody>
@@ -340,6 +258,7 @@
                             <th style="background-color: #0d6efd; color: #ffffff ;">Nombre</th>
                             <th style="background-color: #0d6efd; color: #ffffff ;">Presentación</th>
                             <th style="background-color: #0d6efd; color: #ffffff ;">Precio Unitario</th>
+                            <th style="background-color: #0d6efd; color: #ffffff ;">Descuento</th>
                             <th style="background-color: #0d6efd; color: #ffffff ;">Precio Total</th>
                         </tr>
                     </thead>
@@ -351,6 +270,7 @@
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-JET OIL II CAN 24X1UQL</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$821,60</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">N/A</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$8.214,60</td>
                         </tr>
                         <tr>
@@ -359,6 +279,7 @@
                             <td style="text-align: center;">M-JET OIL II CAN 24X1UQL</td>
                             <td style="text-align: center;">Caja 24 pzas</td>
                             <td style="text-align: right;">$527,66</td>
+                            <td style="text-align: right;">N/A</td>
                             <td style="text-align: right;">$5.276,60</td>
                         </tr>
                         <tr>
@@ -367,21 +288,22 @@
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Tambor</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$2,448.80</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">N/A</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$12,243.00</td>
                         </tr>
                        
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th style="color: #00144F ;" colspan="5" class="text-end">SUBTOTAL:</th>
+                            <th style="color: #00144F ;" colspan="6" class="text-end">SUBTOTAL:</th>
                             <td class="text-end">$25.734,20</td>
                         </tr>
                         <tr>
-                            <th style="color: #00144F ;" colspan="5" class="text-end">IVA 26% :</th>
+                            <th style="color: #00144F ;" colspan="6" class="text-end">IVA 26% :</th>
                             <td class="text-end">$4.117,47</td>
                         </tr>
                         <tr>
-                            <th style="color: #00144F ;" colspan="5" class="text-end fw-bold">TOTAL:</th>
+                            <th style="color: #00144F ;" colspan="6" class="text-end fw-bold">TOTAL:</th>
                             <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29.851,67</td>
                         </tr>
                     </tfoot>
@@ -389,7 +311,6 @@
             </div>
 
         <button class="btn btn-danger" onclick="closeDetails(1)">Cerrar</button>
-        <button class="btn btn-success" >Nueva Version</button>
       </div>
 </div>
 </div>
@@ -545,6 +466,67 @@ function showDetails(id) {
     // Ocultar el detalle correspondiente
     $("#details-" + id).hide();
   }
+
+
+  $(document).ready(function() {
+        var datos = [
+            ["AME1", "1056948", "125018", "1234", "01.03.2023", "31.12.9999"],
+            ["AME1", "1056948", "125027", "5678", "01.03.2023", "31.12.9999"],
+            ["AME1", "1056948", "124982", "91011", "01.03.2023", "31.12.9999"],
+            ["AME1", "1056948", "124985", "1213.14", "01.03.2023", "31.12.9999"],
+            ["AME1", "1056948", "125028", "1516.17", "01.03.2023", "31.12.9999"],
+            ["AME1", "1056948", "125029", "1819.2", "01.03.2023", "31.12.9999"],
+            ["AME1", "1056948", "125025", "2122.23", "01.03.2023", "31.12.9999"],
+            ["AME1", "1056948", "M125026", "2425.26", "01.03.2023", "31.12.9999"],
+            ["AME1", "1056948", "125024", "2728.29", "01.03.2023", "31.12.9999"]
+        ];
+
+        var table = $('#cotizacionesTable').DataTable({
+            data: datos,
+            columns: [
+                { title: "Sucursal" },
+                { title: "# Cliente" },
+                { title: "# Material" },
+                { title: "Precio" },
+                { title: "Fec_inicio" },
+                { title: "Fec_final" }
+            ]
+        });
+
+        $('#exportTxt').click(function() {
+            const colWidths = [10, 12, 12, 10, 12, 12];
+
+            function formatCell(text, width) {
+                return text.toString().padEnd(width, " ");
+            }
+
+            var txtContent = formatCell("Sucursal", colWidths[0]) +
+                             formatCell("# Cliente", colWidths[1]) +
+                             formatCell("# Material", colWidths[2]) +
+                             formatCell("Precio", colWidths[3]) +
+                             formatCell("Fec_inicio", colWidths[4]) +
+                             formatCell("Fec_final", colWidths[5]) + "\n";
+
+            txtContent += "-".repeat(60) + "\n"; 
+
+           
+            datos.forEach(function(row) {
+                txtContent += formatCell(row[0], colWidths[0]) +
+                              formatCell(row[1], colWidths[1]) +
+                              formatCell(row[2], colWidths[2]) +
+                              formatCell(row[3], colWidths[3]) +
+                              formatCell(row[4], colWidths[4]) +
+                              formatCell(row[5], colWidths[5]) + "\n";
+            });
+
+            var blob = new Blob([txtContent], { type: "text/plain" });
+            var link = document.createElement("a");
+
+            link.href = URL.createObjectURL(blob);
+            link.download = "cotizaciones.txt";
+            link.click();
+        });
+    });
 </script>
 
 
