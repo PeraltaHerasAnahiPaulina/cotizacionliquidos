@@ -45,6 +45,8 @@ Route::get('/cotiv2',  [vendedorcontroller::class, 'cotiv2'])->name('cotiv2');
 Route::get('/iniciogerencia',  [gerenciaventascontroller::class, 'iniciogerencia'])->name('iniciogerencia'); 
 Route::get('/cotizacionreporteg',  [gerenciaventascontroller::class, 'cotizacionreporte'])->name('cotizacionreporteg');
 Route::get('/coti2',  [gerenciaventascontroller::class, 'coti2'])->name('coti2');  
+Route::get('/graficas',  [gerenciaventascontroller::class, 'graficas'])->name('graficas');  
+
 //Interfas Direccion Comercial
 Route::get('/iniciodireccion',  [direccioncomercialcontroller::class, 'iniciodireccion'])->name('iniciodireccion');
 Route::get('/cotizacionreportec',  [direccioncomercialcontroller::class, 'cotizacionreporte'])->name('cotizacionreportec');

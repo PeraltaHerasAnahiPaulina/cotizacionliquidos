@@ -1,4 +1,4 @@
-@extends('gerenciaventas.layouts.templatep')
+@extends('cargasap.layouts.templatep')
 
 
 @section('contenido')

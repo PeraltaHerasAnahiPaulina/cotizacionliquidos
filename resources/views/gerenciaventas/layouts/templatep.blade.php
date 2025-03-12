@@ -124,9 +124,7 @@
                      <li>
                         <a href="#cargaArchivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-briefcase blue1_color"></i> <span>Carga de archivos</span></a>
                         <ul class="collapse list-unstyled" id="cargaArchivos">
-                           <li><a href="/clientes"> <span> Cliente</span></a></li>
-                           <li><a href="/productos"> <span> Productos</span></a></li>
-                           <li><a href="/precios"> <span> Precios</span></a></li>
+                           
                            <li><a href="/inventario"> <span> Inventarios</span></a></li>
                         </ul>
                      </li>
@@ -148,10 +146,10 @@
                   <h4>Estadisticas</h4>
                      <ul class="list-unstyled components">
                         <li>
-                           <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Estadisticas</span></a>
-                           <ul class="collapse list-unstyled" id="cotizacionMenu">
+                           <a href="#estadisticas" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Estadisticas</span></a>
+                           <ul class="collapse list-unstyled" id="estadisticas">
                          
-                           <li><a href="#"> <span> Ver estadisticas</span></a></li>
+                           <li><a href="/graficas"> <span> Ver estadisticas</span></a></li>
                            </ul>
                         </li>
                      </ul>

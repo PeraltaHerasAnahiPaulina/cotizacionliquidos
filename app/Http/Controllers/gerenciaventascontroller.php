@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Storage;
 class gerenciaventascontroller extends Controller
 {
     //
+    public function graficas(){
+        return view('gerenciaventas.estadisticas.estadisticas');
+    }
     public function iniciogerencia(){
         return view('gerenciaventas.inicio');
     }

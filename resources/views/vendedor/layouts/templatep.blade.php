@@ -126,6 +126,18 @@
                         </li>
                      </ul>
                   </div>
+                  <div class="sidebar_blog_2">
+                     <h4>Estadisticas</h4>
+                        <ul class="list-unstyled components">
+                           <li>
+                              <a href="#ESTADISTICAS" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Estadisticas</span></a>
+                              <ul class="collapse list-unstyled" id="ESTADISTICAS">
+                            
+                              <li><a href="#"> <span> Ver estadisticas</span></a></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
 
             </nav>
 
