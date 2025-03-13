@@ -104,7 +104,7 @@
                                             </div>
                                             <div class="mb-3">
                            <label for="estado" class="form-label">* Estado:</label>
-                             <select class="form-control" id="estado" name="estado" required>
+                             <select class="form-select" id="estado" name="estado" required>
                              <option value="Estado de México">Estado de México</option>
                                 <option value="Ciudad de México">Ciudad de México</option>
                                 <option value="San Luis Potosí">San Luis Potosí</option>
