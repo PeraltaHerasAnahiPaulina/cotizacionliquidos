@@ -37,7 +37,22 @@
                                     
                                     <div class="container">
                                     <div class="row mb-3">
+                                             <div class="mb-3">
+                                                <label class="form-label">* Tipo de persona:</label>
+                                                <div class="d-flex">
+                                                    <div class="form-check me-3">
+                                                        <input class="form-check-input" type="radio" name="tipoPersona" id="personaFisica" value="fisica" checked id="personaFisica" required>
+                                                        <label class="form-check-label" for="personaFisica">Persona Física</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="tipoPersona" id="personaMoral" value="moral" required>
+                                                        <label class="form-check-label" for="personaMoral">Persona Moral</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         <!-- Columna izquierda-->
+                                         
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label for="clave" class="form-label">* Clave:</label>
@@ -71,13 +86,31 @@
                                                 <input type="text" class="form-control" id="municipio" placeholder="Toluca" required>
                                                 <div class="invalid-feedback">Por favor, ingresa el municipio</div>
                                             </div>
+                                            <div class="mb-3">
+                                            <label class="form-label"> * Archivo  :  </label>
+                                            <div class="d-flex"> 
+                                            
+                                            <div class="form-check me-3">
+                                                        <input class="form-check-input" type="radio" name="archivo" id="archivo" value="archivo" checked id="archivo" required>
+                                                        <label class="form-check-label" for="si">Sí</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="archivo" id="archivo" value="archivo" required>
+                                                        <label class="form-check-label" for="no">No </label>
+                                                    </div>
+                                            </div>
+                                            </div>
                                         </div>
+                                       
+                                    
+
+                                        
 
                                         <!-- Columna derecha -->
                                         <div class="col-md-6">
                                             <div class="mb-3">
                                                 <label for="razon" class="form-label">* Razón Social</label>
-                                                <input type="text" class="form-control" id="razon" placeholder="Refaccionaria Tollocan" required>
+                                                <input type="text" class="form-control" id="razon" placeholder="Refaccionaria Tollocan" checked id="razon"     required>
                                                 <div class="invalid-feedback">Por favor, ingresa razón social.</div>
                                             </div>
 
@@ -104,19 +137,21 @@
                                             </div>
                                             <div class="mb-3">
                            <label for="estado" class="form-label">* Estado:</label>
-                             <select class="form-control" id="estado" name="estado" required>
-                             <option value="Estado de México">Estado de México</option>
-                                <option value="Ciudad de México">Ciudad de México</option>
-                                <option value="San Luis Potosí">San Luis Potosí</option>
-                                <option value="Querétaro">Querétaro</option>
-                                <option value="Puebla">Puebla</option>
-                                                </select>
+                             <select class="form-select" id="estado" name="estado" required>
+                                 <option value="">Seleccione un estado</option>
+                                    <option value="Estado de México">Estado de México</option>
+                                    <option value="Ciudad de México">Ciudad de México</option>
+                                     <option value="San Luis Potosí">San Luis Potosí</option>
+                                     <option value="Querétaro">Querétaro</option>
+                                     <option value="Puebla">Puebla</option>
+                             </select>
                             <div class="invalid-feedback">Por favor, selecciona un estado.</div>
                                       </div>
 
                                         </div>
                                     </div>
                             </div>
+                            
 
                                     <div class="form-row justify-content-center mt-4">
                                         <button type="submit" class="btn btn-primary mx-2">Guardar</button>
@@ -149,7 +184,7 @@
                                             <div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="pago"
-                                                        id="activo-credito" value="credito" checked id="activo-creditp" required >
+                                                        id="activo-credito" value="credito" checked id="activo-credito" required >
                                                     <label class="form-check-label" for="activo-credito">Credito </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
@@ -157,8 +192,9 @@
                                                         id="activo-contado" value="contado" required>
                                                     <label class="form-check-label" for="activo-contado">Contado</label>
                                                 </div>
+                                                
                                 </div>
-        
+                                
                             </form>
                         </div>
                         

@@ -133,6 +133,7 @@
     </table>
 </div>
 
+
                     <!-- Detalles debajo de la tabla -->
                     <div id="details-1" class="details-container">
                     <div class="d-flex justify-content-between align-items-center">

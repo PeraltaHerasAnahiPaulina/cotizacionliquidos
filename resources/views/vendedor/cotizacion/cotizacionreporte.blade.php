@@ -121,7 +121,7 @@
                 <td style="text-align: center"> Archivo LSWP cargado</td>
                 <td>
 
-                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
                     <i class="fa-solid fa-gear"></i>
                     </button>
                     <button class="btn btn-info btn-sm" onclick="showDetails(1)">
@@ -147,7 +147,7 @@
                 <td style="text-align: center"> Archivo LSWP cargado</td>
                 <td>
                  
-                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
                     <i class="fa-solid fa-gear"></i>
                     </button>
                     <!-- Botón Ver -->
@@ -175,7 +175,7 @@
                 <td style="text-align: center"> Pendiente de generar LSWP</td>
                 <td>
                     <!-- Botón PDF -->
-                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
                     <i class="fa-solid fa-gear"></i>
                     </button>
                     <!-- Botón Ver -->
@@ -203,7 +203,7 @@
                 <td style="text-align: center"> Pendiente de generar LSWP</td>
                 <td>
                     <!-- Botón PDF -->
-                    <button class="btn btn-danger btn-sm" onclick="exportToPDF()">
+                    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
                     <i class="fa-solid fa-gear"></i>
                     </button>
                     <!-- Botón Ver -->
@@ -219,6 +219,78 @@
         </tbody>
     </table>
 </div>
+
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- Tabla dentro del modal -->
+                    <table class="table table-bordered">
+                    <thead style="background-color: #f5333f; color: white;">
+                        <tr>
+                            <th colspan="8" class="text-center" style="background-color: #00144F; color: #FFFFFF ;">Reporte de Cardex de Cotización AME1.IND-00001</th>
+                        </tr>
+                    </thead>
+                        <thead class="table text-center">
+                            <tr>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">FECHA MOVIMIENTO</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">STATUS ANTERIOR</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">STATUS NUEVO</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">USUARIO HIZO CAMBIO</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">PERFIL</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">OBSERVACIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;" >19/02/2025</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Pendiente aprobación gerencia</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Aprobada gerencia</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Miguel Escutia</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Gerente ventas</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Sin cambio</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">20/02/2025</td>
+                                <td style="text-align: center;">Aprobada gerencia</td>
+                                <td style="text-align: center;">Pendiente aprobación cliente</td>
+                                <td style="text-align: center;">Pedro sanabria</td>
+                                <td style="text-align: center;">Vendedor</td>
+                                <td style="text-align: center;">Se envia a cliente para revisión</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">21/02/2025</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Pendiente aprobación cliente</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Aprobada por cliente</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Pedro sanabria</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Vendedor</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">El cliente aprueba la cotización</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">21/02/2025</td>
+                                <td style="text-align: center;">Aprobada por cliente</td>
+                                <td style="text-align: center;">Pendiente de descarga de archivo LSW</td>
+                                <td style="text-align: center;">Pedro Sanabria</td>
+                                <td style="text-align: center;">Vendedor</td>
+                                <td style="text-align: center;"></td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">22/02/2025</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Pendiente de descarga de  archivo LSW</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Archivo LSW cargado</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Ana Mendez</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Carga Sap</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Archivo cargado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
                     <!-- Detalles debajo de la tabla -->
                     <div id="details-1" class="details-container">
@@ -410,6 +482,8 @@
       </div>
 </div>
 </div>
+
+
 
 
 <!-- Modal -->

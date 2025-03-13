@@ -103,7 +103,18 @@
                                     <div class="invalid-feedback">Por favor, selecciona un tipo de empleado.</div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="form-check form-check-inline">
+                            <h4 class="mb-3">Tipo gerente de ventas</h4>
+                                                    <input class="form-check-input" type="radio" name="tipovendedor"
+                                                        id="activo-industrial" value="industrial" checked id="activo-industrial" required >
+                                                    <label class="form-check-label" for="activo-industrial">Industrial</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="tipovendedor"
+                                                        id="activo-automotriz" value="automotriz" required>
+                                                    <label class="form-check-label" for="activo-automotriz">Automotriz</label>
+                                                </div>
+                                             </div>
                                 <div class="form-row justify-content-center mt-4">
                                     <button type="submit" class="btn btn-primary mx-2">Guardar</button>
                                     <button type="reset" class="btn btn-secondary mx-2">Cancelar</button>
