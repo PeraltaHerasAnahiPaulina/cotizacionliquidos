@@ -133,7 +133,7 @@
                               <a href="#ESTADISTICAS" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Estadisticas</span></a>
                               <ul class="collapse list-unstyled" id="ESTADISTICAS">
                             
-                              <li><a href="#"> <span> Ver estadisticas</span></a></li>
+                              <li><a href="/graficasv"> <span> Ver estadisticas</span></a></li>
                               </ul>
                            </li>
                         </ul>

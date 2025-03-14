@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 class vendedorcontroller extends Controller
 {
     //
+    public function graficasv(){
+        return view('vendedor.estadisticas.estadisticas');
+    }
     public function iniciovendedor(){
         return view('vendedor.inicio');
     }

@@ -1,4 +1,4 @@
-@extends('gerenciaventas.layouts.templatep')
+@extends('vendedor.layouts.templatep')
 <!--CDNS necesarios para highcharts-->
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>

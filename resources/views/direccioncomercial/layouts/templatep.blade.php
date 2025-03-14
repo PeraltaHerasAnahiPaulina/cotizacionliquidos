@@ -129,13 +129,11 @@
                <div class="sidebar_blog_2">
                <h4>Estadisticas</h4>
                <ul class="list-unstyled components">
-                  <li class="active">
-                     <a href="#dashboard1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class='fa-solid fa-person'></i> <span>Estadisticas</span></a>
-                     <ul class="collapse list-unstyled" id="dashboard1">
-                        <li>
-                           <a href="#"> <span> Ver estadisticas </span></a>
-                        </li>
-                        
+                  <li>
+                     <a href="#ESTADISTICAS" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Estadisticas</span></a>
+                     <ul class="collapse list-unstyled" id="ESTADISTICAS">
+                   
+                     <li><a href="/graficasd"> <span> Ver estadisticas</span></a></li>
                      </ul>
                   </li>
                </ul>

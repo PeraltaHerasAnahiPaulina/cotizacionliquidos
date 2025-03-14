@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 class direccioncomercialcontroller extends Controller
 {
     //
+    public function graficasd(){
+        return view('direccioncomercial.estadisticas.estadisticas');
+    }
     public function iniciodireccion(){
         return view('direccioncomercial.inicio');
     }
