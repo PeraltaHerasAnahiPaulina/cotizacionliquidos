@@ -115,6 +115,50 @@
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
+                  <!-- Modal -->
+<div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <!-- Select de estado -->
+          <div class="form-group">
+            <label for="estadoSelect" class="d-block">Estado</label>
+            <select class="form-control custom-select" id="estadoSelect">
+              <option value="">Seleccione un estado</option>
+              <option value="pendiente">Pendiente aceptación cliente</option>
+              <option value="aceptada" selected>Aceptada por cliente</option>
+              <option value="cancelada">Cancelada por Cliente</option>
+            </select>
+          </div>
+          
+          <!-- Fecha de modificación -->
+          <div class="form-group" id="fechaGroup">
+            <label for="fechaModificacion" class="d-block">Fecha de Cambio de Estado</label>
+            <input type="date" class="form-control" id="fechaModificacion">
+          </div>
+          
+          <!-- Observaciones -->
+          <div class="form-group" id="observacionesGroup">
+            <label for="observaciones" class="d-block">Observaciones</label>
+            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
                 </td>
                 </td>
                 <td style="text-align: center">Aprobada por Gerente</td>
@@ -172,7 +216,7 @@
                   </button>
                 </td>
                 <td style="text-align: center">Cancelado por Gerente</td>
-                <td style="text-align: center"> Pendiente de generar LSWP</td>
+                <td style="text-align: center"> NO APLICA</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
@@ -478,7 +522,8 @@
             </div>
 
         <button class="btn btn-danger" onclick="closeDetails(1)">Cerrar</button>
-        <button class="btn btn-success" >Nueva Version</button>
+        <a href="/cotiv2">
+        <button class="btn btn-success" >Nueva Version</button></a>
       </div>
 </div>
 </div>
@@ -486,53 +531,10 @@
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <!-- Select de estado -->
-          <div class="form-group">
-            <label for="estadoSelect" class="d-block">Estado</label>
-            <select class="form-control custom-select" id="estadoSelect">
-              <option value="">Seleccione un estado</option>
-              <option value="entregado">Entregado por la cliente</option>
-              <option value="pendiente" selected>Pendiente de aceptación por cliente</option>
-              <option value="cancelado">Cancelado por la cliente</option>
-              <option value="recibido">Recibido por la cliente</option>
-            </select>
-          </div>
-          
-          <!-- Fecha de modificación -->
-          <div class="form-group" id="fechaGroup">
-            <label for="fechaModificacion" class="d-block">Fecha de Cambio de Estado</label>
-            <input type="date" class="form-control" id="fechaModificacion">
-          </div>
-          
-          <!-- Observaciones -->
-          <div class="form-group" id="observacionesGroup">
-            <label for="observaciones" class="d-block">Observaciones</label>
-            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        
-        <button type="button" class="btn btn-primary">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 </div>
+
 <script>
   // Función para establecer la fecha de hoy automáticamente
   document.addEventListener("DOMContentLoaded", function () {

@@ -159,7 +159,7 @@
          
                 </td>
                 <td style="text-align: center">Cancelado por Gerente</td>
-                <td style="text-align: center">  Pendiente de generar LSWP</td>
+                <td style="text-align: center">  NO APLICA</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">

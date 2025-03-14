@@ -116,7 +116,56 @@
                 </td>
                 </td>
                 <td style="text-align: center">Aprobada por Gerente</td>
-                <td style="text-align: center"> Archivo LSWP cargado</td>
+                <td style="text-align: center;">
+                  <div style="margin-bottom: 10px; text-align: center;">Archivo LSWP cargado</div>
+                    <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
+                     <i class="fa fa-refresh"></i>
+                  </button>
+                </td>
+                 <!-- Modal -->
+<div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <!-- Select de estado -->
+          <div class="form-group">
+    <label for="estadoSelect" class="d-block">Estado</label>
+    <select class="form-control custom-select" id="estadoSelect">
+        <option value="">Seleccione un estado</option>
+        <option value="carga">Archivo LSWE Pendiente de Carga</option>
+        <option value="cargado" selected>Archivo LSFW Cargado</option>
+    </select>
+</div>
+
+          
+          <!-- Fecha de modificación -->
+          <div class="form-group" id="fechaGroup">
+            <label for="fechaModificacion" class="d-block">Fecha de Cambio de Estado</label>
+            <input type="date" class="form-control" id="fechaModificacion">
+          </div>
+          
+          <!-- Observaciones -->
+          <div class="form-group" id="observacionesGroup">
+            <label for="observaciones" class="d-block">Observaciones</label>
+            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
                 <td>
 
                     <button class="btn btn-info btn-sm" onclick="showDetails(1)">

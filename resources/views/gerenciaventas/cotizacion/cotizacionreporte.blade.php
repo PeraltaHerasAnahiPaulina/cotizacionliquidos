@@ -116,6 +116,53 @@
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
+                  <!-- Modal -->
+<div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <!-- Select de estado -->
+          <div class="form-group">
+    <label for="estadoSelect" class="d-block">Estado</label>
+    <select class="form-control custom-select" id="estadoSelect">
+        <option value="">Seleccione un estado</option>
+        <option value="autorizada">Autorizada por gerente</option>
+        <option value="pendiente" selected>Pendiente de autorizacion por gerente</option>
+        <option value="cancelada">Cancelada por gerente</option>
+        <option value="pendienteaprobacion">Pendiente Aprobación por gerente</option>
+        <option value="aprobada">Aprobada por gerente</option>
+    </select>
+</div>
+
+          
+          <!-- Fecha de modificación -->
+          <div class="form-group" id="fechaGroup">
+            <label for="fechaModificacion" class="d-block">Fecha de Cambio de Estado</label>
+            <input type="date" class="form-control" id="fechaModificacion">
+          </div>
+          
+          <!-- Observaciones -->
+          <div class="form-group" id="observacionesGroup">
+            <label for="observaciones" class="d-block">Observaciones</label>
+            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        
+        <button type="button" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
                 </td>
                 <td style="text-align: center"> Archivo LSWP cargado</td>
                 </td>
@@ -174,7 +221,7 @@
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">  Pendiente de generar LSWP</td>
+                <td style="text-align: center">  NO APLICA</td>
                 
                 <td>
                     <!-- Botón PDF -->
@@ -491,52 +538,7 @@
 </div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <!-- Select de estado -->
-          <div class="form-group">
-    <label for="estadoSelect" class="d-block">Estado</label>
-    <select class="form-control custom-select" id="estadoSelect">
-        <option value="">Seleccione un estado</option>
-        <option value="entregado">Entregado por la gerencia</option>
-        <option value="pendiente" selected>Pendiente de aceptación por gerencia</option>
-        <option value="cancelado">Cancelado por la gerencia</option>
-        <option value="recibido">Recibido por la gerencia</option>
-    </select>
-</div>
 
-          
-          <!-- Fecha de modificación -->
-          <div class="form-group" id="fechaGroup">
-            <label for="fechaModificacion" class="d-block">Fecha de Cambio de Estado</label>
-            <input type="date" class="form-control" id="fechaModificacion">
-          </div>
-          
-          <!-- Observaciones -->
-          <div class="form-group" id="observacionesGroup">
-            <label for="observaciones" class="d-block">Observaciones</label>
-            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        
-        <button type="button" class="btn btn-primary">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 </div>
 <script>

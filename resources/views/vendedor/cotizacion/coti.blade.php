@@ -30,43 +30,119 @@
         </div>
         <div class="col-md-4 mb-3">
             <label for="folio">Folio:</label>
-            <input type="text" class="form-control" id="folio" value="AME1-IND-000001-01">
+            <input type="text" class="form-control" id="folio" value="AME1-IND-000001">
         </div>
     </div>
 
-    <div class="row">
-        <!-- Segunda fila: 4 columnas -->
-        <div class="col-md-3 mb-3">
-            <label for="cliente">Seleccione Cliente:</label>
-            <select class="form-select" id="cliente">
-                <option>Carlos Ortega Mendez</option>
-            </select>
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="atencion">Atención:</label>
-            <select class="form-select" id="atencion">
-                <option>Nadia Fonseca</option>
-            </select>
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="correo">Correo:</label>
-            <input type="email" class="form-control" id="correo" value="CarlosOrtega@gmail.com">
-        </div>
-        <div class="col-md-3 mb-3">
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" class="form-control" id="telefono" value="7223968475">
-        </div>
+    <div class="row mb-3">
+    <label class="form-label">Tipo:</label>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="tipo" id="clienteRadio" value="cliente" checked>
+        <label class="form-check-label" for="clienteRadio">Cliente</label>
     </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="tipo" id="prospectoRadio" value="prospecto">
+        <label class="form-check-label" for="prospectoRadio">Prospecto</label>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Cliente (Select) / Prospecto (Input) -->
+    <div class="col-md-3 mb-3">
+        <label for="cliente">Seleccione Cliente:</label>
+        <select class="form-select" id="clienteSelect">
+            <option>Carlos Ortega Mendez</option>
+        </select>
+        <input type="text" class="form-control d-none" id="clienteInput" placeholder="Ingrese el nombre">
+    </div>
+
+    <!-- Atención (Select) / Prospecto (Input) -->
+    <div class="col-md-3 mb-3">
+        <label for="atencion">Atención:</label>
+        <select class="form-select" id="atencionSelect">
+            <option>Nadia Fonseca</option>
+        </select>
+        <input type="text" class="form-control d-none" id="atencionInput" placeholder="Ingrese atención">
+    </div>
+
+    <!-- Correo (Siempre Input) -->
+    <div class="col-md-3 mb-3">
+        <label for="correo">Correo:</label>
+        <input type="email" class="form-control" id="correo" value="CarlosOrtega@gmail.com" placeholder="Ingrese correo">
+    </div>
+
+    <!-- Teléfono (Siempre Input) -->
+    <div class="col-md-3 mb-3">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" class="form-control" id="telefono" value="7223968475" placeholder="Ingrese teléfono">
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const clienteRadio = document.getElementById("clienteRadio");
+        const prospectoRadio = document.getElementById("prospectoRadio");
+
+        const clienteSelect = document.getElementById("clienteSelect");
+        const clienteInput = document.getElementById("clienteInput");
+
+        const atencionSelect = document.getElementById("atencionSelect");
+        const atencionInput = document.getElementById("atencionInput");
+
+        const correoInput = document.getElementById("correo");
+        const telefonoInput = document.getElementById("telefono");
+
+        function setClienteValues() {
+            clienteSelect.classList.remove("d-none");
+            clienteInput.classList.add("d-none");
+            atencionSelect.classList.remove("d-none");
+            atencionInput.classList.add("d-none");
+
+            clienteInput.value = "";
+            atencionInput.value = "";
+
+            correoInput.value = "CarlosOrtega@gmail.com";
+            telefonoInput.value = "7223968475";
+        }
+
+        function setProspectoValues() {
+            clienteSelect.classList.add("d-none");
+            clienteInput.classList.remove("d-none");
+            atencionSelect.classList.add("d-none");
+            atencionInput.classList.remove("d-none");
+
+            clienteInput.value = "";
+            atencionInput.value = "";
+
+            correoInput.value = "";
+            telefonoInput.value = "";
+        }
+
+        clienteRadio.addEventListener("change", function () {
+            if (clienteRadio.checked) {
+                setClienteValues();
+            }
+        });
+
+        prospectoRadio.addEventListener("change", function () {
+            if (prospectoRadio.checked) {
+                setProspectoValues();
+            }
+        });
+
+        // Cargar valores iniciales
+        setClienteValues();
+    });
+</script>
+
 
     <div class="row">
         <!-- Tercera fila: 4 columnas -->
         <div class="col-md-3 mb-3">
             <label for="tiempoEntrega">Tiempo de Entrega:</label>
             <select class="form-select" id="tiempoEntrega">
+                <option> DE ACUERDO A DISPONIBILIDAD DEL PRODUCTO</option>
                 <option>2 días</option>
-                <option>Inmediata</option>
-                <option>24 horas</option>
-                <option>3 días</option>
             </select>
         </div>
         <div class="col-md-3 mb-3">
@@ -109,18 +185,41 @@
         <div class="col-md-2 mb-3">
             <label for="tipo">Tipo:</label>
             <select class="form-select" id="tipo">
-                <option>Tipo 1</option>
-                <option>Tipo 2</option>
+                <option>CVL</option>
+                <option> PVL </option>
+                <option> INDUSTRIA </option>
             </select>
         </div>
-        <div class="col-md-2 mb-3">
-            <label for="tiempoEntrega">Producto:</label>
-            <select class="form-select" id="tiempoEntrega">
-                <option>M-JET OIL II CAN 24X1UQL</option>
-                <option>M-VACUOLINE 146 DRUM 208L</option>
-                <option>M-JET OIL II CAN 24X1UQL</option>
+        <div class="col-md-4 mb-3">
+            <label for="producto">Producto:</label>
+            <select class="form-select" id="producto">
+                <option value="M-JET OIL II CAN 24X1UQL">M-JET OIL II CAN 24X1UQL</option>
+                <option value="M-VACUOLINE 146 DRUM 208L">M-VACUOLINE 146 DRUM 208L</option>
+                <option value="M-JET OIL II CAN 24X1UQL">M-JET OIL II CAN 24X1UQL</option>
             </select>
         </div>
+
+        <script>
+            $(document).ready(function() {
+                $('#producto').select2({
+                    placeholder: "Buscar producto...",
+                    allowClear: true,
+                    width: '100%'
+                });
+            });
+        </script><style>
+            .select2-container {
+                width: 100% !important; /* Asegura que el contenedor se expanda completamente */
+            }
+        
+            .select2-selection {
+                height: calc(2.25rem + 2px) !important; /* Ajusta la altura para que coincida con el select original */
+                padding: 0.375rem 4.75rem; /* Mantiene un diseño uniforme */
+                border-radius: 5px; /* Ajusta las esquinas redondeadas */
+                border: 1px solid #ced4da; /* Color de borde para igualar el diseño */
+            }
+        </style>
+
         <div class="col-md-2 mb-3">
             <label for="presentacion">Presentación:</label>
             <input type="text" class="form-control" id="presentacion" value="Caja 24 pzas">
@@ -173,6 +272,21 @@
             <label for="cantidad">Cantidad:</label>
             <input type="number" class="form-control" id="cantidad" value="10">
         </div>
+        <div class="col-md-2 mb-3">
+            <label for="total">Total:</label>
+            <input type="text" class="form-control" id="total" value="4,929.60" oninput="formatNumber(this)">
+        </div>
+
+        <script>
+        function formatNumber(input) {
+            let value = input.value.replace(/,/g, ''); // Eliminar comas previas
+            if (!isNaN(value) && value !== "") {
+                let formattedValue = parseFloat(value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                input.value = formattedValue;
+            }
+        }
+        </script>
+
         
 
 
@@ -296,6 +410,7 @@
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Nombre</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Presentación</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Precio Unitario</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Descuento</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Precio Total</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Opciones</th>
                             </tr>
@@ -308,6 +423,7 @@
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-JET OIL II CAN 24X1UQL</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$821.60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">40%</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$8,214.60</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align:center">
                                 <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
@@ -325,6 +441,7 @@
                                 <td style="text-align: center;">M-JET OIL II CAN 24X1UQL</td>
                                 <td style="text-align: center;">Caja 24 pzas</td>
                                 <td style="text-align: center;">$527.66</td>
+                                <td style="text-align: center;">40%</td>
                                 <td style="text-align: center;">$5,276.60</td>
                                 <td style="text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
     <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
@@ -339,6 +456,7 @@
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$527.66</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">40%</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$5,276.60</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
                                  <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
@@ -352,15 +470,15 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th style="color: #00144F ;" colspan="5" class="text-end">SUBTOTAL:</th>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">SUBTOTAL:</th>
                                 <td class="text-end">$25,734.20</td>
                             </tr>
                             <tr>
-                                <th style="color: #00144F ;" colspan="5" class="text-end">IVA 26% :</th>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">IVA 26% :</th>
                                 <td class="text-end">$4,117.47</td>
                             </tr>
                             <tr>
-                                <th style="color: #00144F ;" colspan="5" class="text-end fw-bold">TOTAL:</th>
+                                <th style="color: #00144F ;" colspan="6" class="text-end fw-bold">TOTAL:</th>
                                 <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29,851.67</td>
                             </tr>
                         </tfoot>
@@ -391,6 +509,9 @@
    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
    <link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.5.1/css/dataTables.dateTime.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
    <style>
       thead input {
          width: 100%;

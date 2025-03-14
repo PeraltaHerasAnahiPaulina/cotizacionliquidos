@@ -30,7 +30,7 @@
         </div>
         <div class="col-md-4 mb-3">
             <label for="folio">Folio:</label>
-            <input type="text" class="form-control" id="folio" value="AME1-IND-000001-01">
+            <input type="text" class="form-control" id="folio" value="AME1-IND-000001">
         </div>
     </div>
 
@@ -274,7 +274,7 @@
                 </div>
 
             <div class="text-center mt-4">
-                <button class="btn btn-success" id="createCotizacionBtn">Crear Cotización</button>
+                <button class="btn btn-success" id="createCotizacionBtn" >Crear Cotización</button>
             </div>
         </div>
     </div>
