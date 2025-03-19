@@ -187,14 +187,7 @@
                     <div id="details-1" class="details-container">
                     <div class="d-flex justify-content-between align-items-center">
                   <div class="form-group">
-  <label>Firmas</label>
-  Sí<input type="radio" id="html1" name="fav_language_cliente" value="si" checked readonly >
-  No<input type="radio" id="html2" name="fav_language_cliente" value="no" readonly disabled>
-</div>
-                    <div>
-          <div style="float: right;">
-            <button class="btn btn-primary"><i class="fa fa-download"></i> Descargar PDF</button>
-          </div>
+  
         </div>
       </div>
       <div class="modal-body">
