@@ -100,9 +100,9 @@
                         <a href="#cargaArchivos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-briefcase blue1_color"></i> <span>Carga de archivos</span></a>
                         <ul class="collapse list-unstyled" id="cargaArchivos">
                           
-                           <li><a href="/productos"> <span> Productos</span></a></li>
-                           <li><a href="/precios"> <span> Precios</span></a></li>
-                           
+                           <li><a href="/productos"> <span> Productos CVL</span></a></li>
+                           <li><a href="/precios"> <span> Precios Industria</span></a></li>
+                           <li><a href="/preciosPVL"> <span> Precios PVL</span></a></li>
                         </ul>
                      </li>
                   </ul>

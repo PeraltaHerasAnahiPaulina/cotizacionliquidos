@@ -152,8 +152,8 @@
                         <i class="fas fa-calendar-alt" style="color: #007bff; margin-right: 8px;"></i>Selecciona Mes:
                     </label>
                     <div class="input-group" style="max-width: 300px; margin: 0 auto;">
-                        <select id="monthSelect" class="form-control" onchange="updateCharts()">
-                            <option value="" selected disabled>Escoge el mes deseado </option>
+                        <select id="monthSelect" class="form-control" onchange="updateVendors()">
+                            <option value="" selected disabled>Escoge el mes deseado</option>
                             <option value="1">Enero</option>
                             <option value="2">Febrero</option>
                             <option value="3">Marzo</option>
@@ -166,6 +166,20 @@
                             <option value="10">Octubre</option>
                             <option value="11">Noviembre</option>
                             <option value="12">Diciembre</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 text-center mt-3" id="vendorContainer" style="display: none;">
+                    <label for="vendorSelect" class="d-block mb-2" style="font-size: 1.2rem; font-weight: bold;">
+                        <i class="fas fa-user" style="color: #28a745; margin-right: 8px;"></i>Selecciona Vendedor:
+                    </label>
+                    <div class="input-group" style="max-width: 300px; margin: 0 auto;">
+                        <select id="vendorSelect" class="form-control" onchange="updateCharts()">
+                            <option value="" selected disabled>Escoge el vendedor</option>
+                            <option value="v1">Pedro Sanabria</option>
+                            <option value="v2">Paula Alcantara</option>
+                            <option value="v3">Luis Romero</option>
                         </select>
                     </div>
                 </div>
@@ -228,13 +242,24 @@
         </div>
     </div>
     <script>
-        function updateCharts() {
+         function updateCharts() {
             var selectedMonth = document.getElementById("monthSelect").value;
-            if (selectedMonth) {
+            var selectedVendor = document.getElementById("vendorSelect").value;
+            
+            if (selectedMonth && selectedVendor) {
                 document.getElementById("chartsContainer").style.display = "block";
                 console.log("Mes seleccionado: ", selectedMonth);
-             }
+                console.log("Vendedor seleccionado: ", selectedVendor);
+            }
         }
+        function updateVendors() {
+            var selectedMonth = document.getElementById("monthSelect").value;
+            if (selectedMonth) {
+                document.getElementById("vendorContainer").style.display = "block";
+            }
+        }
+    
+       
     </script>
 </body>
 
