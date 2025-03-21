@@ -300,6 +300,7 @@
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Nombre</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Presentación</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Precio Unitario</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Descuento</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Precio Total</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">Opciones</th>
                             </tr>
@@ -307,12 +308,13 @@
                         <tbody>
                          
                             <tr>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-JET OIL II CAN 24X1UQL</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$821.60</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$8,214.60</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-JET OIL II CAN 24X1UQL</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$821.60</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">10%</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$4,929.60</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align:center">
                                 <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
     <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
@@ -324,12 +326,13 @@
                                    
                             </tr>
                             <tr>
-                                <td style="text-align: center;">10</td>
-                                <td style="text-align: center;">104765</td>
-                                <td style="text-align: center;">M-JET OIL II CAN 24X1UQL</td>
-                                <td style="text-align: center;">Caja 24 pzas</td>
-                                <td style="text-align: center;">$527.66</td>
-                                <td style="text-align: center;">$5,276.60</td>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">104765</td>
+                            <td style="text-align: center;">M-JET OIL II CAN 24X1UQL</td>
+                            <td style="text-align: center;">Caja 24 pzas</td>
+                            <td style="text-align: right;">$527.66</td>
+                            <td style="text-align: right;">0%</td>
+                            <td style="text-align: right;">$5,276.60</td>
                                 <td style="text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
     <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
 </button>
@@ -338,12 +341,13 @@
                                         </button></td>
                             </tr>
                             <tr>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">5</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$263.83</td>
-                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">$2,638.30</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja de 24 Pzas</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$527.66</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">5%</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$5,012.77</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;"> <button class="btn btn-datatable btn-icon btn-transparent-dark mr-2 open-modal-btn" id="openModalBtn" data-bs-toggle="modal" data-bs-target="#editModal">
                                  <i class="fa-solid fa-pencil" style="color: #FFD43B;"></i>
                                 </button>
@@ -355,17 +359,17 @@
                            
                         </tbody>
                         <tfoot>
-                            <tr>
-                                <th style="color: #00144F ;" colspan="5" class="text-end">SUBTOTAL:</th>
-                                <td class="text-end">$25,734.20</td>
+                        <tr>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">SUBTOTAL:</th>
+                                <td class="text-end">$15,218.97</td>
                             </tr>
                             <tr>
-                                <th style="color: #00144F ;" colspan="5" class="text-end">IVA 26% :</th>
-                                <td class="text-end">$4,117.47</td>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">IVA 16% :</th>
+                                <td class="text-end">$2,435.04</td>
                             </tr>
                             <tr>
-                                <th style="color: #00144F ;" colspan="5" class="text-end fw-bold">TOTAL:</th>
-                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29,851.67</td>
+                                <th style="color: #00144F ;" colspan="6" class="text-end fw-bold">TOTAL:</th>
+                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$17,654.01</td>
                             </tr>
                         </tfoot>
                     </table>

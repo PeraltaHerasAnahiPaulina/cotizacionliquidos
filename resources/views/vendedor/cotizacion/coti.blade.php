@@ -422,7 +422,7 @@
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-JET OIL II CAN 24X1UQL</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$821,60</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$821.60</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">10%</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$4,929.60</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align:center">
@@ -474,7 +474,7 @@
                                 <td class="text-end">$15,218.97</td>
                             </tr>
                             <tr>
-                                <th style="color: #00144F ;" colspan="6" class="text-end">IVA 26% :</th>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">IVA 16% :</th>
                                 <td class="text-end">$2,435.04</td>
                             </tr>
                             <tr>
