@@ -27,9 +27,9 @@
             <div class="form-group">
                 <label><strong>Tipo:</strong></label><br>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="tipo" id="industrias" value="Industrias">
+                    <input class="form-check-input" type="radio" name="tipo" id="industrias" value="Industrias" checked>
                     <label class="form-check-label" for="industrias">Industria</label>
-                </div>
+                </div>                
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="tipo" id="gracias" value="Grasas">
                     <label class="form-check-label" for="gracias">Grasas</label>
@@ -67,113 +67,118 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
                     <tr>
-                        <td style=" text-align: center;">122652</td>
-                        <td>M-DTE 27 DRUM</td>
-                        <td style=" text-align: center;">Tambor</td>
-                        <td style=" text-align: center;">208 L</td>
-                        <td style=" text-align: center;">ISO 100</td>
-                        <td style=" text-align: right;">$332,423.00</td>
+                        <td style="text-align: center;">122652</td>
+                        <td>M-DTE 27 DRUM 208L</td>
+                        <td style="text-align: center;">Tambor</td>
+                        <td style="text-align: center;">208 L</td>
+                        <td style="text-align: center;">ISO 100</td>
+                        <td style="text-align: right;">$53,255.32</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;" >122626</td>
-                        <td>M-DTE EXCEL 32 DRUM</td>
-                        <td style=" text-align: center;">Tambor</td>
-                        <td style=" text-align: center;">208 L</td>
-                        <td style=" text-align: center;">ISO 32</td>
-                        <td style=" text-align: right;">$67,756.37</td>
+                        <td style="text-align: center;">122626</td>
+                        <td>M-DTE EXCEL 32 DRUM 208L</td>
+                        <td style="text-align: center;">Tambor</td>
+                        <td style="text-align: center;">208 L</td>
+                        <td style="text-align: center;">ISO 32</td>
+                        <td style="text-align: right;">$67,756.37</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">122624</td>
-                        <td>M-DTE EXCEL 46 DRUM</td>
-                        <td style=" text-align: center;"> Tambor</td>
-                        <td style=" text-align: center;">208 L</td>
-                        <td style=" text-align: center;">ISO 46</td>
-                        <td style=" text-align: right;">$67,756.37</td>
+                        <td style="text-align: center;">122624</td>
+                        <td>M-DTE EXCEL 46 DRUM 208L</td>
+                        <td style="text-align: center;">Tambor</td>
+                        <td style="text-align: center;">208 L</td>
+                        <td style="text-align: center;">ISO 46</td>
+                        <td style="text-align: right;">$67,756.37</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">100687</td>
+                        <td style="text-align: center;">100687</td>
                         <td>M-DTE EXCEL 46</td>
-                        <td style=" text-align: center;">Granel</td>
-                        <td style=" text-align: center;">1 L</td>
-                        <td style=" text-align: center;">ISO 46</td>
-                        <td style=" text-align: right;">$310.20</td>
+                        <td style="text-align: center;">Granel</td>
+                        <td style="text-align: center;">1 L</td>
+                        <td style="text-align: center;">ISO 46</td>
+                        <td style="text-align: right;">$310.20</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">122623</td>
-                        <td>M-DTE EXCEL 68 DRUM</td>
-                        <td style=" text-align: center;">Tambor</td>
-                        <td style=" text-align: center;">208 L</td>
-                        <td style=" text-align: center;">ISO 68</td>
-                        <td style=" text-align: right;">$67,756.37</td>
+                        <td style="text-align: center;">122623</td>
+                        <td>M-DTE EXCEL 68 DRUM 208L</td>
+                        <td style="text-align: center;">Tambor</td>
+                        <td style="text-align: center;">208 L</td>
+                        <td style="text-align: center;">ISO 68</td>
+                        <td style="text-align: right;">$67,756.37</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">125454</td>
-                        <td>MOBIL DTE 24 ULTRA PAIL</td>
-                        <td style=" text-align: center;">Cubeta</td>
-                        <td style=" text-align: center;">19 L</td>
-                        <td style=" text-align: center;">ISO 46</td>
-                        <td style=" text-align: right;">$5,401.27</td>
+                        <td style="text-align: center;">125454</td>
+                        <td>MOBIL DTE 24 ULTRA PAIL 19L</td>
+                        <td style="text-align: center;">Cubeta</td>
+                        <td style="text-align: center;">19 L</td>
+                        <td style="text-align: center;">ISO 32</td>
+                        <td style="text-align: right;">$5,401.27</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">125453</td>
-                        <td>MOBIL DTE 24 ULTRA</td>
-                        <td style=" text-align: center;">Tambor</td>
-                        <td style=" text-align: center;">208 L</td>
-                        <td style=" text-align: center;">ISO 46</td>
-                        <td style=" text-align: right;">$53,753.40</td>
+                        <td style="text-align: center;">125453</td>
+                        <td>MOBIL DTE 24 ULTRA DRUM 208L</td>
+                        <td style="text-align: center;">Tambor</td>
+                        <td style="text-align: center;">208 L</td>
+                        <td style="text-align: center;">ISO 32</td>
+                        <td style="text-align: right;">$53,753.04</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">125432</td>
-                        <td>MOBIL DTE 24 ULTRA</td>
-                        <td style=" text-align: center;">Granel</td>
-                        <td style=" text-align: center;">1 L</td>
-                        <td style=" text-align: center;">ISO 46</td>
-                        <td style=" text-align: right;">$234.44</td>
+                        <td style="text-align: center;">125332</td>
+                        <td>MOBIL DTE 24 ULTRA BULK</td>
+                        <td style="text-align: center;">Granel</td>
+                        <td style="text-align: center;">1 L</td>
+                        <td style="text-align: center;">ISO 32</td>
+                        <td style="text-align: right;">$234.44</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">125456</td>
-                        <td >MOBIL DTE 25 ULTRA PAIL</td>
-                        <td style=" text-align: center;">Cubeta</td>
-                        <td style=" text-align: center;">19 L</td>
-                        <td style=" text-align: center;">ISO 46</td>
-                        <td style=" text-align: right;">$5,401.27</td>
+                        <td style="text-align: center;">125456</td>
+                        <td>MOBIL DTE 25 ULTRA PAIL 19L</td>
+                        <td style="text-align: center;">Cubeta</td>
+                        <td style="text-align: center;">19 L</td>
+                        <td style="text-align: center;">ISO 46</td>
+                        <td style="text-align: right;">$5,401.27</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">125457</td>
-                        <td>MOBIL DTE 25 ULTRA</td>
-                        <td style=" text-align: center;">Tambor</td>
-                        <td style=" text-align: center;">208 L</td>
-                        <td style=" text-align: center;">ISO 46</td>
-                        <td style=" text-align: right;">$53,753.40</td>
+                        <td style="text-align: center;">125455</td>
+                        <td>MOBIL DTE 25 ULTRA DRUM 208L</td>
+                        <td style="text-align: center;">Tambor</td>
+                        <td style="text-align: center;">208 L</td>
+                        <td style="text-align: center;">ISO 46</td>
+                        <td style="text-align: right;">$53,753.04</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">125533</td>
-                        <td>MOBIL DTE 25 ULTRA</td>
-                        <td style=" text-align: center;">Granel</td>
-                        <td style=" text-align: center;">1 L</td>
-                        <td style=" text-align: center;">ISO 46</td>
-                        <td style=" text-align: right;">$234.44</td>
+                        <td style="text-align: center;">125333</td>
+                        <td>MOBIL DTE 25 ULTRA BULK</td>
+                        <td style="text-align: center;">Granel</td>
+                        <td style="text-align: center;">1 L</td>
+                        <td style="text-align: center;">ISO 46</td>
+                        <td style="text-align: right;">$234.44</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">125458</td>
-                        <td>MOBIL DTE 26 ULTRA PAIL</td>
-                        <td style=" text-align: center;">Cubeta</td>
-                        <td style=" text-align: center;">19 L</td>
-                        <td style=" text-align: center;">ISO 68</td>
-                        <td style=" text-align: right;">$5,401.27</td>
+                        <td style="text-align: center;">125458</td>
+                        <td>MOBIL DTE 26 ULTRA PAIL 19L</td>
+                        <td style="text-align: center;">Cubeta</td>
+                        <td style="text-align: center;">19 L</td>
+                        <td style="text-align: center;">ISO 68</td>
+                        <td style="text-align: right;">$5,401.27</td>
                     </tr>
                     <tr>
-                        <td style=" text-align: center;">125534</td>
-                        <td>MOBIL DTE 26 ULTRA</td>
-                        <td style=" text-align: center;">Granel</td>
-                        <td style=" text-align: center;">1 L</td>
-                        <td style=" text-align: center;">ISO 68</td>
-                        <td style=" text-align: right;">$234.44</td>
+                        <td style="text-align: center;">125457</td>
+                        <td>MOBIL DTE 26 ULTRA DRUM 208L</td>
+                        <td style="text-align: center;">Tambor</td>
+                        <td style="text-align: center;">208 L</td>
+                        <td style="text-align: center;">ISO 68</td>
+                        <td style="text-align: right;">$53,753.04</td>
                     </tr>
-                
-                   
+                    <tr>
+                        <td style="text-align: center;">125334</td>
+                        <td>MOBIL DTE 26 ULTRA BULK</td>
+                        <td style="text-align: center;">Granel</td>
+                        <td style="text-align: center;">1 L</td>
+                        <td style="text-align: center;">ISO 68</td>
+                        <td style="text-align: right;">$234.44</td>
+                    </tr>
                 </tbody>
                 
             </table>

@@ -10,8 +10,8 @@ class cargararchivoscontroller extends Controller
     public function productos(){
     return view('cargaarchivos.productos');
 }
-    public function clientes(){
-        return view('cargaarchivos.cliente');
+    public function preciosPVL(){
+        return view('cargaarchivos.preciospvl');
     }
     public function precios(){
         return view('cargaarchivos.precios');
