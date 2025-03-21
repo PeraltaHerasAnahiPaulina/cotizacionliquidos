@@ -108,7 +108,7 @@
                   <td>21-02-2025</td>
                 <td>AME1-IND-00001</td>
                 <td>NUEVA GENERACION AERONAUTICA</td>
-                <td>$28,263.52</td>
+                <td>$17,654.01</td>
                 <td style="text-align: center;">
                   <div style="margin-bottom: 10px; text-align: center;">Aceptada por el Cliente</div>
                   
@@ -411,41 +411,41 @@
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-JET OIL II CAN 24X1UQL</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$821,60</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">N/A</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$8.214,60</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">10%</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$4,929.60</td>
                         </tr>
                         <tr>
                             <td style="text-align: center;">10</td>
                             <td style="text-align: center;">104765</td>
                             <td style="text-align: center;">M-JET OIL II CAN 24X1UQL</td>
                             <td style="text-align: center;">Caja 24 pzas</td>
-                            <td style="text-align: right;">$527,66</td>
-                            <td style="text-align: right;">N/A</td>
-                            <td style="text-align: right;">$5.276,60</td>
+                            <td style="text-align: right;">$527.66</td>
+                            <td style="text-align: right;">0%</td>
+                            <td style="text-align: right;">$5,276.60</td>
                         </tr>
                         <tr>
-                        <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">5</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">122728</td>
+                        <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
                             <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Tambor</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$2,448.80</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">N/A</td>
-                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$12,243.00</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja de 24 Pzas</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$527.66</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">5%</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$5,012.77</td>
                         </tr>
                        
                     </tbody>
                     <tfoot>
                         <tr>
                             <th style="color: #00144F ;" colspan="6" class="text-end">SUBTOTAL:</th>
-                            <td class="text-end">$25.734,20</td>
+                            <td class="text-end">$15,218.97</td>
                         </tr>
                         <tr>
                             <th style="color: #00144F ;" colspan="6" class="text-end">IVA 26% :</th>
-                            <td class="text-end">$4.117,47</td>
+                            <td class="text-end">$2,435.04</td>
                         </tr>
                         <tr>
                             <th style="color: #00144F ;" colspan="6" class="text-end fw-bold">TOTAL:</th>
-                            <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$29.851,67</td>
+                            <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$17,654.01</td>
                         </tr>
                     </tfoot>
                 </table>
