@@ -220,18 +220,15 @@
             }
         </style>
 
-        <div class="col-md-2 mb-3">
+        <div class="col-md-3 mb-3">
             <label for="presentacion">Presentación:</label>
             <input type="text" class="form-control" id="presentacion" value="Caja 24 pzas">
         </div>
-        <div class="col-md-2 mb-3">
+        <div class="col-md-3 mb-3">
             <label for="disponibilidad">Disponibilidad:</label>
             <input type="text" class="form-control" id="disponibilidad" value="FTS">
         </div>
-        <div class="col-md-2 mb-3">
-            <label for="existencia">Existencia:</label>
-            <input type="text" class="form-control" id="existencia" value="46">
-        </div>
+       
     </div>
 
     <div class="row">

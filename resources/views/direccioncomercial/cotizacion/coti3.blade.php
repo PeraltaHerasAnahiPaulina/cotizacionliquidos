@@ -106,14 +106,14 @@
 <form>
     <div class="row">
         <!-- Primera fila con 5 elementos -->
-        <div class="col-md-2 mb-3">
+        <div class="col-md-3 mb-3">
             <label for="tipo">Tipo:</label>
             <select class="form-select" id="tipo">
                 <option>Tipo 1</option>
                 <option>Tipo 2</option>
             </select>
         </div>
-        <div class="col-md-2 mb-3">
+        <div class="col-md-3 mb-3">
             <label for="tiempoEntrega">Producto:</label>
             <select class="form-select" id="tiempoEntrega">
                 <option>M-JET OIL II CAN 24X1UQL</option>
@@ -121,17 +121,13 @@
                 <option>M-JET OIL II CAN 24X1UQL</option>
             </select>
         </div>
-        <div class="col-md-2 mb-3">
+        <div class="col-md-3 mb-3">
             <label for="presentacion">Presentación:</label>
             <input type="text" class="form-control" id="presentacion" value="Caja 24 pzas">
         </div>
-        <div class="col-md-2 mb-3">
+        <div class="col-md-3 mb-3">
             <label for="disponibilidad">Disponibilidad:</label>
             <input type="text" class="form-control" id="disponibilidad" value="FTS">
-        </div>
-        <div class="col-md-2 mb-3">
-            <label for="existencia">Existencia:</label>
-            <input type="text" class="form-control" id="existencia" value="46">
         </div>
     </div>
 
