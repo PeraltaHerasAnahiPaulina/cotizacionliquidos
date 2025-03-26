@@ -110,8 +110,9 @@
         <div class="col-md-3 mb-3">
             <label for="tipo">Tipo:</label>
             <select class="form-select" id="tipo">
-                <option>Tipo 1</option>
-                <option>Tipo 2</option>
+                <option>CVL</option>
+                <option> PVL </option>
+                <option> INDUSTRIA </option>
             </select>
         </div>
         <div class="col-md-3 mb-3">
