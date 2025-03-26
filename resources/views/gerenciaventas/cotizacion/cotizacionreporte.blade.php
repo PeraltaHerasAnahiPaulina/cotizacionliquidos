@@ -164,7 +164,7 @@
   </div>
 </div>
                 </td>
-                <td style="text-align: center"> Archivo LSWP cargado</td>
+                <td style="text-align: center"> Archivo SAP cargado</td>
                 </td>
                 
                 <td>
@@ -192,7 +192,7 @@
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center"> Archivo LSWP cargado</td>
+                <td style="text-align: center"> Archivo SAP cargado</td>
                 
                 <td>
                  
@@ -250,7 +250,7 @@
                      <i class="fa fa-refresh"></i>
                   </button>
                 </td>
-                <td style="text-align: center">  Pendiente de generar LSWP</td>
+                <td style="text-align: center">  Pendiente de generar SAP</td>
                 
                 <td>
                     <!-- Botón PDF -->

@@ -117,7 +117,7 @@
                 </td>
                 <td style="text-align: center">Aprobada por Gerente</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Archivo LSWP cargado</div>
+                  <div style="margin-bottom: 10px; text-align: center;">Archivo SAP cargado</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>

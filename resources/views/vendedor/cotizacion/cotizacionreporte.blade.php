@@ -162,7 +162,7 @@
                 </td>
                 </td>
                 <td style="text-align: center">Aprobada por Gerente</td>
-                <td style="text-align: center"> Archivo LSWP cargado</td>
+                <td style="text-align: center"> Archivo SAP cargado</td>
                 <td>
 
                     <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
@@ -188,7 +188,7 @@
                   </button>
                 </td>
                 <td style="text-align: center">Pendiente de autorizacion por Gerente</td>
-                <td style="text-align: center"> Archivo LSWP cargado</td>
+                <td style="text-align: center"> Archivo SAP cargado</td>
                 <td>
                  
                     <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
@@ -244,7 +244,7 @@
                   </button>
                 </td>
                 <td style="text-align: center">Pendiente aprobación por Gerente</td>
-                <td style="text-align: center"> Pendiente de generar LSWP</td>
+                <td style="text-align: center"> Pendiente de generar SAP</td>
                 <td>
                     <!-- Botón PDF -->
                     <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
