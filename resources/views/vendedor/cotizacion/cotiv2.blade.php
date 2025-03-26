@@ -22,15 +22,15 @@
         <!-- Primera fila: 3 columnas -->
         <div class="col-md-4 mb-3">
             <label for="status">Tipo de Cotización:</label>
-            <input type="text" class="form-control" id="status" value="Automotriz" readonly>
+            <input type="text" class="form-control" id="status" value="Automotriz" readonly disabled>
         </div>
         <div class="col-md-4 mb-3">
             <label for="fecha">Seleccionar Fecha:</label>
-            <input type="date" class="form-control" id="fecha">
+            <input type="date" class="form-control" id="fecha" disabled>
         </div>
         <div class="col-md-4 mb-3">
             <label for="folio">Folio:</label>
-            <input type="text" class="form-control" id="folio" value="AME1-IND-000001-02">
+            <input type="text" class="form-control" id="folio" value="AME1-IND-000001-02" disabled>
         </div>
     </div>
 
@@ -38,7 +38,7 @@
         <!-- Segunda fila: 4 columnas -->
         <div class="col-md-3 mb-3">
             <label for="cliente">Seleccione Cliente:</label>
-            <select class="form-select" id="cliente">
+            <select class="form-select" id="cliente" disabled>
                 <option>Carlos Ortega Mendez</option>
             </select>
         </div>
