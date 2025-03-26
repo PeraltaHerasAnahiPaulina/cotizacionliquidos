@@ -116,9 +116,9 @@
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal">
                      <i class="fa fa-refresh"></i>
                   </button>
-                  <!-- Modal -->
+                 <!-- Modal -->
 <div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg modal-dialog-centered" style="max-width: 70%;" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
@@ -127,29 +127,94 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
-          <!-- Select de estado -->
-          <div class="form-group">
-    <label for="estadoSelect" class="d-block">Estado</label>
-    <select class="form-control custom-select" id="estadoSelect">
-        <option value="">Seleccione un estado</option>
-        <option value="autorizada">Autorizada por gerente</option>
-        <option value="pendiente" selected>Pendiente de autorizacion por gerente</option>
-        <option value="cancelada">Cancelada por gerente</option>
-        <option value="pendienteaprobacion">Pendiente Aprobación por gerente</option>
-        <option value="aprobada">Aprobada por gerente</option>
-    </select>
-</div>
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered">
+            <thead style="background-color: #f5333f; color: white;">
+              <tr>
+                <th colspan="8" class="text-center">Artículos Solicitados</th>
+              </tr>
+            </thead>
+            <thead class="table text-center">
+                            <tr>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Cantidad</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Código</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Nombre</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Presentación</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Precio Unitario</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Descuento</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">Precio Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+                            <tr>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-JET OIL II CAN 24X1UQL</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja 24 pzas</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$821.60</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">10%</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$4,929.60</td>
+                               
 
-          
-          <!-- Fecha de modificación -->
-          <div class="form-group" id="fechaGroup">
+                                   
+                            </tr>
+                            <tr>
+                            <td style="text-align: center;">10</td>
+                            <td style="text-align: center;">104765</td>
+                            <td style="text-align: center;">M-JET OIL II CAN 24X1UQL</td>
+                            <td style="text-align: center;">Caja 24 pzas</td>
+                            <td style="text-align: right;">$527.66</td>
+                            <td style="text-align: right;">0%</td>
+                            <td style="text-align: right;">$5,276.60</td>
+                                
+                            <tr>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">10</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">104765</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">M-VACUOLINE 146 DRUM 208L</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Caja de 24 Pzas</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$527.66</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">5%</td>
+                            <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">$5,012.77</td>
+                                
+                           
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">SUBTOTAL:</th>
+                                <td class="text-end">$15,218.97</td>
+                            </tr>
+                            <tr>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">IVA 16% :</th>
+                                <td class="text-end">$2,435.04</td>
+                            </tr>
+                            <tr>
+                                <th style="color: #00144F ;" colspan="6" class="text-end fw-bold">TOTAL:</th>
+                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">$17,654.01</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+        </div>
+
+        <form>
+          <div class="form-group">
+            <label for="estadoSelect" class="d-block">Estado</label>
+            <select class="form-control" id="estadoSelect">
+              <option value="">Seleccione un estado</option>
+              <option value="autorizada">Autorizada por gerente</option>
+              <option value="pendiente" selected>Pendiente de autorización</option>
+              <option value="cancelada">Cancelada por gerente</option>
+              <option value="pendienteaprobacion">Pendiente Aprobación</option>
+              <option value="aprobada">Aprobada por gerente</option>
+            </select>
+          </div>
+
+          <div class="form-group">
             <label for="fechaModificacion" class="d-block">Fecha de Cambio de Estado</label>
             <input type="date" class="form-control" id="fechaModificacion">
           </div>
-          
-          <!-- Observaciones -->
-          <div class="form-group" id="observacionesGroup">
+
+          <div class="form-group">
             <label for="observaciones" class="d-block">Observaciones</label>
             <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
           </div>
@@ -157,12 +222,11 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        
         <button type="button" class="btn btn-primary">Guardar</button>
       </div>
     </div>
   </div>
-</div>
+
                 </td>
                 <td style="text-align: center"> Archivo SAP cargado</td>
                 </td>
