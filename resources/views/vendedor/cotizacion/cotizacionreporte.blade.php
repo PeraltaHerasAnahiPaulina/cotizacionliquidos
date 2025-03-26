@@ -178,7 +178,7 @@
             </tr>
             <tr>
                   <td>21-02-2025</td>
-                  <td>AME1-IND-00001</td>
+                  <td>AME1-IND-00001-01</td>
                 <td>Prospecto NUEVA GENERACION AERONAUTICA </td>
                 <td>$12,063.52</td>
                 <td style="text-align: center;">
@@ -206,7 +206,7 @@
             </tr>
             <tr>
                   <td>21-02-2025</td>
-                  <td>AME1-IND-00001</td>
+                  <td>AME1-IND-00001-01</td>
                 <td>Taller Tollocan</td>
                 <td>$18,263.32</td>
                 <td style="text-align: center;">
