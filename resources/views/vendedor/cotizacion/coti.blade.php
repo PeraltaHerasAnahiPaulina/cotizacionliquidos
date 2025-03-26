@@ -193,9 +193,9 @@
         <div class="col-md-4 mb-3">
             <label for="producto">Producto:</label>
             <select class="form-select" id="producto">
-                <option value="M-JET OIL II CAN 24X1UQL">M-JET OIL II CAN 24X1UQL</option>
-                <option value="M-VACUOLINE 146 DRUM 208L">M-VACUOLINE 146 DRUM 208L</option>
-                <option value="M-JET OIL II CAN 24X1UQL">M-JET OIL II CAN 24X1UQL</option>
+                <option value="M-JET OIL II CAN 24X1UQL">104765 - M-JET OIL II CAN 24X1UQL - Caja 24 pzas</option>
+                <option value="M-VACUOLINE 146 DRUM 208L">104765 - M-VACUOLINE 146 DRUM 208L - Caja 24 pzas</option>
+                <option value="M-JET OIL II CAN 24X1UQL">104765 - M-JET OIL II CAN 24X1UQL - Caja 24 pzas</option>
             </select>
         </div>
 
@@ -214,7 +214,7 @@
         
             .select2-selection {
                 height: calc(2.25rem + 2px) !important; /* Ajusta la altura para que coincida con el select original */
-                padding: 0.375rem 4.75rem; /* Mantiene un diseño uniforme */
+                padding: 0.375rem 0.75rem; /* Mantiene un diseño uniforme */
                 border-radius: 5px; /* Ajusta las esquinas redondeadas */
                 border: 1px solid #ced4da; /* Color de borde para igualar el diseño */
             }
