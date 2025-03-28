@@ -48,7 +48,7 @@ class gerenciaventascontroller extends Controller
 
      
     public function descargar(Request $request)
-{
+   {
     
     $tipoFirma = $request->input('firma');
 

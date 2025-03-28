@@ -278,6 +278,7 @@
                         <thead class="table text-center">
                             <tr>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">FECHA MOVIMIENTO</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">VERSIÓN DE COTIZACIÓN</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">STATUS ANTERIOR</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">STATUS NUEVO</th>
                                 <th style="background-color: #0d6efd; color: #ffffff ;">USUARIO HIZO CAMBIO</th>
@@ -288,6 +289,7 @@
                         <tbody>
                             <tr>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;" >19/02/2025</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;" >AME1-IND-00001-01</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Pendiente aprobación gerencia</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Aprobada gerencia</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Miguel Escutia</td>
@@ -296,6 +298,7 @@
                             </tr>
                             <tr>
                                 <td style="text-align: center;">20/02/2025</td>
+                                <td style="text-align: center;">AME1-IND-00001-01</td>
                                 <td style="text-align: center;">Aprobada gerencia</td>
                                 <td style="text-align: center;">Pendiente aprobación cliente</td>
                                 <td style="text-align: center;">Pedro sanabria</td>
@@ -304,6 +307,7 @@
                             </tr>
                             <tr>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">21/02/2025</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;" >AME1-IND-00001-01</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Pendiente aprobación cliente</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Aprobada por cliente</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Pedro sanabria</td>
@@ -312,6 +316,7 @@
                             </tr>
                             <tr>
                                 <td style="text-align: center;">21/02/2025</td>
+                                <td style="text-align: center;">AME1-IND-00001-02</td>
                                 <td style="text-align: center;">Aprobada por cliente</td>
                                 <td style="text-align: center;">Pendiente de descarga de archivo LSW</td>
                                 <td style="text-align: center;">Pedro Sanabria</td>
@@ -320,6 +325,7 @@
                             </tr>
                             <tr>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">22/02/2025</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">AME1-IND-0001-03</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Pendiente de descarga de  archivo LSW</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Archivo LSW cargado</td>
                                 <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">Ana Mendez</td>
@@ -341,22 +347,42 @@
                     <div class="d-flex justify-content-between align-items-center">
                     <div>
           <div>
+          <div class="card">
+          <div class="card-body">
           <form id="downloadForm" method="POST" action="{{ route('descargar.pdf') }}" class="d-flex align-items-center">
     @csrf
     <button type="button" id="descargarBtn" class="btn btn-primary me-3">
         <i class="fa fa-download"></i> Descargar PDF
     </button>
-
+ <div class="d-flex flex-column me-3">
+        <strong>Firma</strong>
     <div class="d-flex align-items-center">
         <div class="me-3">
-            <input type="radio" name="firma" id="con_firma" value="con_firma" class="me-1">
-            <label for="con_firma">Con firma</label>
+            <input type="radio" name="firma" id="con_firma" value="con_firma" class="me-1" checked >
+            <label for="con_firma">Sí</label>
         </div>
         <div>
             <input type="radio" name="firma" id="sin_firma" value="sin_firma" class="me-1">
-            <label for="sin_firma">Sin firma</label>
+            <label for="sin_firma">No</label>
         </div>
     </div>
+    </div>
+
+    <div class="d-flex flex-column">
+        <strong>Descuento</strong>
+        <div class="d-flex align-items-center">
+            <div class="me-2">
+                <input type="radio" name="descuento" id="descuento_si" value="si" class="me-1" checked>
+                <label for="descuento_si">Sí</label>
+            </div>
+            <div>
+                <input type="radio" name="descuento" id="descuento_no" value="no" class="me-1">
+                <label for="descuento_no">No</label>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
 </form>
       <div class="modal-body">
         <div class="d-flex justify-content-between">
