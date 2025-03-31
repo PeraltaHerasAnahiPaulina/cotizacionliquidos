@@ -221,25 +221,26 @@
                         <div class="col-md-6 mb-3">
                             <label for="tipo">Tipo:</label>
                             <select class="form-select" id="tipo">
-                                <option>Tipo 1</option>
-                                <option>Tipo 2</option>
+                                <option>PVL </option>
+                                <option>CVL</option>
                             </select>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="producto">Producto:</label>
-                            <select class="form-select" id="producto">
-                                <option>M-JET OIL II CAN 24X1UQL</option>
-                                <option>M-VACUOLINE 146 DRUM 208L</option>
-                                <option>M-JET OIL II CAN 24X1UQL</option>
-                            </select>
-                        </div>
+                            <div class="col-md-4 mb-3">
+                             <label for="productos">Producto:</label>
+                                 <select class="form-select" id="productos">
+                            <option value="">Buscar </option>
+                            <option value="M-JET OIL II CAN 24X1UQL">104765- M-JET-OIL-II-CAN 24X1UQL- Caja 24 pzas</option>
+                            <option value="M-VACUOLINE 146 DRUM 208L">104765 - M-VACUOLINE 146 DRUM 208L - Caja 24 pzas</option>
+                            <option value="M-JET OIL II CAN 24X1UQL">104765 - M-JET OIL II CAN 24X1UQL - Caja 24 pzas</option>
+                               </select>
+                           </div>
                         <div class="col-md-6 mb-3">
                             <label for="presentacion">Presentación:</label>
                             <input type="text" class="form-control" id="presentacion" value="Caja 24 pzas" readonly>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="existencia">Existencia:</label>
-                            <input type="text" class="form-control" id="existencia" value="46" readonly>
+                            <label for="cantidad">Cantidad:</label>
+                            <input type="number" class="form-control" id="cantidad" value="10">
                         </div>
                     </div>
 
@@ -259,10 +260,7 @@
                                 <span class="input-group-text">%</span>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="cantidad">Cantidad:</label>
-                            <input type="number" class="form-control" id="cantidad" value="10">
-                        </div>
+                        
                         <div class="col-md-6 mb-3">
                             <label for="precioTotal">Precio Total:</label>
                             <div class="input-group">
