@@ -22,7 +22,7 @@
         <!-- Primera fila: 3 columnas -->
         <div class="col-md-4 mb-3">
             <label for="status">Tipo de Cotización:</label>
-            <input type="text" class="form-control" id="status" value="Automotriz" readonly disabled>
+            <input type="text" class="form-control" id="status" value="INDUSTRIAL" readonly disabled>
         </div>
         <div class="col-md-4 mb-3">
             <label for="fecha">Seleccionar Fecha:</label>
