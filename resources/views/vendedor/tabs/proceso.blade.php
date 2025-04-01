@@ -581,7 +581,20 @@
             </table>
         </div>
 
-        <button class="btn btn-danger" onclick="closeDetails(1)">Cerrar</button>
+        <div class="text-center mt-4">
+    <a href="/cotiv2">
+        <button class="btn btn-success" id="createCotizacionBtn">Nueva Versión</button>
+    </a>
+    <button class="btn btn-danger ms-3" onclick="closeDetails(1)">Cerrar</button>
+</div>
+
+<script>
+    function closeDetails(id) {
+        // Aquí colocas la lógica para cerrar el modal o la vista de detalles
+        console.log("Cerrando detalles de: " + id);
+    }
+</script>
+
     </div>
 </div>
 
