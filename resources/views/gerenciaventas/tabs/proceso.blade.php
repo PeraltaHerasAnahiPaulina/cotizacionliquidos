@@ -72,7 +72,7 @@
                                 <i class="fa-solid fa-gear"></i>
                             </button>
                             <!-- Botón Ver -->
-                            <button class="btn btn-info btn-sm" onclick="showDetails()">
+                            <button class="btn btn-info btn-sm" onclick="showDetails(1)">
                                 <i class="fa fa-eye"></i>
                             </button>
                             <!-- Botón Editar (libretita) -->
