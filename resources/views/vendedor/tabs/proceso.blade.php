@@ -55,23 +55,29 @@
                         <td>NUEVA GENERACION AERONAUTICA</td>
                         <td>$17,654.01</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">
-                                Pendiente aceptacion Cliente</div>
+                            <div style="margin-bottom: 10px; text-align: center;color: #f1e30f">Pendiente aceptacion
+                                Cliente</div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal">
+                                <i class="fa fa-refresh"></i>
+                            </button>
+                        </td>
+                        <td style="text-align: center;color: #f1e30f">Pendiente de autorizacion por Gerente</td>
+                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            Generar</td>
 
-                        </td>
-                        </td>
-                        <td style="text-align: center ; color: #f1e30f;">Pendiente aprobación por Gerente</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente
-                                Generar</div>
-                        </td>
                         <td>
 
                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
                                 <i class="fa-solid fa-gear"></i>
                             </button>
+                            <!-- Botón Ver -->
                             <button class="btn btn-info btn-sm" onclick="showDetails(1)">
                                 <i class="fa fa-eye"></i>
+                            </button>
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
                             </button>
                         </td>
                     </tr>
@@ -81,15 +87,17 @@
                         <td>Taller Automotriz A</td>
                         <td>$15,923.12</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Pendiente aceptacion
+                            <div style="margin-bottom: 10px; text-align: center;color: #f1e30f">Pendiente aceptacion
                                 Cliente</div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal">
+                                <i class="fa fa-refresh"></i>
+                            </button>
+                        </td>
+                        <td style="text-align: center;color: #f1e30f">Pendiente de autorizacion por Gerente</td>
+                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            Generar</td>
 
-                        </td>
-                        <td style="text-align: center ; color: #f1e30f;">Pendiente aprobación por Gerente</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente
-                                Generar</div>
-                        </td>
                         <td>
 
                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
@@ -99,7 +107,10 @@
                             <button class="btn btn-info btn-sm" onclick="showDetails()">
                                 <i class="fa fa-eye"></i>
                             </button>
-
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
+                            </button>
                         </td>
                     </tr>
                     <tr>
@@ -108,23 +119,29 @@
                         <td>Taller Tollocan</td>
                         <td>$18,263.32</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Pendiente aceptacion
+                            <div style="margin-bottom: 10px; text-align: center;color: #f1e30f">Pendiente aceptacion
                                 Cliente</div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal">
+                                <i class="fa fa-refresh"></i>
+                            </button>
+                        </td>
+                        <td style="text-align: center;color: #f1e30f">Pendiente de autorizacion por Gerente</td>
+                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            Generar</td>
 
-                        </td>
-                        <td style="text-align: center ; color: #f1e30f;">Pendiente aprobación por Gerente</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente
-                                Generar</div>
-                        </td>
                         <td>
-                            <!-- Botón PDF -->
+
                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
                                 <i class="fa-solid fa-gear"></i>
                             </button>
                             <!-- Botón Ver -->
                             <button class="btn btn-info btn-sm" onclick="showDetails()">
                                 <i class="fa fa-eye"></i>
+                            </button>
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
                             </button>
                         </td>
                     </tr>
@@ -134,22 +151,29 @@
                         <td>Taller Auto</td>
                         <td>$15,923.12</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Pendiente aceptacion
+                            <div style="margin-bottom: 10px; text-align: center;color: #f1e30f">Pendiente aceptacion
                                 Cliente</div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal">
+                                <i class="fa fa-refresh"></i>
+                            </button>
                         </td>
-                        <td style="text-align: center ; color: #f1e30f;">Pendiente aprobación por Gerente</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente
-                                Generar</div>
-                        </td>
+                        <td style="text-align: center;color: #f1e30f">Pendiente de autorizacion por Gerente</td>
+                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            Generar</td>
+
                         <td>
-                            <!-- Botón PDF -->
+
                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
                                 <i class="fa-solid fa-gear"></i>
                             </button>
                             <!-- Botón Ver -->
                             <button class="btn btn-info btn-sm" onclick="showDetails()">
                                 <i class="fa fa-eye"></i>
+                            </button>
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
                             </button>
                         </td>
                     </tr>
@@ -471,5 +495,51 @@
         </div>
 
         <button class="btn btn-danger" onclick="closeDetails(1)">Cerrar</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- Select de estado -->
+                    <div class="form-group">
+                        <label for="estadoSelect" class="d-block">Estado</label>
+                        <select class="form-control custom-select" id="estadoSelect">
+                            <option value="">Seleccione un estado</option>
+                            <option value="pendiente">Pendiente aceptación cliente</option>
+                            <option value="aceptada" selected>Aceptada por cliente</option>
+                            <option value="cancelada">Cancelada por Cliente</option>
+                        </select>
+                    </div>
+
+                    <!-- Fecha de modificación -->
+                    <div class="form-group" id="fechaGroup">
+                        <label for="fechaModificacion" class="d-block">Fecha de Cambio de Estado</label>
+                        <input type="date" class="form-control" id="fechaModificacion">
+                    </div>
+
+                    <!-- Observaciones -->
+                    <div class="form-group" id="observacionesGroup">
+                        <label for="observaciones" class="d-block">Observaciones</label>
+                        <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
     </div>
 </div>
