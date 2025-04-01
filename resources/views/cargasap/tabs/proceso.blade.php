@@ -53,12 +53,12 @@
             <td>NUEVA GENERACION AERONAUTICA</td>
             <td>$17,654.01</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el Cliente</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #29af1f;">Aceptada por el Cliente</div>
             </td>
             </td>
-            <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
+            <td style="text-align: center ; color: #29af1f;">Aprobada por Gerente</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente Generar</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Archivo SAP pendiente Generar</div>
             </td>
             <td>
 
@@ -70,16 +70,16 @@
           </tr>
           <tr>
             <td>25-09-2025</td>
-            <td>xd-dlD-00001</td>
+            <td>AME1-IND-00002-01</td>
             <td>Taller Automotriz A</td>
             <td>$15,923.12</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el Cliente</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #29af1f;">Aceptada por el Cliente</div>
             </td>
             </td>
-            <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
+            <td style="text-align: center ; color: #29af1f;">Aprobada por Gerente</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente Generar</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Archivo SAP pendiente Generar</div>
             </td>
             <td>
 
@@ -91,16 +91,16 @@
           </tr>
           <tr>
             <td>19-07-2024</td>
-            <td>CDI2-3303-00031</td>
+            <td>AME1-IND-00003-01</td>
             <td>Taller Tollocan</td>
             <td>$18,263.32</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el Cliente</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #29af1f;">Aceptada por el Cliente</div>
             </td>
             </td>
-            <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
+            <td style="text-align: center ; color: #29af1f;">Aprobada por Gerente</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente Generar</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Archivo SAP pendiente Generar</div>
             </td>
             <td>
 
@@ -112,16 +112,16 @@
           </tr>
           <tr>
             <td>19-02-2025</td>
-            <td>xd-IND-00001</td>
+            <td>AME1-IND-00004-01</td>
             <td>Taller Auto</td>
             <td>$15,923.12</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el Cliente</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #29af1f;">Aceptada por el Cliente</div>
             </td>
             </td>
-            <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
+            <td style="text-align: center ; color: #29af1f;">Aprobada por Gerente</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente Generar</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Archivo SAP pendiente Generar</div>
             </td>
             <td>
 

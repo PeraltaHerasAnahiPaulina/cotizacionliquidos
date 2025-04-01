@@ -49,16 +49,16 @@
         <tbody>
           <tr>
             <td>21-02-2025</td>
-            <td>AME1-IND-00001-01</td>
+            <td>AME1-IND-00007-01</td>
             <td>NUEVA GENERACION AERONAUTICA</td>
             <td>$17,654.01</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el Cliente</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #29af1f;">Aceptada por el Cliente</div>
             </td>
             </td>
-            <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
+            <td style="text-align: center ; color: #29af1f;">Aprobada por Gerente</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #29af1f;">Archivo SAP cargado</div>
             </td>
             <td>
 
@@ -69,16 +69,16 @@
           </tr>
           <tr>
             <td>22-01-2025</td>
-            <td>CDL1-LJD-0001</td>
+            <td>AME1-IND-00007-01</td>
             <td>Taller AV</td>
             <td>$10,263.32</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el Cliente</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #29af1f;">Aceptada por el Cliente</div>
             </td>
             </td>
-            <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
+            <td style="text-align: center ; color: #29af1f;">Aprobada por Gerente</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #29af1f;">Archivo SAP cargado</div>
             </td>
             <td>
 
@@ -89,16 +89,16 @@
           </tr>
           <tr>
             <td>12-09-2024</td>
-            <td>xdw2-xcD-00001</td>
+            <td>AME1-IND-00009-01</td>
             <td>Nv Taller Tol</td>
             <td>$17,654.01</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el Cliente</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #29af1f;">Aceptada por el Cliente</div>
             </td>
             </td>
-            <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
+            <td style="text-align: center ; color: #29af1f;">Aprobada por Gerente</td>
             <td style="text-align: center;">
-              <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado</div>
+              <div style="margin-bottom: 10px; text-align: center; color: #29af1f;">Archivo SAP cargado</div>
             </td>
             <td>
 

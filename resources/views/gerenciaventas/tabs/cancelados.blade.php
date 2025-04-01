@@ -51,7 +51,7 @@
                 <tbody>
                     <tr>
                         <td>15-03-2025</td>
-                        <td>AME2-LOG-00015-02</td>
+                        <td>AME1-IND-00013-01</td>
                         <td>Distribuidora Central</td>
                         <td>$22,500.75</td>
                         <td style="text-align: center; color: #e61e1e;">Cancelado por Cliente</td>
@@ -63,7 +63,7 @@
                                 <i class="fa fa-refresh"></i>
                             </button>
                         </td>
-                        <td style="text-align: center;color: #f1e30f;"> NO APLICA</td>
+                        <td style="text-align: center;color: #ff8e2f;"> NO APLICA</td>
 
                         <td>
                             <!-- Botón PDF -->
@@ -82,7 +82,7 @@
                     </tr>
                     <tr>
                         <td>10-04-2025</td>
-                        <td>AME3-FIN-00025-03</td>
+                        <td>AME1-IND-00233-01</td>
                         <td>Servicios Contables MX</td>
                         <td>$9,874.50</td>
                         <td style="text-align: center; color: #e61e1e;">Cancelado por Cliente</td>
@@ -94,7 +94,7 @@
                                 <i class="fa fa-refresh"></i>
                             </button>
                         </td>
-                        <td style="text-align: center;color: #f1e30f;"> NO APLICA</td>
+                        <td style="text-align: center;color: #ff8e2f;"> NO APLICA</td>
 
                         <td>
                             <!-- Botón PDF -->
@@ -113,7 +113,7 @@
                     </tr>
                     <tr>
                         <td>05-05-2025</td>
-                        <td>AME4-TEC-00035-04</td>
+                        <td>AME1-IND-00072-01</td>
                         <td>Innovación Automotriz</td>
                         <td>$35,000.00</td>
                         <td style="text-align: center; color: #e61e1e;">Cancelado por Cliente</td>
@@ -125,7 +125,7 @@
                                 <i class="fa fa-refresh"></i>
                             </button>
                         </td>
-                        <td style="text-align: center;color: #f1e30f;"> NO APLICA</td>
+                        <td style="text-align: center;color: #ff8e2f;"> NO APLICA</td>
 
                         <td>
                             <!-- Botón PDF -->
@@ -144,7 +144,7 @@
                     </tr>
                     <tr>
                         <td>20-06-2025</td>
-                        <td>AME5-MNT-00045-05</td>
+                        <td>AME1-IND-00054-01</td>
                         <td>Mantenimiento Global</td>
                         <td>$15,600.90</td>
                         <td style="text-align: center; color: #e61e1e;">Cancelado por Cliente</td>
@@ -156,7 +156,7 @@
                                 <i class="fa fa-refresh"></i>
                             </button>
                         </td>
-                        <td style="text-align: center;color: #f1e30f;"> NO APLICA</td>
+                        <td style="text-align: center;color: #ff8e2f;"> NO APLICA</td>
 
                         <td>
                             <!-- Botón PDF -->
