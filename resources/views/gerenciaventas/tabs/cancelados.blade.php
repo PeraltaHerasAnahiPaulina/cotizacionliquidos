@@ -14,18 +14,18 @@
                         <td><input class="date-input" type="text" id="max" name="max"></td>
                         <td style="padding-left: 20px;">
                             <!-- Botón Excel -->
-                            <button class="btn btn-success btn-sm" id="exportButton2" onclick="exportToExcel()">
+                            <button class="btn btn-success btn-sm" id="exportButton3" onclick="exportToExcel()">
                                 <i class="fa fa-file-excel"></i> Exportar Excel
                             </button>
                         </td>
                         <td class="search-controls" style="font-size: 14px; font-weight:bold;">
-                            Buscar: <input type="text" id="searchInput2" placeholder="Buscar...">
+                            Buscar: <input type="text" id="searchInput3" placeholder="Buscar...">
                         </td>
 
                     </tr>
                 </tbody>
             </table>
-            <table id="documentTable2" class="table table-striped table-bordered display" style="width: 100%">
+            <table id="documentTable3" class="table table-striped table-bordered display" style="width: 100%">
                 <thead>
                     <tr style="background-color: #E0E0E0">
                         <th style="background-color: #323F52; color: #ffffff; width: 80px">Fecha</th>
@@ -50,80 +50,126 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>21-02-2025</td>
-                        <td>AME1-IND-00001-01</td>
-                        <td>NUEVA GENERACION AERONAUTICA</td>
-                        <td>$17,654.01</td>
+                        <td>15-03-2025</td>
+                        <td>AME2-LOG-00015-02</td>
+                        <td>Distribuidora Central</td>
+                        <td>$22,500.75</td>
+                        <td style="text-align: center; color: #e61e1e;">Cancelado por Cliente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el
-                                Cliente</div>
-                        </td>
-                        </td>
-                        <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado
+                            <div style="margin-bottom: 10px; text-align: center;color: #e61e1e;">Cancelado por Gerente
                             </div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal3"
+                                data-target="#estadoModal3">
+                                <i class="fa fa-refresh"></i>
+                            </button>
                         </td>
-                        <td>
+                        <td style="text-align: center;color: #f1e30f;"> NO APLICA</td>
 
+                        <td>
+                            <!-- Botón PDF -->
                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal3">
                                 <i class="fa-solid fa-gear"></i>
                             </button>
-                            <button class="btn btn-info btn-sm" onclick="showDetails(2)">
-                                <i class="fa fa-eye"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>22-01-2025</td>
-                        <td>CDL1-LJD-0001</td>
-                        <td>Taller AV</td>
-                        <td>$10,263.32</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el
-                                Cliente</div>
-                        </td>
-                        </td>
-                        <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado
-                            </div>
-                        </td>
-                        <td>
-
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
-                                <i class="fa-solid fa-gear"></i>
-                            </button>
                             <!-- Botón Ver -->
                             <button class="btn btn-info btn-sm" onclick="showDetails()">
                                 <i class="fa fa-eye"></i>
                             </button>
-
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
+                            </button>
                         </td>
                     </tr>
                     <tr>
-                        <td>12-09-2024</td>
-                        <td>xdw2-xcD-00001</td>
-                        <td>Nv Taller Tol</td>
-                        <td>$17,654.01</td>
+                        <td>10-04-2025</td>
+                        <td>AME3-FIN-00025-03</td>
+                        <td>Servicios Contables MX</td>
+                        <td>$9,874.50</td>
+                        <td style="text-align: center; color: #e61e1e;">Cancelado por Cliente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el
-                                Cliente</div>
-                        </td>
-                        </td>
-                        <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado
+                            <div style="margin-bottom: 10px; text-align: center;color: #e61e1e;">Cancelado por Gerente
                             </div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal3">
+                                <i class="fa fa-refresh"></i>
+                            </button>
                         </td>
+                        <td style="text-align: center;color: #f1e30f;"> NO APLICA</td>
+
                         <td>
                             <!-- Botón PDF -->
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal3">
                                 <i class="fa-solid fa-gear"></i>
                             </button>
                             <!-- Botón Ver -->
                             <button class="btn btn-info btn-sm" onclick="showDetails()">
                                 <i class="fa fa-eye"></i>
+                            </button>
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>05-05-2025</td>
+                        <td>AME4-TEC-00035-04</td>
+                        <td>Innovación Automotriz</td>
+                        <td>$35,000.00</td>
+                        <td style="text-align: center; color: #e61e1e;">Cancelado por Cliente</td>
+                        <td style="text-align: center;">
+                            <div style="margin-bottom: 10px; text-align: center;color: #e61e1e;">Cancelado por Gerente
+                            </div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal3">
+                                <i class="fa fa-refresh"></i>
+                            </button>
+                        </td>
+                        <td style="text-align: center;color: #f1e30f;"> NO APLICA</td>
+
+                        <td>
+                            <!-- Botón PDF -->
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal3">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                            <!-- Botón Ver -->
+                            <button class="btn btn-info btn-sm" onclick="showDetails()">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>20-06-2025</td>
+                        <td>AME5-MNT-00045-05</td>
+                        <td>Mantenimiento Global</td>
+                        <td>$15,600.90</td>
+                        <td style="text-align: center; color: #e61e1e;">Cancelado por Cliente</td>
+                        <td style="text-align: center;">
+                            <div style="margin-bottom: 10px; text-align: center;color: #e61e1e;">Cancelado por Gerente
+                            </div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal3">
+                                <i class="fa fa-refresh"></i>
+                            </button>
+                        </td>
+                        <td style="text-align: center;color: #f1e30f;"> NO APLICA</td>
+
+                        <td>
+                            <!-- Botón PDF -->
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal3">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                            <!-- Botón Ver -->
+                            <button class="btn btn-info btn-sm" onclick="showDetails()">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
                             </button>
                         </td>
                     </tr>
@@ -229,7 +275,7 @@
 
 
 
-<div id="details-2" class="details-container">
+<div id="details-3" class="details-container">
     <div class="d-flex justify-content-between align-items-center">
         <div class="form-group">
             <div>
@@ -443,6 +489,160 @@
             </table>
         </div>
 
-        <button class="btn btn-danger" onclick="closeDetails(2)">Cerrar</button>
+        <button class="btn btn-danger" onclick="closeDetails(3)">Cerrar</button>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="estadoModal3" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" style="max-width: 70%;" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered">
+                        <thead style="background-color: #f5333f; color: white;">
+                            <tr>
+                                <th colspan="8" class="text-center">Artículos Solicitados
+                                </th>
+                            </tr>
+                        </thead>
+                        <thead class="table text-center">
+                            <tr>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Cantidad</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Código</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Nombre</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Presentación</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Precio Unitario</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Descuento</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Precio Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    10
+                                </td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    104765</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    M-JET
+                                    OIL II CAN 24X1UQL</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    Caja
+                                    24 pzas</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    $821.60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    10%
+                                </td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    $4,929.60</td>
+
+
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">104765</td>
+                                <td style="text-align: center;">M-JET OIL II CAN 24X1UQL
+                                </td>
+                                <td style="text-align: center;">Caja 24 pzas</td>
+                                <td style="text-align: right;">$527.66</td>
+                                <td style="text-align: right;">0%</td>
+                                <td style="text-align: right;">$5,276.60</td>
+
+                            <tr>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    10
+                                </td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    104765</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    M-VACUOLINE 146 DRUM 208L</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    Caja
+                                    de 24 Pzas</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    $527.66</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    5%
+                                </td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    $5,012.77</td>
+
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">
+                                    SUBTOTAL:</th>
+                                <td class="text-end">$15,218.97</td>
+                            </tr>
+                            <tr>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">
+                                    IVA 16% :</th>
+                                <td class="text-end">$2,435.04</td>
+                            </tr>
+                            <tr>
+                                <th style="color: #00144F ;" colspan="6" class="text-end fw-bold">TOTAL:</th>
+                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">
+                                    $17,654.01</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <form>
+    <div class="form-group d-flex align-items-center">
+        <label for="estadoSelect" class="col-md-3">Estado</label>
+        <div class="col-md-9">
+            <select class="form-control" id="estadoSelect">
+                <option value="">Seleccione un estado</option>
+                <option value="autorizada">Autorizada por gerente</option>
+                <option value="pendiente" selected>Pendiente de autorización</option>
+                <option value="cancelada">Cancelada por gerente</option>
+                <option value="pendienteaprobacion">Pendiente Aprobación</option>
+                <option value="aprobada">Aprobada por gerente</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group d-flex align-items-center">
+        <label for="fechaModificacion" class="col-md-3">Fecha de Cambio de Estado</label>
+        <div class="col-md-9">
+            <input type="date" class="form-control" id="fechaModificacion">
+        </div>
+    </div>
+
+    <div class="form-group d-flex align-items-center">
+        <label for="observaciones" class="col-md-3">Observaciones</label>
+        <div class="col-md-9">
+            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
+        </div>
+    </div>
+</form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
     </div>
 </div>

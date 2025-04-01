@@ -59,18 +59,27 @@
                                 Cliente</div>
                         </td>
                         </td>
-                        <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado
+                            <div style="margin-bottom: 10px; text-align: center;  color: #30da2d;">Aprobada por Gerente
                             </div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal2">
+                                <i class="fa fa-refresh"></i>
+                            </button>
                         </td>
+                        <td style="text-align: center; color: #30da2d;"> Archivo SAP cargado</td>
+                        </td>
+
                         <td>
 
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal3">
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal22">
                                 <i class="fa-solid fa-gear"></i>
                             </button>
-                            <button class="btn btn-info btn-sm" onclick="showDetails(2)">
+                            <button class="btn btn-info btn-sm" onclick="showDetails(1)">
                                 <i class="fa fa-eye"></i>
+                            </button>
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
                             </button>
                         </td>
                     </tr>
@@ -84,21 +93,27 @@
                                 Cliente</div>
                         </td>
                         </td>
-                        <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado
+                            <div style="margin-bottom: 10px; text-align: center;  color: #30da2d;">Aprobada por Gerente
                             </div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal2">
+                                <i class="fa fa-refresh"></i>
+                            </button>
                         </td>
+                        <td style="text-align: center; color: #30da2d;"> Archivo SAP cargado</td>
+
                         <td>
 
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal22">
                                 <i class="fa-solid fa-gear"></i>
                             </button>
-                            <!-- Botón Ver -->
-                            <button class="btn btn-info btn-sm" onclick="showDetails()">
+                            <button class="btn btn-info btn-sm" onclick="showDetails(1)">
                                 <i class="fa fa-eye"></i>
                             </button>
-
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
+                            </button>
                         </td>
                     </tr>
                     <tr>
@@ -111,19 +126,26 @@
                                 Cliente</div>
                         </td>
                         </td>
-                        <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado
+                            <div style="margin-bottom: 10px; text-align: center;  color: #30da2d;">Aprobada por Gerente
                             </div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal2">
+                                <i class="fa fa-refresh"></i>
+                            </button>
                         </td>
+                        <td style="text-align: center; color: #30da2d;"> Archivo SAP cargado</td>
+
                         <td>
-                            <!-- Botón PDF -->
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
+
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal22">
                                 <i class="fa-solid fa-gear"></i>
                             </button>
-                            <!-- Botón Ver -->
-                            <button class="btn btn-info btn-sm" onclick="showDetails()">
+                            <button class="btn btn-info btn-sm" onclick="showDetails(1)">
                                 <i class="fa fa-eye"></i>
+                            </button>
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
                             </button>
                         </td>
                     </tr>
@@ -133,7 +155,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal22" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-body">
@@ -444,5 +466,160 @@
         </div>
 
         <button class="btn btn-danger" onclick="closeDetails(2)">Cerrar</button>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="estadoModal2" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" style="max-width: 70%;" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered">
+                        <thead style="background-color: #f5333f; color: white;">
+                            <tr>
+                                <th colspan="8" class="text-center">Artículos Solicitados
+                                </th>
+                            </tr>
+                        </thead>
+                        <thead class="table text-center">
+                            <tr>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Cantidad</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Código</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Nombre</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Presentación</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Precio Unitario</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Descuento</th>
+                                <th style="background-color: #0d6efd; color: #ffffff ;">
+                                    Precio Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    10
+                                </td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    104765</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    M-JET
+                                    OIL II CAN 24X1UQL</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    Caja
+                                    24 pzas</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    $821.60</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    10%
+                                </td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    $4,929.60</td>
+
+
+
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">10</td>
+                                <td style="text-align: center;">104765</td>
+                                <td style="text-align: center;">M-JET OIL II CAN 24X1UQL
+                                </td>
+                                <td style="text-align: center;">Caja 24 pzas</td>
+                                <td style="text-align: right;">$527.66</td>
+                                <td style="text-align: right;">0%</td>
+                                <td style="text-align: right;">$5,276.60</td>
+
+                            <tr>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    10
+                                </td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    104765</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    M-VACUOLINE 146 DRUM 208L</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: center;">
+                                    Caja
+                                    de 24 Pzas</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    $527.66</td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    5%
+                                </td>
+                                <td style="background-color: rgba(185, 185, 185, 0.55); text-align: right;">
+                                    $5,012.77</td>
+
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">
+                                    SUBTOTAL:</th>
+                                <td class="text-end">$15,218.97</td>
+                            </tr>
+                            <tr>
+                                <th style="color: #00144F ;" colspan="6" class="text-end">
+                                    IVA 16% :</th>
+                                <td class="text-end">$2,435.04</td>
+                            </tr>
+                            <tr>
+                                <th style="color: #00144F ;" colspan="6" class="text-end fw-bold">TOTAL:</th>
+                                <td class="text-end fw-bold text-white" style="background-color: #f5333f;">
+                                    $17,654.01</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <form>
+    <div class="form-group d-flex align-items-center">
+        <label for="estadoSelect" class="col-md-3">Estado</label>
+        <div class="col-md-9">
+            <select class="form-control" id="estadoSelect">
+                <option value="">Seleccione un estado</option>
+                <option value="autorizada">Autorizada por gerente</option>
+                <option value="pendiente" selected>Pendiente de autorización</option>
+                <option value="cancelada">Cancelada por gerente</option>
+                <option value="pendienteaprobacion">Pendiente Aprobación</option>
+                <option value="aprobada">Aprobada por gerente</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group d-flex align-items-center">
+        <label for="fechaModificacion" class="col-md-3">Fecha de Cambio de Estado</label>
+        <div class="col-md-9">
+            <input type="date" class="form-control" id="fechaModificacion">
+        </div>
+    </div>
+
+    <div class="form-group d-flex align-items-center">
+        <label for="observaciones" class="col-md-3">Observaciones</label>
+        <div class="col-md-9">
+            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
+        </div>
+    </div>
+</form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
     </div>
 </div>

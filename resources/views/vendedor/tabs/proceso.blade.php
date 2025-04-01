@@ -14,18 +14,18 @@
                         <td><input class="date-input" type="text" id="max" name="max"></td>
                         <td style="padding-left: 20px;">
                             <!-- Botón Excel -->
-                            <button class="btn btn-success btn-sm" id="exportButton2" onclick="exportToExcel()">
+                            <button class="btn btn-success btn-sm" id="exportButton" onclick="exportToExcel()">
                                 <i class="fa fa-file-excel"></i> Exportar Excel
                             </button>
                         </td>
                         <td class="search-controls" style="font-size: 14px; font-weight:bold;">
-                            Buscar: <input type="text" id="searchInput2" placeholder="Buscar...">
+                            Buscar: <input type="text" id="searchInput" placeholder="Buscar...">
                         </td>
 
                     </tr>
                 </tbody>
             </table>
-            <table id="documentTable2" class="table table-striped table-bordered display" style="width: 100%">
+            <table id="documentTable" class="table table-striped table-bordered display" style="width: 100%">
                 <thead>
                     <tr style="background-color: #E0E0E0">
                         <th style="background-color: #323F52; color: #ffffff; width: 80px">Fecha</th>
@@ -50,45 +50,54 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>21-02-2025</td>
+                        <td>18-02-2025</td>
                         <td>AME1-IND-00001-01</td>
                         <td>NUEVA GENERACION AERONAUTICA</td>
                         <td>$17,654.01</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el
+                            <div style="margin-bottom: 10px; text-align: center;color: #f1e30f">Pendiente aceptacion
                                 Cliente</div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal">
+                                <i class="fa fa-refresh"></i>
+                            </button>
                         </td>
-                        </td>
-                        <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado
-                            </div>
-                        </td>
+                        <td style="text-align: center;color: #f1e30f">Pendiente de autorizacion por Gerente</td>
+                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            Generar</td>
+
                         <td>
 
-                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal3">
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
                                 <i class="fa-solid fa-gear"></i>
                             </button>
-                            <button class="btn btn-info btn-sm" onclick="showDetails(2)">
+                            <!-- Botón Ver -->
+                            <button class="btn btn-info btn-sm" onclick="showDetails(1)">
                                 <i class="fa fa-eye"></i>
+                            </button>
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
                             </button>
                         </td>
                     </tr>
                     <tr>
-                        <td>22-01-2025</td>
-                        <td>CDL1-LJD-0001</td>
-                        <td>Taller AV</td>
-                        <td>$10,263.32</td>
+                        <td>25-09-2025</td>
+                        <td>xd-dlD-00001</td>
+                        <td>Taller Automotriz A</td>
+                        <td>$15,923.12</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el
+                            <div style="margin-bottom: 10px; text-align: center;color: #f1e30f">Pendiente aceptacion
                                 Cliente</div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal">
+                                <i class="fa fa-refresh"></i>
+                            </button>
                         </td>
-                        </td>
-                        <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado
-                            </div>
-                        </td>
+                        <td style="text-align: center;color: #f1e30f">Pendiente de autorizacion por Gerente</td>
+                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            Generar</td>
+
                         <td>
 
                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
@@ -98,32 +107,160 @@
                             <button class="btn btn-info btn-sm" onclick="showDetails()">
                                 <i class="fa fa-eye"></i>
                             </button>
-
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
+                            </button>
                         </td>
                     </tr>
                     <tr>
-                        <td>12-09-2024</td>
-                        <td>xdw2-xcD-00001</td>
-                        <td>Nv Taller Tol</td>
-                        <td>$17,654.01</td>
+                        <td>19-07-2024</td>
+                        <td>CDI2-3303-00031</td>
+                        <td>Taller Tollocan</td>
+                        <td>$18,263.32</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el
+                            <div style="margin-bottom: 10px; text-align: center;color: #f1e30f">Pendiente aceptacion
                                 Cliente</div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal">
+                                <i class="fa fa-refresh"></i>
+                            </button>
                         </td>
-                        </td>
-                        <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
-                        <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado
-                            </div>
-                        </td>
+                        <td style="text-align: center;color: #f1e30f">Pendiente de autorizacion por Gerente</td>
+                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            Generar</td>
+
                         <td>
-                            <!-- Botón PDF -->
+
                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
                                 <i class="fa-solid fa-gear"></i>
                             </button>
                             <!-- Botón Ver -->
                             <button class="btn btn-info btn-sm" onclick="showDetails()">
                                 <i class="fa fa-eye"></i>
+                            </button>
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>19-02-2025</td>
+                        <td>AME1-IND-00001-01</td>
+                        <td>PROSPECTO NUEVA GENERACION AERONAUTICA <br> <div class="container mt-4">
+    <!-- Botón para abrir el modal -->
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCotizacion_123">
+        <i class="fas fa-file-invoice"></i>
+    </button>
+</div>
+</td>
+
+<!-- Modal -->
+<div class="modal fade" id="modalCotizacion_123" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg"> <!-- Hacemos el modal más amplio -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Asignación Cotización a Clientes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- Primera fila: Cotización, Fecha, Vendedor -->
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Cotización:</label>
+                            <input type="text" class="form-control" value="AMEL-IND-00002-01" readonly>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Fecha:</label>
+                            <input type="date" class="form-control" value="2025-02-21" readonly>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Vendedor:</label>
+                            <input type="text" class="form-control" value="Pedro Sanabria" readonly>
+                        </div>
+                    </div>
+
+                    <!-- Segunda fila: Tiempo de entrega, Validez Oferta, Moneda con checkboxes -->
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Tiempo de entrega:</label>
+                            <input type="text" class="form-control" value="2 días">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Validez Oferta:</label>
+                            <input type="text" class="form-control" value="Cambios con previo aviso">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label d-block">Moneda Forma de Pago:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="monedaMXN" checked>
+                                <label class="form-check-label" for="monedaMXN">MXN</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="monedaCredito">
+                                <label class="form-check-label" for="monedaCredito">Crédito</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campos alineados uno debajo del otro -->
+                    <div class="mb-2">
+                        <label class="form-label">Seleccione Cliente:</label>
+                        <select class="form-select">
+                            <option selected>321981 - Taller La Paz</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Atención:</label>
+                        <select class="form-select">
+                            <option selected>Carlos Lopez</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Correo:</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Teléfono:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Guardar Cambio</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        <td>$15,923.12</td>
+                        <td style="text-align: center;">
+                            <div style="margin-bottom: 10px; text-align: center;color: #f1e30f">Pendiente aceptacion
+                                Cliente</div>
+                            <button type="button" class="btn btn-primary text-center" data-toggle="modal"
+                                data-target="#estadoModal">
+                                <i class="fa fa-refresh"></i>
+                            </button>
+                        </td>
+                        <td style="text-align: center;color: #f1e30f">Pendiente de autorizacion por Gerente</td>
+                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            Generar</td>
+
+                        <td>
+
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal2">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                            <!-- Botón Ver -->
+                            <button class="btn btn-info btn-sm" onclick="showDetails()">
+                                <i class="fa fa-eye"></i>
+                            </button>
+                            <!-- Botón Editar (libretita) -->
+                            <button class="btn btn-warning btn-sm" onclick="editItem(1)">
+                                <i class="fa fa-pencil"></i>
                             </button>
                         </td>
                     </tr>
@@ -133,7 +270,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-body">
@@ -229,7 +366,7 @@
 
 
 
-<div id="details-2" class="details-container">
+<div id="details-1" class="details-container">
     <div class="d-flex justify-content-between align-items-center">
         <div class="form-group">
             <div>
@@ -242,7 +379,7 @@
                                 <i class="fa fa-download"></i> Descargar PDF
                             </button>
                             <div class="d-flex flex-column me-3">
-                                <strong>Firma</strong>
+                                <strong>¿Aparece Firma?</strong>
                                 <div class="d-flex align-items-center">
                                     <div class="me-3">
                                         <input type="radio" name="firma" id="con_firma" value="con_firma" class="me-1"
@@ -255,8 +392,9 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="d-flex flex-column">
-                                <strong>Descuento</strong>
+                                <strong>¿Aparece Descuento?</strong>
                                 <div class="d-flex align-items-center">
                                     <div class="me-2">
                                         <input type="radio" name="descuento" id="descuento_si" value="si" class="me-1"
@@ -443,6 +581,65 @@
             </table>
         </div>
 
-        <button class="btn btn-danger" onclick="closeDetails(2)">Cerrar</button>
+        <div class="text-center mt-4">
+    <a href="/cotiv2">
+        <button class="btn btn-success" id="createCotizacionBtn">Nueva Versión</button>
+    </a>
+    <button class="btn btn-danger ms-3" onclick="closeDetails(1)">Cerrar</button>
+</div>
+
+<script>
+    function closeDetails(id) {
+        // Aquí colocas la lógica para cerrar el modal o la vista de detalles
+        console.log("Cerrando detalles de: " + id);
+    }
+</script>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="estadoModal" tabindex="-1" role="dialog" aria-labelledby="estadoModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="estadoModalLabel">Actualizar Estado</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- Select de estado -->
+                    <div class="form-group">
+                        <label for="estadoSelect" class="d-block">Estado</label>
+                        <select class="form-control custom-select" id="estadoSelect">
+                            <option value="">Seleccione un estado</option>
+                            <option value="pendiente">Pendiente aceptación cliente</option>
+                            <option value="aceptada" selected>Aceptada por cliente</option>
+                            <option value="cancelada">Cancelada por Cliente</option>
+                        </select>
+                    </div>
+
+                    <!-- Fecha de modificación -->
+                    <div class="form-group" id="fechaGroup">
+                        <label for="fechaModificacion" class="d-block">Fecha de Cambio de Estado</label>
+                        <input type="date" class="form-control" id="fechaModificacion">
+                    </div>
+
+                    <!-- Observaciones -->
+                    <div class="form-group" id="observacionesGroup">
+                        <label for="observaciones" class="d-block">Observaciones</label>
+                        <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+                <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
     </div>
 </div>

@@ -52,12 +52,12 @@
                 <td>NUEVA GENERACION AERONAUTICA</td>
                 <td>$17,654.01</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Aceptada por el Cliente</div>
+                   <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Aceptada por el Cliente</div>
                 </td>
                 </td>
-                <td style="text-align: center">Aprobada por Gerente</td>
+             <td style="text-align: center ; color: #30da2d;">Aprobada por Gerente</td>
                 <td style="text-align: center;">
-                  <div style="margin-bottom: 10px; text-align: center;">Archivo SAP cargado</div>
+                   <div style="margin-bottom: 10px; text-align: center; color: #30da2d;">Archivo SAP cargado</div>
                     <button type="button" class="btn btn-primary text-center" data-toggle="modal" data-target="#estadoModal3">
                      <i class="fa fa-refresh"></i>
                   </button>
