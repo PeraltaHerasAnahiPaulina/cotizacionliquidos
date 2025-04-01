@@ -265,11 +265,28 @@
                             <label for="precioTotal">Precio Total:</label>
                             <div class="input-group">
                                 <span class="input-group-text">$</span>
-                                <input type="number" class="form-control" id="precioTotal" step="0.01" readonly value="8,214.60">
+                                <input type="text" class="form-control" id="precioTotal" step="0.01" readonly value="8,214.60">
                             </div>
                         </div>
                     </div>
                 </form>
+                 <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let precioInput = document.getElementById("precioTotal");
+
+            // Formato inicial (opcional)
+            let valorInicial = 8214.60; // Puedes cambiarlo según sea necesario
+            precioInput.value = valorInicial;
+
+            // Formato automático al escribir
+            precioInput.addEventListener("blur", function() {
+                let valor = parseFloat(precioInput.value);
+                if (!isNaN(valor)) {
+                    precioInput.value = valor.toFixed(2); // Asegura siempre dos decimales
+                }
+            });
+        });
+    </script>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -378,5 +395,42 @@
     </div>
 </div>
 
+
+
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script>
+    function confirmDesactivation() {
+        Swal.fire({
+            title: 'Eliminar Productos agregados',
+            text: '¿Estas seguro de eliminar los productos agregados?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Cancelar',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Aquí puedes agregar la lógica para desactivar al cliente.
+                Swal.fire(
+                    'Eliminado!',
+                    'Los productos han sido eliminados',
+                    'success'
+                );
+            }
+        });
+    }
+</script>
+<script>
+    $(document).ready(function() {
+    $('#productos').select2({
+        dropdownParent: $('#editModal'),
+        placeholder: "Buscar productos...",
+        allowClear: true,
+        width: '100%'
+    });
+});
+
+</script>
             
 @endsection

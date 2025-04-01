@@ -225,15 +225,15 @@
     <div class="d-flex justify-content-between align-items-center">
         <div class="form-group">
             <div>
-                <div class="card">
-                    <div class="card-body">
+               <div class="card">
+                    <div class="card-body"> 
                         <form id="downloadForm" method="POST" action="{{ route('descargar.pdf') }}" class="d-flex align-items-center">
                             @csrf
                             <button type="button" id="descargarBtn" class="btn btn-primary me-3">
                                 <i class="fa fa-download"></i> Descargar PDF
                             </button>
                             <div class="d-flex flex-column me-3">
-                                <strong>Firma</strong>
+                                <strong>¿Aparece Firma?</strong>
                                 <div class="d-flex align-items-center">
                                     <div class="me-3">
                                         <input type="radio" name="firma" id="con_firma" value="con_firma" class="me-1" checked>
@@ -246,7 +246,7 @@
                                 </div>
                             </div>
                             <div class="d-flex flex-column">
-                                <strong>Descuento</strong>
+                                <strong>¿Aparece Descuento?</strong>
                                 <div class="d-flex align-items-center">
                                     <div class="me-2">
                                         <input type="radio" name="descuento" id="descuento_si" value="si" class="me-1" checked>
