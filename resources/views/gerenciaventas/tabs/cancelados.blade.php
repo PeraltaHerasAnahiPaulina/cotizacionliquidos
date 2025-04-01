@@ -609,31 +609,35 @@
                 </div>
 
                 <form>
-                    <div class="form-group">
-                        <label for="estadoSelect" class="d-block">Estado</label>
-                        <select class="form-control" id="estadoSelect">
-                            <option value="">Seleccione un estado</option>
-                            <option value="autorizada">Autorizada por gerente</option>
-                            <option value="pendiente" selected>Pendiente de autorización
-                            </option>
-                            <option value="cancelada">Cancelada por gerente</option>
-                            <option value="pendienteaprobacion">Pendiente Aprobación
-                            </option>
-                            <option value="aprobada">Aprobada por gerente</option>
-                        </select>
-                    </div>
+    <div class="form-group d-flex align-items-center">
+        <label for="estadoSelect" class="col-md-3">Estado</label>
+        <div class="col-md-9">
+            <select class="form-control" id="estadoSelect">
+                <option value="">Seleccione un estado</option>
+                <option value="autorizada">Autorizada por gerente</option>
+                <option value="pendiente" selected>Pendiente de autorización</option>
+                <option value="cancelada">Cancelada por gerente</option>
+                <option value="pendienteaprobacion">Pendiente Aprobación</option>
+                <option value="aprobada">Aprobada por gerente</option>
+            </select>
+        </div>
+    </div>
 
-                    <div class="form-group">
-                        <label for="fechaModificacion" class="d-block">Fecha de Cambio de
-                            Estado</label>
-                        <input type="date" class="form-control" id="fechaModificacion">
-                    </div>
+    <div class="form-group d-flex align-items-center">
+        <label for="fechaModificacion" class="col-md-3">Fecha de Cambio de Estado</label>
+        <div class="col-md-9">
+            <input type="date" class="form-control" id="fechaModificacion">
+        </div>
+    </div>
 
-                    <div class="form-group">
-                        <label for="observaciones" class="d-block">Observaciones</label>
-                        <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
-                    </div>
-                </form>
+    <div class="form-group d-flex align-items-center">
+        <label for="observaciones" class="col-md-3">Observaciones</label>
+        <div class="col-md-9">
+            <textarea class="form-control" id="observaciones" rows="3">Se acepta</textarea>
+        </div>
+    </div>
+</form>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
