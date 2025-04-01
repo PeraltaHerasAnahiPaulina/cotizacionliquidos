@@ -151,7 +151,7 @@
                         <td>PROSPECTO NUEVA GENERACION AERONAUTICA <br> <div class="container mt-4">
     <!-- Botón para abrir el modal -->
     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCotizacion_123">
-        <i class="fas fa-file-invoice"></i> Asignar Cotización
+        <i class="fas fa-file-invoice"></i>
     </button>
 </div>
 </td>
