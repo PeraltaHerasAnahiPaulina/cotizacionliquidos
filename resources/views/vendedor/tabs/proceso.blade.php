@@ -147,8 +147,95 @@
                     </tr>
                     <tr>
                         <td>19-02-2025</td>
-                        <td>xd-IND-00001</td>
-                        <td>Taller Auto</td>
+                        <td>AME1-IND-00001-01</td>
+                        <td>PROSPECTO NUEVA GENERACION AERONAUTICA <br> <div class="container mt-4">
+    <!-- Botón para abrir el modal -->
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCotizacion_123">
+        <i class="fas fa-file-invoice"></i> Asignar Cotización
+    </button>
+</div>
+</td>
+
+<!-- Modal -->
+<div class="modal fade" id="modalCotizacion_123" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg"> <!-- Hacemos el modal más amplio -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Asignación Cotización a Clientes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- Primera fila: Cotización, Fecha, Vendedor -->
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Cotización:</label>
+                            <input type="text" class="form-control" value="AMEL-IND-00002-01" readonly>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Fecha:</label>
+                            <input type="date" class="form-control" value="2025-02-21" readonly>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Vendedor:</label>
+                            <input type="text" class="form-control" value="Pedro Sanabria" readonly>
+                        </div>
+                    </div>
+
+                    <!-- Segunda fila: Tiempo de entrega, Validez Oferta, Moneda con checkboxes -->
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Tiempo de entrega:</label>
+                            <input type="text" class="form-control" value="2 días">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Validez Oferta:</label>
+                            <input type="text" class="form-control" value="Cambios con previo aviso">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label d-block">Moneda Forma de Pago:</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="monedaMXN" checked>
+                                <label class="form-check-label" for="monedaMXN">MXN</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="monedaCredito">
+                                <label class="form-check-label" for="monedaCredito">Crédito</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campos alineados uno debajo del otro -->
+                    <div class="mb-2">
+                        <label class="form-label">Seleccione Cliente:</label>
+                        <select class="form-select">
+                            <option selected>321981 - Taller La Paz</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Atención:</label>
+                        <select class="form-select">
+                            <option selected>Carlos Lopez</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Correo:</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">Teléfono:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Guardar Cambio</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
                         <td>$15,923.12</td>
                         <td style="text-align: center;">
                             <div style="margin-bottom: 10px; text-align: center;color: #f1e30f">Pendiente aceptacion
