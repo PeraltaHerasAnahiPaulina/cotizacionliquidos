@@ -135,6 +135,10 @@
                             
                               <li><a href="/graficasv"> <span> Ver estadisticas</span></a></li>
                               </ul>
+                              <ul class="collapse list-unstyled" id="ESTADISTICAS">
+                            
+                                 <li><a href="/estadisticasexcel"> <span> Estadisticas Excel</span></a></li>
+                                 </ul>
                            </li>
                         </ul>
                      </div>
