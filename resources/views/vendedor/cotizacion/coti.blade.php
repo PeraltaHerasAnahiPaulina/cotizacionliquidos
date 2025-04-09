@@ -337,7 +337,7 @@
                             <div class="col-md-4 mb-3">
                              <label for="productos">Producto:</label>
                                  <select class="form-select" id="productos">
-                            <option value="">Buscar </option>
+                            
                             <option value="M-JET OIL II CAN 24X1UQL">104765- M-JET-OIL-II-CAN 24X1UQL- Caja 24 pzas</option>
                             <option value="M-VACUOLINE 146 DRUM 208L">104765 - M-VACUOLINE 146 DRUM 208L - Caja 24 pzas</option>
                             <option value="M-JET OIL II CAN 24X1UQL">104765 - M-JET OIL II CAN 24X1UQL - Caja 24 pzas</option>
@@ -559,6 +559,13 @@
          width: 650px;
          text-align: right;
       }
+
+      /* Estilos para hacer el modal más ancho */
+    .modal-dialog {
+    max-width: 65%; /* Ajusta este valor según necesites.*/
+    margin: 1.75rem auto; /* Centra el modal horizontalmente */
+    }
+
 
 
       

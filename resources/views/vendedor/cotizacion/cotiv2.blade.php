@@ -225,15 +225,14 @@
                                 <option>CVL</option>
                             </select>
                         </div>
-                            <div class="col-md-4 mb-3">
-                             <label for="productos">Producto:</label>
-                                 <select class="form-select" id="productos">
-                            <option value="">Buscar </option>
-                            <option value="M-JET OIL II CAN 24X1UQL">104765- M-JET-OIL-II-CAN 24X1UQL- Caja 24 pzas</option>
-                            <option value="M-VACUOLINE 146 DRUM 208L">104765 - M-VACUOLINE 146 DRUM 208L - Caja 24 pzas</option>
-                            <option value="M-JET OIL II CAN 24X1UQL">104765 - M-JET OIL II CAN 24X1UQL - Caja 24 pzas</option>
-                               </select>
-                           </div>
+                        <div class="col-md-4 mb-3">
+                <label for="productos">Producto:</label>
+                    <select class="form-select" id="productos">
+                        <option value="M-JET OIL II CAN 24X1UQL">104765 - M-JET OIL II CAN 24X1UQL - Caja 24 pzas</option>
+                        <option value="M-VACUOLINE 146 DRUM 208L">104765 - M-VACUOLINE 146 DRUM 208L - Caja 24 pzas</option>
+                        <option value="M-JET OIL II CAN 24X1UQL">104765 - M-JET OIL II CAN 24X1UQL - Caja 24 pzas</option>
+                     </select>
+                     </div>  
                         <div class="col-md-6 mb-3">
                             <label for="presentacion">Presentación:</label>
                             <input type="text" class="form-control" id="presentacion" value="Caja 24 pzas" readonly>
@@ -396,7 +395,15 @@
 </div>
 
 
-
+<style>
+    
+    /* Estilos para hacer el modal más ancho */
+    .modal-dialog {
+    max-width: 65%; /* Ajusta este valor según necesites. 90% del viewport */
+    margin: 1.75rem auto; /* Centra el modal horizontalmente */
+}
+    
+</style>
 <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 <script>
