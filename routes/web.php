@@ -48,6 +48,7 @@ Route::get('/iniciogerencia',  [gerenciaventascontroller::class, 'iniciogerencia
 Route::get('/cotizacionreporteg',  [gerenciaventascontroller::class, 'cotizacionreporte'])->name('cotizacionreporteg');
 Route::get('/coti2',  [gerenciaventascontroller::class, 'coti2'])->name('coti2');  
 Route::get('/graficas',  [gerenciaventascontroller::class, 'graficas'])->name('graficas');  
+Route::get('/estadisticasexcelv',  [gerenciaventascontroller::class, 'estadisticasexcelv'])->name('estadisticasexcelv'); 
 
 //Interfas Direccion Comercial
 Route::get('/iniciodireccion',  [direccioncomercialcontroller::class, 'iniciodireccion'])->name('iniciodireccion');

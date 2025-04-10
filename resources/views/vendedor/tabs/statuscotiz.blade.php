@@ -14,18 +14,18 @@
                         <td><input class="date-input" type="text" id="max" name="max"></td>
                         <td style="padding-left: 20px;">
                             <!-- Botón Excel -->
-                            <button class="btn btn-success btn-sm" id="exportButton2" onclick="exportToExcel()">
+                            <button class="btn btn-success btn-sm" id="exportButton3" onclick="exportToExcel()">
                                 <i class="fa fa-file-excel"></i> Exportar Excel
                             </button>
                         </td>
                         <td class="search-controls" style="font-size: 14px; font-weight:bold;">
-                            Buscar: <input type="text" id="searchInput2" placeholder="Buscar...">
+                            Buscar: <input type="text" id="searchInput3" placeholder="Buscar...">
                         </td>
 
                     </tr>
                 </tbody>
             </table>
-            <table id="documentTable2" class="table table-striped table-bordered display" style="width: 100%">
+            <table id="documentTable3" class="table table-striped table-bordered display" style="width: 100%">
                 <thead>
                     <tr style="background-color: #E0E0E0">
                         <th style="background-color: #323F52; color: #ffffff; width: 80px">Mes</th>
@@ -116,10 +116,10 @@
                         <td style="text-align: right;">5</td>
                     </tr>
                     <tr > 
-                        <td style="background-color: red;"><strong>Total</strong></td> 
-                        <td style="text-align: right; background-color: red;"><strong>42</strong></td> 
-                        <td style="text-align: right; background-color: red;"><strong>376</strong></td> 
-                        <td style="text-align: right; background-color: red;"><strong>77</strong></td> 
+                        <td style="background-color: #323F52;  color: #ffffff;"><strong>Total</strong></td> 
+                        <td style="text-align: right; background-color: #323F52;  color: #ffffff;"><strong>42</strong></td> 
+                        <td style="text-align: right; background-color: #323F52;  color: #ffffff;"><strong>376</strong></td> 
+                        <td style="text-align: right; background-color: #323F52;  color: #ffffff;"><strong>77</strong></td> 
                     </tr>
                    
                    

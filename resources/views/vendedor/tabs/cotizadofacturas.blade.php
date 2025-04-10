@@ -102,9 +102,9 @@
                         <td style="text-align: right;">$565.00</td>
                     </tr>
                     <tr > 
-                        <td style="background-color: red;"><strong>Total</strong></td> 
-                        <td style="text-align: right; background-color: red;"><strong>$53,857.00</strong></td> 
-                        <td style="text-align: right; background-color: red;"><strong>$42,021.00</strong></td> 
+                        <td style="background-color: #323F52; color: #ffffff;"><strong>Total</strong></td> 
+                        <td style="text-align: right; background-color: #323F52; color: #ffffff;"><strong>$53,857.00</strong></td> 
+                        <td style="text-align: right; background-color: #323F52; color: #ffffff;"><strong>$42,021.00</strong></td> 
                     </tr>
                    
                    
