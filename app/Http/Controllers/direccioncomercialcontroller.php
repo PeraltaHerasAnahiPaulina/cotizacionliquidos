@@ -21,6 +21,10 @@ class direccioncomercialcontroller extends Controller
         return view('direccioncomercial.cotizacion.coti3');
     }
 
+    public function cotizaciongeneralc(){
+        return view('direccioncomercial.cotizacion.cotizaciongeneralc');
+    }
+
     public function usuario(){
         return view ('direccioncomercial.catalogos.usuario');
     }

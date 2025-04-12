@@ -28,6 +28,10 @@ class vendedorcontroller extends Controller
     public function cotiv2(){
         return view('vendedor.cotizacion.cotiv2');
     }
+    
+    public function cotizaciongeneralv(){
+        return view('vendedor.cotizacion.cotizaciongeneralv');
+    }
     public function altaclient(){
         return view('vendedor.catalogo.altaclient');
     }

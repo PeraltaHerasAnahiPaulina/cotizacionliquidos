@@ -122,6 +122,7 @@
                            <ul class="collapse list-unstyled" id="cotizacionMenu">
                               <li><a href="/coti"> <span> Crear</span></a></li>
                               <li><a href="/cotizacionreportev"> <span> Reporte de cotizacion</span></a></li>
+                              <li><a href="/cotizaciongeneralv"> <span> Reporte General Cotizaciones</span></a></li>
                            </ul>
                         </li>
                      </ul>
