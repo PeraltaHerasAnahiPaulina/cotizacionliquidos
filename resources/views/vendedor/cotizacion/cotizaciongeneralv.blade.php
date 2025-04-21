@@ -19,13 +19,14 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div id="list" class="table-responsive">
-
+                        <label>Fecha Inicio: <input type="text" id="min-date" placeholder="DD-MM-YYYY" /></label>
+                        <label>Fecha Fin: <input type="text" id="max-date" placeholder="DD-MM-YYYY" /></label>
                             <!-- ↓Id de la tabla (Es importante colocar un id) ↓ -->
                             <!--↓Quitar cuando se acomode dentro de un div bueno↓-->
-                            <table id="TablaEXM" class="table table-striped table-bordered display" style="width: 100%">
+                            <table id="miTabla" class="table table-striped table-bordered display" style="width: 100%">
                                 <thead>
                                     <tr style="background-color: #E0E0E0">
-
+                                    <th style="background-color: #323F52; color: #ffffff">Fecha</th>
                                         <th style="background-color: #323F52; color: #ffffff">Folio </th>
                                         <th style="background-color: #323F52; color: #ffffff">Cliente</th>
                                         <th style="background-color: #323F52; color: #ffffff">Sucursal</th>
@@ -47,6 +48,7 @@
                                 </thead>
                                 <tbody>
                                 <tr>
+                                <td>19-02-2025</td>
                                         <td>AME1-00001-01</td>
                                         <td>Ind ABC</td>
                                         <td>AME-1</td>
@@ -66,6 +68,7 @@
                                         <td >NA</td>
                                     </tr>
                                     <tr>
+                                    <td>18-02-2025</td>
                                         <td>AME1-00001-01</td>
                                         <td>Ind ABC</td>
                                         <td>AME-1</td>
@@ -85,6 +88,7 @@
                                         <td>NA</td>
                                     </tr>
                                     <tr>
+                                    <td>18-02-2025</td>
                                         <td>AME1-00001-01</td>
                                         <td>Flota K</td>
                                         <td>AME-1</td>
@@ -104,6 +108,7 @@
                                         <td>NA</td>
                                     </tr>
                                     <tr>
+                                    <td>18-02-2025</td>
                                         <td>AME1-00002-01</td>
                                         <td>Flota K</td>
                                         <td>AME-1</td>
@@ -123,6 +128,7 @@
                                         <td style="color: #29af1f">Archivo Sap Generado</td>
                                     </tr>
                                     <tr>
+                                    <td>18-02-2025</td>
                                         <td>AME1-00001-05</td>
                                         <td>Flota K</td>
                                         <td>AME-1</td>
@@ -142,6 +148,7 @@
                                         <td style="color: #29af1f">Archivo Sap Generado</td>
                                     </tr>
                                     <tr>
+                                    <td>18-02-2025</td>
                                         <td>AME1-00002-01</td>
                                         <td>Juan Perez</td>
                                         <td>AME-1</td>
@@ -161,6 +168,7 @@
                                         <td>NA</td>
                                     </tr>
                                     <tr>
+                                    <td>18-02-2025</td>
                                         <td>AME2-00002-01</td>
                                         <td>Maquinados A</td>
                                         <td>AME-2</td>
@@ -180,6 +188,7 @@
                                         <td>NA</td>
                                     </tr>
                                     <tr>
+                                    <td>18-02-2025</td>
                                         <td>AME2-00001-02</td>
                                         <td>Minera B</td>
                                         <td>AME-2</td>
@@ -205,7 +214,21 @@
                 </div>
 
             </div>
-        </div>
+        </div>   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- DataTables -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+<!-- Buttons Extension -->
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+
+<!-- Datepicker (opcional) -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
         <script>
             function confirmDesactivation() {
                 Swal.fire({
@@ -227,6 +250,57 @@
                     }
                 });
             }
+
+            $(document).ready(function () {
+
+$("#min-date, #max-date").datepicker({
+    dateFormat: "dd-mm-yy"
+});
+
+function parseFecha(fechaStr) {
+    var partes = fechaStr.split("-");
+    return new Date(partes[2], partes[1] - 1, partes[0]);
+}
+
+
+$.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
+    var min = $('#min-date').val();
+    var max = $('#max-date').val();
+    var fecha = data[0];
+
+    if (fecha) {
+        var fechaActual = parseFecha(fecha);
+        var minFecha = min ? parseFecha(min) : null;
+        var maxFecha = max ? parseFecha(max) : null;
+
+        if ((minFecha === null || fechaActual >= minFecha) &&
+            (maxFecha === null || fechaActual <= maxFecha)) {
+            return true;
+        }
+    }
+
+    return false;
+});
+
+
+var table = $('#miTabla').DataTable({
+    dom: 'Bfrtip',
+    buttons: [
+        {
+            extend: 'excelHtml5',
+            title: 'Cotizacion General',
+            exportOptions: {
+                columns: ':visible'
+            }
+        }
+    ]
+});
+
+
+$('#min-date, #max-date').change(function () {
+    table.draw();
+});
+});
         </script>
 
 
