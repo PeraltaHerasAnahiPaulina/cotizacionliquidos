@@ -54,16 +54,16 @@
                         <td>AME1-IND-00001-01</td>
                         <td>NUEVA GENERACION AERONAUTICA</td>
                         <td>$17,654.01</td>
-                        <td style="text-align: center; color: #f1e30f">Pendiente aceptacion Cliente</td>
+                        <td style="text-align: center; color: #ff8e2f">Pendiente aceptacion Cliente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f;">Pendiente aprobación
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f;">Pendiente aprobación
                                 por Gerente</div>
                             <button type="button" class="btn btn-primary text-center" data-toggle="modal"
                                 data-target="#estadoModal">
                                 <i class="fa fa-refresh"></i>
                             </button>
                         </td>
-                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                        <td style="text-align: center; color: #ff8e2f">Archivo SAP pendiente
                             Generar</td>
 
                         <td>
@@ -83,19 +83,19 @@
                     </tr>
                     <tr>
                         <td>25-09-2025</td>
-                        <td>xd-dlD-00001</td>
+                        <td>AME1-IND-00012-01</td>
                         <td>Taller Automotriz A</td>
                         <td>$15,923.12</td>
-                        <td style="text-align: center; color: #f1e30f">Pendiente aceptacion Cliente</td>
+                        <td style="text-align: center; color: #ff8e2f">Pendiente aceptacion Cliente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f;">Pendiente aprobación
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f;">Pendiente aprobación
                                 por Gerente</div>
                             <button type="button" class="btn btn-primary text-center" data-toggle="modal"
                                 data-target="#estadoModal">
                                 <i class="fa fa-refresh"></i>
                             </button>
                         </td>
-                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                        <td style="text-align: center; color: #ff8e2f">Archivo SAP pendiente
                             Generar</td>
 
                         <td>
@@ -115,19 +115,19 @@
                     </tr>
                     <tr>
                         <td>19-07-2024</td>
-                        <td>CDI2-3303-00031</td>
+                        <td>AME1-IND-00092-01</td>
                         <td>Taller Tollocan</td>
                         <td>$18,263.32</td>
-                        <td style="text-align: center; color: #f1e30f">Pendiente aceptacion Cliente</td>
+                        <td style="text-align: center; color: #ff8e2f">Pendiente aceptacion Cliente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f;">Pendiente aprobación
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f;">Pendiente aprobación
                                 por Gerente</div>
                             <button type="button" class="btn btn-primary text-center" data-toggle="modal"
                                 data-target="#estadoModal">
                                 <i class="fa fa-refresh"></i>
                             </button>
                         </td>
-                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                        <td style="text-align: center; color: #ff8e2f">Archivo SAP pendiente
                             Generar</td>
 
                         <td>
@@ -147,19 +147,19 @@
                     </tr>
                     <tr>
                         <td>19-02-2025</td>
-                        <td>xd-IND-00001</td>
+                        <td>AME1-IND-00092-01</td>
                         <td>Taller Auto</td>
                         <td>$15,923.12</td>
-                        <td style="text-align: center; color: #f1e30f">Pendiente aceptacion Cliente</td>
+                        <td style="text-align: center; color: #ff8e2f">Pendiente aceptacion Cliente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f;">Pendiente aprobación
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f;">Pendiente aprobación
                                 por Gerente</div>
                             <button type="button" class="btn btn-primary text-center" data-toggle="modal"
                                 data-target="#estadoModal">
                                 <i class="fa fa-refresh"></i>
                             </button>
                         </td>
-                        <td style="text-align: center; color: #f1e30f">Archivo SAP pendiente
+                        <td style="text-align: center; color: #ff8e2f">Archivo SAP pendiente
                             Generar</td>
 
                         <td>
@@ -292,7 +292,7 @@
                                 <i class="fa fa-download"></i> Descargar PDF
                             </button>
                             <div class="d-flex flex-column me-3">
-                                <strong>Firma</strong>
+                                <strong>¿Aparece Firma?</strong>
                                 <div class="d-flex align-items-center">
                                     <div class="me-3">
                                         <input type="radio" name="firma" id="con_firma" value="con_firma" class="me-1"
@@ -307,7 +307,7 @@
                             </div>
 
                             <div class="d-flex flex-column">
-                                <strong>Descuento</strong>
+                                <strong>¿Aparece Descuento?</strong>
                                 <div class="d-flex align-items-center">
                                     <div class="me-2">
                                         <input type="radio" name="descuento" id="descuento_si" value="si" class="me-1"
@@ -493,8 +493,12 @@
                 </tfoot>
             </table>
         </div>
-
-        <button class="btn btn-danger" onclick="closeDetails(1)">Cerrar</button>
+        <div class="text-center mt-4">
+    <a href="/cotiv2">
+        <button class="btn btn-success" id="createCotizacionBtn">Nueva Versión</button>
+    </a>
+    <button class="btn btn-danger ms-3" onclick="closeDetails(1)">Cerrar</button>
+</div>
     </div>
 </div>
 

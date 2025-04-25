@@ -117,8 +117,8 @@
                         <a href="#cotizacionMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-receipt blue1_color"></i> <span>Cotización</span></a>
                         <ul class="collapse list-unstyled" id="cotizacionMenu">
                         <li><a href="/cotizacionreportec"> <span> Reporte de cotizacion</span></a></li>
-                        
-                       
+                        <li><a href="/cotizaciongeneralc"> <span> Reporte General Cotizaciones</span></a></li>
+
                         </ul>
                      </li>
                   </ul>

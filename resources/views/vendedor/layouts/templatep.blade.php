@@ -122,6 +122,7 @@
                            <ul class="collapse list-unstyled" id="cotizacionMenu">
                               <li><a href="/coti"> <span> Crear</span></a></li>
                               <li><a href="/cotizacionreportev"> <span> Reporte de cotizacion</span></a></li>
+                              <li><a href="/cotizaciongeneralv"> <span> Reporte General Cotizaciones</span></a></li>
                            </ul>
                         </li>
                      </ul>
@@ -135,6 +136,10 @@
                             
                               <li><a href="/graficasv"> <span> Ver estadisticas</span></a></li>
                               </ul>
+                              <ul class="collapse list-unstyled" id="ESTADISTICAS">
+                            
+                                 <li><a href="/estadisticasexcel"> <span> Estadisticas Excel</span></a></li>
+                                 </ul>
                            </li>
                         </ul>
                      </div>

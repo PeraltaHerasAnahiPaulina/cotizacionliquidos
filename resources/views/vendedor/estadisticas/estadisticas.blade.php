@@ -129,13 +129,7 @@
                         </figure>
                       
                     </div>
-                    <div class="col-md-6">
-                        <figure class="highcharts-figure">
-                            <div id="container2"></div>
-                            
-                        </figure>
-                      
-                    </div>
+                  
                     <div class="col-md-6">
                         <figure class="highcharts-figure">
                             <div id="container3"></div>
@@ -308,83 +302,7 @@
     ]
  });  
 </script>
-<script>
-    Highcharts.chart('container2', {
-        credits: {
-        enabled: false
-    },
-    lang: {
-        contextButtonTitle: "Menú de exportación",
-        downloadJPEG: "Descargar imagen JPEG",
-        downloadPDF: "Descargar PDF",
-        downloadPNG: "Descargar imagen PNG",
-        downloadSVG: "Descargar imagen SVG",
-        downloadCSV: "Descargar CSV",
-        downloadXLS: "Descargar Excel",
-        printChart: "Imprimir gráfico",
-        viewFullscreen: "Ver en pantalla completa",
-        exitFullscreen: "Salir de pantalla completa",
-        openInCloud: "Abrir en Highcharts Cloud",
-        viewData: "Ver tabla de datos",
-        hideData: "Ocultar tabla de datos",
-        thousandsSep: ",",
-        decimalPoint: "."
-    },
-    exporting: {
-        buttons: {
-            contextButton: {
-                menuItems: [
-                    "downloadPNG",
-                    "downloadPDF"
-                ]
-            }
-        }
-    },
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: ' Total de pedidos '
-    },
-    subtitle: {
-        text:
-            'Del año 2024'
-    },
-    xAxis: {
-        categories: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-        crosshair: true,
-        accessibility: {
-            description: 'Meses'
-        }
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: ''
-        }
-    },
-    tooltip: {
-        valueSuffix: ' '
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.1,
-            borderWidth: 0
-        }
-    },
-    series: [
-        {
-            name: 'Entregados',
-            data: [235, 158, 359, 459, 165, 348, 235, 158, 359, 459, 165, 348]
-        },
-        {
-            name: 'No entregados',
-            data: [35, 158, 109, 759, 65, 38, 435, 18, 159, 359, 65, 48]
-        },
-       
-    ]
- });  
-</script>
+
 <script>
     Highcharts.chart('container3', {
         credits: {
@@ -451,11 +369,11 @@
     },
     series: [
         {
-            name: 'Autorizacion de cliente',
+            name: 'Pedidos Autorizados',
             data: [465, 158, 459, 559, 165, 348, 135, 108, 159, 559, 165, 348]
         },
         {
-            name: 'No entregados',
+            name: ' Pedidos en proceso',
             data: [35, 18, 109, 59, 65, 38, 35, 18, 159, 59, 65, 48]
         },
         {

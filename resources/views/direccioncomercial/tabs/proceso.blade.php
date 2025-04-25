@@ -55,14 +55,14 @@
                         <td>NUEVA GENERACION AERONAUTICA</td>
                         <td>$17,654.01</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">
                                 Pendiente aceptacion Cliente</div>
 
                         </td>
                         </td>
-                        <td style="text-align: center ; color: #f1e30f;">Pendiente aprobación por Gerente</td>
+                        <td style="text-align: center ; color: #ff8e2f;">Pendiente aprobación por Gerente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Archivo SAP pendiente
                                 Generar</div>
                         </td>
                         <td>
@@ -77,17 +77,17 @@
                     </tr>
                     <tr>
                         <td>25-09-2025</td>
-                        <td>xd-dlD-00001</td>
+                        <td>AME1-IND-00012-01</td>
                         <td>Taller Automotriz A</td>
                         <td>$15,923.12</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Pendiente aceptacion
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Pendiente aceptacion
                                 Cliente</div>
 
                         </td>
-                        <td style="text-align: center ; color: #f1e30f;">Pendiente aprobación por Gerente</td>
+                        <td style="text-align: center ; color: #ff8e2f;">Pendiente aprobación por Gerente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Archivo SAP pendiente
                                 Generar</div>
                         </td>
                         <td>
@@ -104,17 +104,17 @@
                     </tr>
                     <tr>
                         <td>19-07-2024</td>
-                        <td>CDI2-3303-00031</td>
+                        <td>AME1-IND-00092-01</td>
                         <td>Taller Tollocan</td>
                         <td>$18,263.32</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Pendiente aceptacion
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Pendiente aceptacion
                                 Cliente</div>
 
                         </td>
-                        <td style="text-align: center ; color: #f1e30f;">Pendiente aprobación por Gerente</td>
+                        <td style="text-align: center ; color: #ff8e2f;">Pendiente aprobación por Gerente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Archivo SAP pendiente
                                 Generar</div>
                         </td>
                         <td>
@@ -130,16 +130,16 @@
                     </tr>
                     <tr>
                         <td>19-02-2025</td>
-                        <td>xd-IND-00001</td>
+                        <td>AME1-IND-00092-01</td>
                         <td>Taller Auto</td>
                         <td>$15,923.12</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Pendiente aceptacion
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Pendiente aceptacion
                                 Cliente</div>
                         </td>
-                        <td style="text-align: center ; color: #f1e30f;">Pendiente aprobación por Gerente</td>
+                        <td style="text-align: center ; color: #ff8e2f;">Pendiente aprobación por Gerente</td>
                         <td style="text-align: center;">
-                            <div style="margin-bottom: 10px; text-align: center; color: #f1e30f">Archivo SAP pendiente
+                            <div style="margin-bottom: 10px; text-align: center; color: #ff8e2f">Archivo SAP pendiente
                                 Generar</div>
                         </td>
                         <td>
@@ -259,16 +259,15 @@
     <div class="d-flex justify-content-between align-items-center">
         <div class="form-group">
             <div>
-                <div class="card">
-                    <div class="card-body">
-                        <form id="downloadForm" method="POST" action="{{ route('descargar.pdf') }}"
-                            class="d-flex align-items-center">
+               <div class="card">
+                    <div class="card-body"> 
+                        <form id="downloadForm" method="POST" action="{{ route('descargar.pdf') }}" class="d-flex align-items-center">
                             @csrf
                             <button type="button" id="descargarBtn" class="btn btn-primary me-3">
                                 <i class="fa fa-download"></i> Descargar PDF
                             </button>
                             <div class="d-flex flex-column me-3">
-                                <strong>Firma</strong>
+                                <strong>¿Aparece Firma?</strong>
                                 <div class="d-flex align-items-center">
                                     <div class="me-3">
                                         <input type="radio" name="firma" id="con_firma" value="con_firma" class="me-1"
@@ -283,7 +282,7 @@
                             </div>
 
                             <div class="d-flex flex-column">
-                                <strong>Descuento</strong>
+                                <strong>¿Aparece Descuento?</strong>
                                 <div class="d-flex align-items-center">
                                     <div class="me-2">
                                         <input type="radio" name="descuento" id="descuento_si" value="si" class="me-1"

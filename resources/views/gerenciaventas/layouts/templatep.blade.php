@@ -140,6 +140,10 @@
                          
                            <li><a href="/graficas"> <span> Ver estadisticas</span></a></li>
                            </ul>
+                           <ul class="collapse list-unstyled" id="estadisticas">
+                         
+                              <li><a href="/estadisticasexcelv"> <span> Estadisticas excel</span></a></li>
+                              </ul>
                         </li>
                      </ul>
                   </div>

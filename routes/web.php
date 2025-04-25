@@ -41,18 +41,24 @@ Route::get('/iniciovendedor',  [vendedorcontroller::class, 'iniciovendedor'])->n
 Route::get('/cotizacionreportev',  [vendedorcontroller::class, 'cotizacionreporte'])->name('cotizacionreportev'); 
 Route::get('/coti',  [vendedorcontroller::class, 'coti'])->name('coti'); 
 Route::get('/cotiv2',  [vendedorcontroller::class, 'cotiv2'])->name('cotiv2'); 
-Route::get('/graficasv',  [vendedorcontroller::class, 'graficasv'])->name('graficasv');  
+Route::get('/graficasv',  [vendedorcontroller::class, 'graficasv'])->name('graficasv'); 
+Route::get('/estadisticasexcel',  [vendedorcontroller::class, 'estadisticasexcel'])->name('estadisticasexcel'); 
+Route::get('/cotizaciongeneralv',  [vendedorcontroller::class, 'cotizaciongeneralv'])->name('cotizaciongeneralv'); 
+
 //Interfas Gerencia de ventas
 Route::get('/iniciogerencia',  [gerenciaventascontroller::class, 'iniciogerencia'])->name('iniciogerencia'); 
 Route::get('/cotizacionreporteg',  [gerenciaventascontroller::class, 'cotizacionreporte'])->name('cotizacionreporteg');
 Route::get('/coti2',  [gerenciaventascontroller::class, 'coti2'])->name('coti2');  
 Route::get('/graficas',  [gerenciaventascontroller::class, 'graficas'])->name('graficas');  
+Route::get('/estadisticasexcelv',  [gerenciaventascontroller::class, 'estadisticasexcelv'])->name('estadisticasexcelv'); 
 
 //Interfas Direccion Comercial
 Route::get('/iniciodireccion',  [direccioncomercialcontroller::class, 'iniciodireccion'])->name('iniciodireccion');
 Route::get('/cotizacionreportec',  [direccioncomercialcontroller::class, 'cotizacionreporte'])->name('cotizacionreportec');
 Route::get('/coti3',  [direccioncomercialcontroller::class, 'coti3'])->name('coti3');
 Route::get('/graficasd',  [direccioncomercialcontroller::class, 'graficasd'])->name('graficasd');   
+Route::get('/cotizaciongeneralc',  [direccioncomercialcontroller::class, 'cotizaciongeneralc'])->name('cotizaciongeneralc');   
+
 //Interfas Carga Sap
 Route::get('/iniciosap',  [cargasapcontroller::class, 'iniciosap'])->name('iniciosap');
 Route::get('/cotizacionreportes',  [cargasapcontroller::class, 'cotizacionreporte'])->name('cotizacionreportes'); 

@@ -225,15 +225,14 @@
                                 <option>CVL</option>
                             </select>
                         </div>
-                            <div class="col-md-4 mb-3">
-                             <label for="productos">Producto:</label>
-                                 <select class="form-select" id="productos">
-                            <option value="">Buscar </option>
-                            <option value="M-JET OIL II CAN 24X1UQL">104765- M-JET-OIL-II-CAN 24X1UQL- Caja 24 pzas</option>
-                            <option value="M-VACUOLINE 146 DRUM 208L">104765 - M-VACUOLINE 146 DRUM 208L - Caja 24 pzas</option>
-                            <option value="M-JET OIL II CAN 24X1UQL">104765 - M-JET OIL II CAN 24X1UQL - Caja 24 pzas</option>
-                               </select>
-                           </div>
+                        <div class="col-md-4 mb-3">
+                <label for="productos">Producto:</label>
+                    <select class="form-select" id="productos">
+                        <option value="M-JET OIL II CAN 24X1UQL">104765 - M-JET OIL II CAN 24X1UQL - Caja 24 pzas</option>
+                        <option value="M-VACUOLINE 146 DRUM 208L">104765 - M-VACUOLINE 146 DRUM 208L - Caja 24 pzas</option>
+                        <option value="M-JET OIL II CAN 24X1UQL">104765 - M-JET OIL II CAN 24X1UQL - Caja 24 pzas</option>
+                     </select>
+                     </div>  
                         <div class="col-md-6 mb-3">
                             <label for="presentacion">Presentación:</label>
                             <input type="text" class="form-control" id="presentacion" value="Caja 24 pzas" readonly>
@@ -265,11 +264,28 @@
                             <label for="precioTotal">Precio Total:</label>
                             <div class="input-group">
                                 <span class="input-group-text">$</span>
-                                <input type="number" class="form-control" id="precioTotal" step="0.01" readonly value="8,214.60">
+                                <input type="text" class="form-control" id="precioTotal" step="0.01" readonly value="8,214.60">
                             </div>
                         </div>
                     </div>
                 </form>
+                 <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let precioInput = document.getElementById("precioTotal");
+
+            // Formato inicial (opcional)
+            let valorInicial = 8214.60; // Puedes cambiarlo según sea necesario
+            precioInput.value = valorInicial;
+
+            // Formato automático al escribir
+            precioInput.addEventListener("blur", function() {
+                let valor = parseFloat(precioInput.value);
+                if (!isNaN(valor)) {
+                    precioInput.value = valor.toFixed(2); // Asegura siempre dos decimales
+                }
+            });
+        });
+    </script>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -378,5 +394,50 @@
     </div>
 </div>
 
+
+<style>
+    
+    /* Estilos para hacer el modal más ancho */
+    .modal-dialog {
+    max-width: 65%; /* Ajusta este valor según necesites. 90% del viewport */
+    margin: 1.75rem auto; /* Centra el modal horizontalmente */
+}
+    
+</style>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script>
+    function confirmDesactivation() {
+        Swal.fire({
+            title: 'Eliminar Productos agregados',
+            text: '¿Estas seguro de eliminar los productos agregados?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Cancelar',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Aquí puedes agregar la lógica para desactivar al cliente.
+                Swal.fire(
+                    'Eliminado!',
+                    'Los productos han sido eliminados',
+                    'success'
+                );
+            }
+        });
+    }
+</script>
+<script>
+    $(document).ready(function() {
+    $('#productos').select2({
+        dropdownParent: $('#editModal'),
+        placeholder: "Buscar productos...",
+        allowClear: true,
+        width: '100%'
+    });
+});
+
+</script>
             
 @endsection

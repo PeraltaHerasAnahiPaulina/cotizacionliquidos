@@ -89,6 +89,39 @@
             <div class="tab-pane fade" id="pedidos-cancelados" role="tabpanel" aria-labelledby="p-cancelados">
             @include('vendedor.tabs.cancelados')
 
+                
+         
+    
+       
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <!-- Sección 1 -->
+          <div class="section-container" style="flex: 1; margin-right: 10px;">
+            <h5>Cotización</h5>
+            <div class="form-group">
+              <label>Fecha</label>
+              <input type="date" class="form-control" value="2025-02-21" readonly>
+            </div>
+            <div class="form-group">
+              <label>Folio</label>
+              <input type="text" class="form-control" value="F12345" readonly>
+            </div>
+            <div class="form-group">
+              <label>Cliente</label>
+              <input type="text" class="form-control" value="NUEVA GENERACION AERONAUTICA" readonly>
+            </div>
+            <div class="form-group">
+              <label>Atención</label>
+              <input type="text" class="form-control" value="NADIA FONSECA" readonly>
+            </div>
+            <div class="form-group">
+              <label>Correo</label>
+              <input type="text" class="form-control" value="NADIA@example.com" readonly>
+            </div>
+            <div class="form-group">
+              <label>Teléfono</label>
+              <input type="text" class="form-control" value="123-456-7890" readonly>
+
             </div>
           </div>
 
