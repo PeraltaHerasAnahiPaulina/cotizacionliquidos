@@ -170,15 +170,15 @@
                     <div class="row mb-2">
                         <div class="col-md-4">
                             <label class="form-label">Cotización:</label>
-                            <input type="text" class="form-control" value="AMEL-IND-00002-01" readonly>
+                            <input type="text" class="form-control" value="AMEL-IND-00002-01" disabled>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">Fecha:</label>
-                            <input type="date" class="form-control" value="2025-02-21" readonly>
+                            <input type="date" class="form-control" value="2025-02-21" disabled>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">Vendedor:</label>
-                            <input type="text" class="form-control" value="Pedro Sanabria" readonly>
+                            <input type="text" class="form-control" value="Pedro Sanabria" disabled>
                         </div>
                     </div>
 
@@ -186,20 +186,20 @@
                     <div class="row mb-2">
                         <div class="col-md-4">
                             <label class="form-label">Tiempo de entrega:</label>
-                            <input type="text" class="form-control" value="2 días">
+                            <input type="text" class="form-control" value="2 días" disabled>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">Validez Oferta:</label>
-                            <input type="text" class="form-control" value="Cambios con previo aviso">
+                            <input type="text" class="form-control" value="Cambios con previo aviso" disabled>
                         </div>
                         <div class="col-md-4">
                             <label class="form-label d-block">Moneda Forma de Pago:</label>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="monedaMXN" checked>
+                                <input class="form-check-input" type="checkbox" id="monedaMXN" checked disabled>
                                 <label class="form-check-label" for="monedaMXN">MXN</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="monedaCredito">
+                                <input class="form-check-input" type="checkbox" id="monedaCredito" disabled>
                                 <label class="form-check-label" for="monedaCredito">Crédito</label>
                             </div>
                         </div>
@@ -220,11 +220,11 @@
                     </div>
                     <div class="mb-2">
                         <label class="form-label">Correo:</label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control" value="carlos@gmail.com">
                     </div>
                     <div class="mb-2">
                         <label class="form-label">Teléfono:</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" value="7223425488">
                     </div>
                 </form>
             </div>
